@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=6"/>
-  <title>Explore Green Spaces &amp; Nature Trails in Koupati | Official Assam Destination Portal</title>
+  <title>Koupati (কৌপাতি) - The Green Destination | Official Tourism Portal</title>
   
-  <meta name="description" content="Find serene nature in Koupati (কৌপাতি), Assam. Explore emerald tea gardens, iconic thatched machans, canopy avenues, and peaceful nature walks near Orang National Park."/>
-  <meta name="keywords" content="Koupati tourism, Kopati tea estate, green spaces Assam, Assam tea tourism, Orang national park nearby, Dalgaon Kopati road, Udalguri nature attractions, nature walks Assam, Kopati Darrang"/>
+  <meta name="description" content="Discover Koupati (কৌপাতি), Assam's tranquil green destination. Explore emerald tea gardens, authentic thatched machans, heritage canopies, and nature trails near Orang National Park."/>
+  <meta name="keywords" content="Koupati tourism, কৌপাতি, Kopati tea estate, green spaces Assam, Assam tea tourism, Orang national park nearby, Dalgaon Kopati road, Udalguri nature attractions"/>
   
   <!-- Canonical & Social Metadata -->
   <link rel="canonical" href="https://koupati.netlify.app/"/>
-  <meta property="og:title" content="Explore Green Spaces &amp; Nature Trails in Koupati (কৌপাতি)"/>
-  <meta property="og:description" content="Discover Assam's pristine tea country, elevated thatched watchtowers, and tranquil nature trails in Koupati."/>
+  <meta property="og:title" content="Koupati (কৌপাতি) - The Green Destination"/>
+  <meta property="og:description" content="Explore tranquil tea garden canopies, elevated thatched machans, and pristine nature trails in Koupati, Assam."/>
   <meta property="og:url" content="https://koupati.netlify.app/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY"/>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & Assamese / Bengali Script -->
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & Noto Serif Bengali for Assamese -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-  <!-- Tailwind Custom Config: VisitSingapore Official Tourism Theme -->
+  <!-- Tailwind Custom Configuration -->
   <script>
     tailwind.config = {
       theme: {
@@ -43,12 +43,12 @@
           },
           colors: {
             stb: {
-              red: '#D71A21',       // VisitSingapore Official Passion Red
-              darkred: '#B3141A',   // Active / Hover Red
-              lightred: '#FFEAEB',  // Soft Red Tint
-              graybg: '#F2F2F2',    // Section Gray
-              darkgray: '#2E2E2E',  // Heading Dark
-              border: '#E5E7EB',    // Clean divider
+              red: '#D71A21',       /* VisitSingapore Official Passion Red */
+              darkred: '#B3141A',   /* Hover Red */
+              lightred: '#FFEAEB',  /* Subtle Red Tint */
+              graybg: '#F2F2F2',    /* Editorial Gray Section */
+              darkgray: '#2E2E2E',  /* Contrast Heading */
+              border: '#E5E7EB',    /* Structural divider */
             }
           }
         }
@@ -56,8 +56,9 @@
     }
   </script>
 
+  <!-- Self-Contained Styles & Tareeqa 2 Screenshot Auto-Crop -->
   <style>
-    /* Destination Underline Accent */
+    /* STB Red Accent Underline */
     .stb-red-underline {
       position: relative;
       display: inline-block;
@@ -67,93 +68,7 @@
       position: absolute;
       left: 0;
       bottom: -6px;
-      width: 44px;
-      height: 3px;
-      background-color: #D71A21;
-      border-radius: 2px;
-    }
-
-    /* Masthead Dark Lens */
-    .stb-masthead-overlay {
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%);
-    }
-
-    /* ======================================================== */
-    /* Intelligent CSS Screenshot Auto-Cropping (Tareeqa 2)     */
-    /* Scales images by 1.12 to trim out screenshot borders,    */
-    /* battery/time status bars, and letterbox edges.           */
-    /* ======================================================== */
-    .hero-crop-container,
-    .auto-crop-container,
-    #galleryGrid .group,
-    #highlights .rounded-2xl,
-    #highlights .rounded-xl,
-    #activities .h-48 {
-      position: relative !important;
-      overflow: hidden !important;
-    }
-
-    .hero-crop-container img,
-    .auto-crop-container img,
-    #galleryGrid img,
-    #highlights img,
-    #activities .h-48 img {
-      object-fit: cover !important;
-      object-position: center !important;
-      transform: scale(1.12);
-      transform-origin: center center;
-      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Enhanced Zoom on Hover */
-    #galleryGrid .group:hover img,
-    #highlights .rounded-2xl:hover img,
-    #highlights .rounded-xl:hover img,
-    #activities .h-48:hover img {
-      transform: scale(1.18) !important;
-    }
-
-    /* Lightbox Modal Auto-Crop Viewport */
-    .lightbox-crop-viewport {
-      position: relative;
-      overflow: hidden;
-      max-width: 90vw;
-      max-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      background: #000;
-    }
-
-    .lightbox-crop-viewport img {
-      transition: transform 0.3s ease, max-height 0.3s ease;
-    }
-
-    .lightbox-crop-viewport.is-cropped img {
-      transform: scale(1.14) !important;
-      object-fit: cover !important;
-    }
-
-    .lightbox-crop-viewport:not(.is-cropped) img {
-      transform: scale(1) !important;
-      object-fit: contain !important;
-    }
-
-    /* Custom Leaflet Map Pin Styles */
-    .custom-map-pin {
-      background: transparent;
-      border: none;
-    }
-    .stb-red-underline::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 48px;
+      width: 46px;
       height: 3px;
       background-color: #D71A21;
       border-radius: 2px;
@@ -162,6 +77,72 @@
     /* Masthead Dark Lens Overlay */
     .stb-masthead-overlay {
       background: linear-gradient(180deg, rgba(17, 24, 39, 0.45) 0%, rgba(17, 24, 39, 0.88) 100%);
+    }
+
+    /* ======================================================== */
+    /* TAREEQA 2: Intelligent CSS Screenshot Auto-Cropping     */
+    /* Trims black borders, battery/network bars & phone UI     */
+    /* ======================================================== */
+    .crop-container {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .crop-container img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      transform: scale(1.12);
+      transform-origin: center center;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+      display: block;
+    }
+
+    .crop-container:hover img {
+      transform: scale(1.18) !important;
+    }
+
+    /* Lightbox Modal Auto-Crop Frame */
+    .lightbox-frame {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 90vw;
+      max-height: 65vh;
+      border-radius: 12px;
+      background: #000;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-frame.is-cropped img {
+      width: 100%;
+      height: 65vh;
+      object-fit: cover !important;
+      transform: scale(1.14);
+    }
+
+    .lightbox-frame:not(.is-cropped) img {
+      max-height: 65vh;
+      max-width: 100%;
+      object-fit: contain !important;
+      transform: scale(1);
+    }
+
+    .lightbox-frame img {
+      transition: transform 0.3s ease, object-fit 0.3s ease;
+    }
+
+    /* Leaflet Custom Circle Marker Reset */
+    .leaflet-popup-content-wrapper {
+      border-radius: 12px;
+      padding: 4px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
@@ -169,7 +150,7 @@
     "@type": "TouristDestination",
     "name": "Koupati",
     "alternateName": "কৌপাতি",
-    "description": "Koupati is a lush tea estate and eco-nature tourist destination in Dalgaon-Sialmari, Udalguri/Darrang, Assam.",
+    "description": "Koupati is a scenic tea garden and eco-tourism destination in Dalgaon-Sialmari, Udalguri/Darrang, Assam, India.",
     "url": "https://koupati.netlify.app/",
     "address": {
       "@type": "PostalAddress",
@@ -194,14 +175,14 @@
 <body class="bg-white text-slate-800 font-sans selection:bg-stb-red selection:text-white antialiased">
 
   <!-- ======================================================== -->
-  <!-- 1. STB ADVISORY BANNER (stb-advisory-banner)              -->
+  <!-- 1. TRAVEL ADVISORY BANNER                                -->
   <!-- ======================================================== -->
-  <div class="bg-[#F8F9FA] border-b border-stb-border text-[#2E2E2E] py-2.5 px-4 text-xs font-medium">
+  <aside class="bg-[#F8F9FA] border-b border-stb-border text-[#2E2E2E] py-2.5 px-4 text-xs font-medium">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
       <div class="flex items-center gap-2">
         <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-stb-red text-white text-[10px] font-bold">!</span>
         <span>
-          <strong>Seasonal Travel Advisory:</strong> Peak tea harvest &amp; lush greenery active across Koupati (<span class="font-assamese text-stb-red font-bold">কৌপাতি</span>) (Oct – Apr). Daylight trail walks recommended between 6:00 AM – 5:30 PM.
+          <strong>Seasonal Travel Advisory:</strong> Peak tea garden plucking season is active across Koupati (<span class="font-assamese text-stb-red font-bold">কৌপাতি</span>) (Oct – Apr). Peaceful daylight walks recommended between 6:00 AM – 5:30 PM.
         </span>
       </div>
       <a href="#faq-section" class="text-stb-red font-bold hover:underline shrink-0 text-xs flex items-center gap-1">
@@ -209,17 +190,16 @@
         <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
       </a>
     </div>
-  </div>
+  </aside>
 
   <!-- ======================================================== -->
-  <!-- 2. MAIN NAVIGATION BAR (stb-main-navigation)             -->
+  <!-- 2. MAIN HEADER & NAVIGATION                              -->
   <!-- ======================================================== -->
-  <header class="sticky top-0 inset-x-0 z-50 bg-white border-b border-stb-border shadow-sm">
+  <header class="sticky top-0 inset-x-0 z-40 bg-white border-b border-stb-border shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand / Destination Logo -->
-        <!-- Destination Logo -->
         <a href="#" class="flex items-center gap-3.5 group">
           <div class="w-12 h-12 rounded-xl bg-stb-red flex items-center justify-center text-white shadow-md group-hover:bg-stb-darkred transition-colors">
             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -229,23 +209,23 @@
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight font-sans">Koupati</span>
+              <span class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">Koupati</span>
               <span class="font-assamese text-stb-red font-bold text-lg sm:text-xl">কৌপাতি</span>
             </div>
-            <p class="text-[11px] font-bold tracking-widest text-slate-500 uppercase font-sans">The Green Destination</p>
+            <p class="text-[11px] font-bold tracking-widest text-slate-500 uppercase">The Green Destination</p>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden xl:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-slate-700">
-          <a href="#overview" class="hover:text-stb-red transition-colors">Overview</a>
+          <a href="#about" class="hover:text-stb-red transition-colors">Overview</a>
           <a href="#highlights" class="hover:text-stb-red transition-colors">Highlights</a>
           <a href="#tours" class="hover:text-stb-red transition-colors">Things To Do</a>
           <a href="#map-section" class="hover:text-stb-red transition-colors flex items-center gap-1">
             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-stb-red"></i> Interactive Map
           </a>
-          <a href="#gallery" class="hover:text-stb-red transition-colors">Photo Gallery</a>
-          <a href="#faq-section" class="hover:text-stb-red transition-colors">Travel FAQ</a>
+          <a href="#gallery" class="hover:text-stb-red transition-colors">Photo Gallery (15)</a>
+          <a href="#faq-section" class="hover:text-stb-red transition-colors">Visitor FAQ</a>
         </nav>
 
         <!-- Social Channels & Plan Trip CTA -->
@@ -281,20 +261,20 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer Navigation -->
+    <!-- Mobile Drawer Menu -->
     <div id="mobileDrawer" class="hidden xl:hidden bg-white border-b border-stb-border px-6 py-6 space-y-4 shadow-xl">
       <div class="flex items-center justify-between pb-3 border-b border-slate-100">
         <span class="font-assamese text-stb-red font-bold text-lg">কৌপাতি • The Green Destination</span>
         <span class="text-xs font-mono text-slate-500">PIN 784113</span>
       </div>
-      <a href="#about" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">About Koupati</a>
+      <a href="#about" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Overview</a>
       <a href="#highlights" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Destination Highlights</a>
       <a href="#tours" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Things To Do</a>
       <a href="#map-section" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link flex items-center gap-1.5">
         <i data-lucide="map-pin" class="w-4 h-4 text-stb-red"></i> Interactive Map
       </a>
-      <a href="#gallery" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Photo Gallery (15 Images)</a>
-      <a href="#faq-section" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Travel FAQ</a>
+      <a href="#gallery" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Photo Gallery (15 Photos)</a>
+      <a href="#faq-section" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Visitor FAQ</a>
       <a href="#contact" class="block text-sm font-bold text-slate-800 hover:text-stb-red mobile-link">Contact &amp; Transit</a>
       
       <div class="pt-4 flex flex-col gap-2">
@@ -306,7 +286,7 @@
   </header>
 
   <!-- ======================================================== -->
-  <!-- 3. BREADCRUMBS                                           -->
+  <!-- 3. BREADCRUMBS NAVIGATION                                -->
   <!-- ======================================================== -->
   <nav class="bg-white border-b border-stb-border py-3 px-4 sm:px-6 lg:px-8 text-xs font-medium text-slate-500">
     <div class="max-w-7xl mx-auto flex items-center space-x-2">
@@ -321,40 +301,39 @@
   </nav>
 
   <!-- ======================================================== -->
-  <!-- 4. HERO MASTHEAD                                         -->
+  <!-- 4. HERO BANNER                                           -->
   <!-- ======================================================== -->
   <section id="about" class="relative min-h-[75vh] flex items-center justify-center text-white overflow-hidden bg-slate-900">
-    <!-- Hero Image: Heritage Canopy Avenue in Koupati with Auto-Crop -->
-    <div class="absolute inset-0 z-0 hero-crop-container">
-      <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM" 
+    <!-- Auto-Cropped Background Image -->
+    <div class="absolute inset-0 z-0 crop-container">
+      <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY" 
            alt="Koupati Tea Estate Canopy Avenue Assam" 
-           class="w-full h-full object-cover object-center filter brightness-90">
+           class="w-full h-full filter brightness-90">
       <div class="absolute inset-0 stb-masthead-overlay"></div>
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center sm:text-left">
-      
-      <!-- Category Badge & Rating -->
+      <!-- Badge & Rating -->
       <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-6">
-        <span class="px-3 py-1 rounded-full bg-stb-red text-white text-xs font-bold uppercase tracking-wider">
-          Assam Tourism &bull; Green Spaces
+        <span class="px-3.5 py-1 rounded-full bg-stb-red text-white text-xs font-bold uppercase tracking-wider">
+          Assam Eco-Tourism &bull; Green Spaces
         </span>
         <span class="px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-amber-300 border border-white/20 text-xs font-bold flex items-center gap-1.5">
           <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 3.9 &bull; Google Verified Listing (19+ Reviews)
         </span>
       </div>
 
-      <!-- Main Heading -->
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-sans">
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
         Green Spaces &amp; Nature Trails of Koupati (<span class="font-assamese text-amber-300">কৌপাতি</span>)
       </h1>
 
-      <!-- Subtitle Description -->
-      <p class="mt-4 text-base sm:text-xl text-slate-200 max-w-3xl leading-relaxed font-normal">
+      <!-- Slogan & Subtitle -->
+      <p class="mt-4 text-base sm:text-xl text-slate-200 max-w-3xl leading-relaxed">
         From lush emerald tea canopies to peaceful pebble riverbeds and traditional thatched treehouse machans, discover Assam's tranquil garden destination where <em>"Life begins after Tea."</em>
       </p>
 
-      <!-- Key Destination Indicators -->
+      <!-- Key Destination Fact Grid -->
       <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl">
         <div class="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15">
           <span class="text-[10px] font-mono uppercase tracking-wider text-slate-300 block">Altitude</span>
@@ -374,7 +353,7 @@
         </div>
       </div>
 
-      <!-- Action Row -->
+      <!-- Action Buttons -->
       <div class="mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-3">
         <a href="#highlights" class="px-6 py-3 rounded-full bg-stb-red hover:bg-stb-darkred text-white text-xs font-bold uppercase tracking-wider shadow-lg transition transform hover:-translate-y-0.5">
           Explore Highlights
@@ -384,87 +363,81 @@
           <span>Open Directions</span>
         </a>
       </div>
-
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- 9. LIGHTBOX MODAL WITH THUMBNAILS & SMART AUTO-CROP      -->
+  <!-- 5. DESTINATION HIGHLIGHTS (Dual-Image Composition)       -->
   <!-- ======================================================== -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex flex-col items-center justify-between p-4 sm:p-6 transition-all duration-300">
-    
-    <!-- Top Action Bar -->
-    <div class="w-full max-w-6xl flex items-center justify-between text-white pb-3 border-b border-white/10">
-      <div>
-        <h4 id="lightboxTitle" class="text-base sm:text-lg font-bold">Koupati Photo Showcase</h4>
-        <p id="lightboxCaption" class="text-xs text-slate-400">Image 1 of 15</p>
-      </div>
-      <div class="flex items-center gap-3">
-        <!-- Smart Screenshot Auto-Crop Toggle -->
-        <button id="cropToggleBtn" onclick="toggleLightboxCrop()" class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stb-red text-white hover:bg-stb-darkred flex items-center gap-1.5 transition border border-white/20 shadow-sm" title="Toggle Screenshot Auto-Crop">
-          <span>✂️ Crop: ON</span>
-        </button>
-        <button onclick="closeLightbox()" aria-label="Close Lightbox" class="w-10 h-10 rounded-full bg-white/10 hover:bg-stb-red flex items-center justify-center transition">
-          <i data-lucide="x" class="w-5 h-5 text-white"></i>
-        </button>
-      </div>
-    </div>
+  <section id="highlights" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-    <!-- Main Image Display & Prev/Next Arrows with Auto-Crop Viewport -->
-    <div class="relative w-full max-w-5xl flex-1 flex items-center justify-center my-4">
-      <button onclick="prevImage()" aria-label="Previous Image" class="absolute left-2 sm:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-stb-red text-white flex items-center justify-center transition z-20 shadow-lg">
-        <i data-lucide="chevron-left" class="w-6 h-6"></i>
-      </button>
-
-      <div id="lightboxViewport" class="lightbox-crop-viewport is-cropped">
-        <img id="lightboxImg" src="" alt="Koupati View" class="max-h-[65vh] max-w-full rounded-xl shadow-2xl transition-all duration-300">
-      </div>
-
-      <button onclick="nextImage()" aria-label="Next Image" class="absolute right-2 sm:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-stb-red text-white flex items-center justify-center transition z-20 shadow-lg">
-        <i data-lucide="chevron-right" class="w-6 h-6"></i>
-      </button>
-    </div>
-
-    <!-- Bottom Thumbnail Carousel -->
-        <!-- Brand Col -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-stb-red flex items-center justify-center text-white">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xl font-bold text-white tracking-tight">Koupati</span>
-              <span class="font-assamese text-stb-red font-bold text-lg ml-1">কৌপাতি</span>
-            </div>
-          </div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            "The Green Destination" — Preserving Assam's tea garden heritage, eco-tourism trails, and rural tranquility.
+      <!-- ITEM 1: THATCHED MACHAN WATCHTOWER -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Text Column -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-stb-red">Cultivate your sense of wonder at</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#2E2E2E] leading-tight">
+            Thatched Treehouse Machan Watchtower
+          </h2>
+          <div class="w-12 h-1 bg-stb-red rounded-full"></div>
+          
+          <p class="text-sm text-slate-600 leading-relaxed pt-2">
+            Standing tall above the manicured tea bush rows, this authentic bamboo-and-thatch machan offers unobstructed panoramic views across Koupati's vibrant emerald carpets. It is the premier local spot for morning meditation, sunset watching, and bird photography.
           </p>
-          <div class="text-[11px] font-mono text-slate-400">
-            Latitude: 26.5846° N &bull; Longitude: 92.2483° E
+
+          <!-- Badges -->
+          <div class="flex items-center gap-4 text-xs font-medium text-slate-500 pt-2">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="clock" class="w-4 h-4 text-stb-red"></i> 1–2 Hours
+            </span>
+            <span class="text-slate-300">|</span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-stb-red"></i> Central Garden Zone
+            </span>
+          </div>
+
+          <!-- Action -->
+          <div class="pt-4">
+            <button onclick="openLightbox(0)" class="inline-flex items-center gap-2 text-xs font-extrabold text-stb-red uppercase tracking-wider group hover:text-stb-darkred">
+              <span>View Machan Gallery</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Media Column: Dual Image Composite -->
+        <div class="lg:col-span-7 relative">
+          <!-- Main Big Image -->
+          <div class="w-full sm:w-11/12 ml-auto h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-200 crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP" 
+                 alt="Thatched Treehouse Machan Watchtower Koupati">
+          </div>
+          <!-- Overlapping Small Image -->
+          <div class="hidden sm:block absolute -bottom-8 left-4 w-52 h-44 rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OaSBPoSjMMHpNdXl1ZsdxfVCEldSK2D0BOHFahpE0pNozStGazJWhj3NPrU75iE_5gbVs3-FmybMVWATod2wtTHy1zkUJWNFXHXfWvS86P48__bV_87U9CvrbTgaolqqtS51nxAsp-m5Qzt" 
+                 alt="Machan Sunset Vista Koupati">
+            <div class="absolute bottom-2 inset-x-2 bg-black/75 backdrop-blur-sm text-white px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1.5 z-10">
+              <i data-lucide="map-pin" class="w-3 h-3 text-stb-red"></i> Machan Viewpoint
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- ITEM 2: HERITAGE CANOPY AVENUE (Alignment: Left) -->
+      <!-- ITEM 2: HERITAGE CANOPY AVENUE -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Media Column: Big + Small Composite -->
+        <!-- Media Column: Dual Image Composite -->
         <div class="lg:col-span-7 relative order-2 lg:order-1">
-          <!-- Large Image -->
-          <div class="w-full sm:w-11/12 mr-auto h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM" 
-                 alt="Heritage Canopy Avenue Koupati" 
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          <!-- Main Big Image -->
+          <div class="w-full sm:w-11/12 mr-auto h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-200 crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY" 
+                 alt="Heritage Canopy Avenue Koupati">
           </div>
-          <!-- Small Overlapping Image with Pin Badge -->
-          <div class="hidden sm:block absolute -bottom-8 right-4 w-52 h-44 rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" 
-                 alt="Tea Garden Mist" 
-                 class="w-full h-full object-cover">
-            <div class="absolute bottom-2 inset-x-2 bg-black/75 backdrop-blur-sm text-white px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1.5">
+          <!-- Overlapping Small Image -->
+          <div class="hidden sm:block absolute -bottom-8 right-4 w-52 h-44 rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8ObWSKqKj_DL5ITl0ev4fdcs7Y8HsWYf2WPv_L7yVZbthMtUCjGrzQXDqpiQjNkXdwdiscM5-cM5AOpKKqwgRjujiCwH3V2HIipYNOKzU-b7VUsIB56HLNIuLYoh0Uopp_XfOd3H1_aixykJ" 
+                 alt="Canopy Tree Avenue Koupati">
+            <div class="absolute bottom-2 inset-x-2 bg-black/75 backdrop-blur-sm text-white px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1.5 z-10">
               <i data-lucide="map-pin" class="w-3 h-3 text-stb-red"></i> Dalgaon-Kopati Corridor
             </div>
           </div>
@@ -473,16 +446,16 @@
         <!-- Text Column -->
         <div class="lg:col-span-5 space-y-4 order-1 lg:order-2">
           <span class="text-xs font-bold uppercase tracking-widest text-stb-red">Take a walk on the green side at</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#2E2E2E] leading-tight font-sans">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#2E2E2E] leading-tight">
             Heritage Canopy Avenue &amp; Forest Walk
           </h2>
           <div class="w-12 h-1 bg-stb-red rounded-full"></div>
           
           <p class="text-sm text-slate-600 leading-relaxed pt-2">
-            Venture out beneath towering rain trees and ancient shade canopies that arch directly over the heritage route. Listen to native bird calls and experience the cool morning micro-climate unique to Koupati's tea estates.
+            Venture beneath towering shade trees that form a continuous green vault over the plantation roads. Breathe in the cool micro-climate, listen to native songbirds, and experience rural tranquility untouched by urban noise.
           </p>
 
-          <!-- Visit Details Badges -->
+          <!-- Badges -->
           <div class="flex items-center gap-4 text-xs font-medium text-slate-500 pt-2">
             <span class="flex items-center gap-1.5">
               <i data-lucide="clock" class="w-4 h-4 text-stb-red"></i> 1–2 Hours
@@ -493,12 +466,12 @@
             </span>
           </div>
 
-          <!-- Text CTA -->
+          <!-- Action -->
           <div class="pt-4">
-            <a href="#gallery" onclick="openLightbox(1)" class="inline-flex items-center gap-2 text-xs font-extrabold text-stb-red uppercase tracking-wider group hover:text-stb-darkred">
+            <button onclick="openLightbox(1)" class="inline-flex items-center gap-2 text-xs font-extrabold text-stb-red uppercase tracking-wider group hover:text-stb-darkred">
               <span>See The Canopy Trail</span>
               <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -507,18 +480,18 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 6. OUTDOOR ACTIVITIES & NATURE TOURS (stb-title-with-slider) -->
+  <!-- 6. OUTDOOR ACTIVITIES & TOURS                            -->
   <!-- ======================================================== -->
   <section id="tours" class="py-20 bg-stb-graybg border-y border-stb-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header with STB Red Underline -->
+      <!-- Section Header -->
       <div class="max-w-3xl mb-12">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-sans stb-red-underline">
-          Nature Tours and Outdoor Activities in Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>)
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight stb-red-underline">
+          Nature Tours &amp; Outdoor Activities in Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>)
         </h2>
         <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          Reconnect with pristine countryside nature and explore Koupati's tea gardens, pebble riverbeds, and biodiversity reserves with these recommended self-guided and local experiences.
+          Reconnect with nature and explore Koupati's tea gardens, pebble riverbeds, and biodiversity reserves with these recommended activities.
         </p>
       </div>
 
@@ -526,12 +499,11 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Card 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
-          <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=80" 
-                 alt="Morning Tea Plucking Trail" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
+          <div class="h-48 overflow-hidden relative crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM" 
+                 alt="Morning Tea Plucking Trail">
+            <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">
               Morning Experience
             </span>
           </div>
@@ -541,27 +513,26 @@
                 Morning Tea Plucking &amp; Aroma Walk
               </h3>
               <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Walk through the rows at 7:00 AM as morning mist rises over the Camellia sinensis bushes and witness traditional tea plucking methods practiced for generations.
+                Walk through the garden rows at 7:00 AM as morning mist rises over the Camellia sinensis bushes and witness traditional tea plucking methods practiced for generations.
               </p>
             </div>
             <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
               <span class="text-slate-500 font-medium flex items-center gap-1">
                 <i data-lucide="clock" class="w-3.5 h-3.5 text-stb-red"></i> 2 Hours
               </span>
-              <span class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
+              <button onclick="openLightbox(2)" class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
                 Trail Guide <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </span>
+              </button>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Card 2 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
-          <div class="h-48 overflow-hidden relative">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
+          <div class="h-48 overflow-hidden relative crop-container">
             <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP" 
-                 alt="Machan Birdwatching & Sunset" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 bg-stb-red text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                 alt="Machan Birdwatching & Sunset">
+            <span class="absolute top-3 left-3 bg-stb-red text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">
               Signature Spot
             </span>
           </div>
@@ -571,49 +542,48 @@
                 Machan Watchtower Birdwatching
               </h3>
               <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Ascend the thatched machan to spot hornbills, drongos, and migratory songbirds nesting across the shade canopy trees during dawn and golden hour.
+                Ascend the thatched machan to spot drongos, hornbills, and migratory songbirds nesting across the shade canopy trees during dawn and the golden hour.
               </p>
             </div>
             <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
               <span class="text-slate-500 font-medium flex items-center gap-1">
                 <i data-lucide="clock" class="w-3.5 h-3.5 text-stb-red"></i> Dawn / Dusk
               </span>
-              <span class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
+              <button onclick="openLightbox(0)" class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
                 View Photos <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </span>
+              </button>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Card 3 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
-          <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=700&q=80" 
-                 alt="Orang National Park Excursion" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-              25 km Excursion
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col group">
+          <div class="h-48 overflow-hidden relative crop-container">
+            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYe-5Cy2NDdOwqqKybjxfa2BFGhOZe4z03fJamGvvsZpaEjywtebZhZvdPRbFiA5ZzfhdSy1PyBoaC8Ggx8_bJVaJ0fwdXkF0qNG8dvsjhzl2SEnUlPKTOXGRgepKjWUifxPoBgaoy9yIJE" 
+                 alt="Sunset Riverbank Trail">
+            <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider z-10">
+              River Horizon
             </span>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
               <h3 class="text-lg font-bold text-slate-900 group-hover:text-stb-red transition-colors">
-                Orang National Park Wildlife Link
+                Dhansiri Riverbed Sunset Walks
               </h3>
               <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Just 25 km south of Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>), Orang National Park offers world-famous safari drives to observe Great Indian One-horned Rhinos and royal Bengal tigers.
+                Follow gentle pebble trails south toward the Dhansiri river basin, where wide open skies and calm shallow waters reflect dramatic evening sunsets.
               </p>
             </div>
             <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
               <span class="text-slate-500 font-medium flex items-center gap-1">
-                <i data-lucide="compass" class="w-3.5 h-3.5 text-stb-red"></i> Day Safari
+                <i data-lucide="compass" class="w-3.5 h-3.5 text-stb-red"></i> Evening Trail
               </span>
-              <span class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
+              <button onclick="openLightbox(3)" class="font-bold text-stb-red group-hover:underline flex items-center gap-1">
                 Route Details <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </span>
+              </button>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
 
@@ -621,7 +591,7 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 7. INTERACTIVE LEAFLET MAP SECTION                      -->
+  <!-- 7. INTERACTIVE MAP SECTION (Leaflet.js)                  -->
   <!-- ======================================================== -->
   <section id="map-section" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -629,15 +599,15 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-stb-red">Interactive Waypoint Map</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline font-sans">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline">
             Navigating Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>) &amp; Surrounds
           </h2>
           <p class="mt-4 text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
-            Situated at 102m altitude in Dalgaon-Sialmari, Udalguri/Darrang district, Koupati is directly accessible via the Dalgaon transit artery.
+            Situated at 102m elevation in Dalgaon-Sialmari, Udalguri/Darrang district, Koupati is directly accessible via the Dalgaon transit artery.
           </p>
         </div>
 
-        <!-- Quick Map Coordinate Action -->
+        <!-- Google Maps Link Button -->
         <a href="https://maps.app.goo.gl/Jy5ZYGcH25v5xiEy8" target="_blank" rel="noopener noreferrer" 
            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 hover:bg-black text-white text-xs font-bold transition shrink-0 shadow-md">
           <i data-lucide="external-link" class="w-4 h-4 text-stb-red"></i>
@@ -645,10 +615,10 @@
         </a>
       </div>
 
-      <!-- Map & Interactive Waypoints Sidebar -->
+      <!-- Map & Sidebar -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        <!-- Interactive Waypoint Selection List -->
+        <!-- Waypoint Selection List -->
         <div class="lg:col-span-4 bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
           <div>
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-1.5">
@@ -677,20 +647,20 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 8. COMPLETE 15-PHOTO AUTHENTIC GALLERY                   -->
+  <!-- 8. 15-PHOTO AUTHENTIC VISUAL ARCHIVE                     -->
   <!-- ======================================================== -->
   <section id="gallery" class="py-20 bg-stb-graybg border-t border-stb-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Heading & Filter Tabs -->
+      <!-- Section Header & Filter Tabs -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-stb-red">Authentic Visual Archive</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline font-sans">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline">
             Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>) in Photographs
           </h2>
           <p class="mt-4 text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
-            A verified 15-photo visual collection showcasing Koupati's signature thatched treehouse machan, morning canopy trails, sun-drenched plantation vistas, and peaceful river horizons.
+            All 15 authentic user photographs showcasing Koupati's signature thatched machan, morning canopy trails, sunlit plantation vistas, and peaceful river horizons.
           </p>
         </div>
 
@@ -712,46 +682,54 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 9. LIGHTBOX MODAL WITH THUMBNAIL PREVIEW STRIP           -->
+  <!-- 9. LIGHTBOX MODAL WITH THUMBNAILS & CROP TOGGLE          -->
   <!-- ======================================================== -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex flex-col justify-between p-4 sm:p-6 transition-opacity duration-300">
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex flex-col justify-between p-4 sm:p-6 transition-all duration-300">
     
-    <!-- Top Bar: Counter & Close -->
-    <div class="flex items-center justify-between text-white z-20">
+    <!-- Top Bar: Counter & Controls -->
+    <div class="w-full max-w-6xl mx-auto flex items-center justify-between text-white pb-3 border-b border-white/10 z-20">
       <div class="flex items-center gap-3">
         <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs font-mono font-bold" id="lightboxCounter">1/15</span>
         <span class="text-sm font-semibold text-slate-300 hidden sm:inline" id="lightboxCategory">Machan Watchtower</span>
       </div>
-      <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" aria-label="Close modal">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
+      
+      <div class="flex items-center gap-3">
+        <!-- Crop Toggle Button -->
+        <button id="cropToggleBtn" onclick="toggleLightboxCrop()" class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stb-red text-white hover:bg-stb-darkred flex items-center gap-1.5 transition border border-white/20 shadow-sm" title="Toggle Screenshot Auto-Crop">
+          <span>✂️ Crop: ON</span>
+        </button>
+        
+        <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-stb-red text-white flex items-center justify-center transition" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Center Stage: Main Preview Image with Navigation Arrows -->
-    <div class="relative flex-1 flex items-center justify-center py-4 px-2">
-      <!-- Previous Button -->
-      <button onclick="changeLightboxImage(-1)" class="absolute left-2 sm:left-4 z-20 w-11 h-11 rounded-full bg-white/10 hover:bg-stb-red text-white flex items-center justify-center backdrop-blur-sm transition" aria-label="Previous photo">
+    <div class="relative w-full max-w-5xl mx-auto flex-1 flex items-center justify-center my-4">
+      <button onclick="changeLightboxImage(-1)" class="absolute left-2 sm:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-stb-red text-white flex items-center justify-center transition z-20 shadow-lg" aria-label="Previous photo">
         <i data-lucide="chevron-left" class="w-6 h-6"></i>
       </button>
 
-      <!-- Active Display Image -->
-      <div class="max-w-4xl max-h-[62vh] w-full h-full flex flex-col items-center justify-center">
-        <img id="lightboxImg" src="" alt="Gallery Preview" class="max-w-full max-h-[58vh] object-contain rounded-xl shadow-2xl transition-all duration-300 border border-white/10">
-        <div class="mt-3 text-center">
-          <h4 id="lightboxTitle" class="text-base font-bold text-white font-sans"></h4>
-          <p id="lightboxDesc" class="text-xs text-slate-400 max-w-xl mx-auto mt-0.5 line-clamp-1"></p>
-        </div>
+      <!-- Frame with Auto-Crop Viewport -->
+      <div id="lightboxFrame" class="lightbox-frame is-cropped shadow-2xl">
+        <img id="lightboxImg" src="" alt="Gallery Preview" class="transition-all duration-300">
       </div>
 
-      <!-- Next Button -->
-      <button onclick="changeLightboxImage(1)" class="absolute right-2 sm:right-4 z-20 w-11 h-11 rounded-full bg-white/10 hover:bg-stb-red text-white flex items-center justify-center backdrop-blur-sm transition" aria-label="Next photo">
+      <button onclick="changeLightboxImage(1)" class="absolute right-2 sm:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-stb-red text-white flex items-center justify-center transition z-20 shadow-lg" aria-label="Next photo">
         <i data-lucide="chevron-right" class="w-6 h-6"></i>
       </button>
     </div>
 
-    <!-- Bottom Thumbnail Strip -->
-    <div class="overflow-x-auto py-2 z-20">
-      <div class="flex items-center gap-2 max-w-4xl mx-auto px-4" id="lightboxThumbnails">
+    <!-- Captions -->
+    <div class="text-center z-20 mb-2">
+      <h4 id="lightboxTitle" class="text-base font-bold text-white"></h4>
+      <p id="lightboxDesc" class="text-xs text-slate-400 max-w-xl mx-auto mt-0.5 line-clamp-1"></p>
+    </div>
+
+    <!-- Bottom Thumbnail Carousel -->
+    <div class="overflow-x-auto py-2 z-20 max-w-4xl mx-auto w-full">
+      <div class="flex items-center gap-2 px-4 justify-start sm:justify-center" id="lightboxThumbnails">
         <!-- Rendered by JavaScript -->
       </div>
     </div>
@@ -759,7 +737,7 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- 10. FAQ ACCORDION SECTION (stb-faq)                      -->
+  <!-- 10. FAQ ACCORDION SECTION                                -->
   <!-- ======================================================== -->
   <section id="faq-section" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -767,7 +745,7 @@
       <!-- Section Header -->
       <div class="text-center mb-12">
         <span class="text-xs font-bold uppercase tracking-widest text-stb-red">Essential Travel Information</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline font-sans">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#2E2E2E] tracking-tight mt-1 stb-red-underline">
           Frequently Asked Questions
         </h2>
         <p class="mt-4 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
@@ -836,7 +814,7 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 11. INQUIRY / CONTACT SECTION (No Phone Privacy Rule)    -->
+  <!-- 11. INQUIRY / CONTACT (Privacy: No Phone Numbers)        -->
   <!-- ======================================================== -->
   <section id="contact" class="py-16 bg-slate-900 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -845,11 +823,11 @@
         <i data-lucide="mail" class="w-6 h-6 text-stb-red"></i>
       </div>
 
-      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight font-sans">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
         Planning a Visit to Koupati (<span class="font-assamese text-stb-red">কৌপাতি</span>)?
       </h2>
       <p class="mt-2 text-xs sm:text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
-        For group photography permits, nature walk inquiries, or local transit directions, please contact our community desk via email or direct message our verified social pages.
+        For nature walk permits, photography guidelines, or local transit information, please connect via email or message our official social pages.
       </p>
 
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -869,7 +847,7 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 12. MULTI-COLUMN TOURISM FOOTER (stb-footer-container)   -->
+  <!-- 12. MULTI-COLUMN TOURISM FOOTER                          -->
   <!-- ======================================================== -->
   <footer class="bg-[#181818] text-slate-400 text-xs border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -905,11 +883,11 @@
           </ul>
         </div>
 
-        <!-- Column 3: Visitor Inquiries & Policies -->
+        <!-- Column 3: Visitor Info & Privacy Notice -->
         <div>
           <h4 class="text-white font-bold uppercase text-[11px] tracking-wider mb-3">Visitor Info</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#overview" class="hover:text-white transition">Elevation (102m Above Sea)</a></li>
+            <li><a href="#about" class="hover:text-white transition">Elevation (102m Above Sea)</a></li>
             <li><a href="#faq-section" class="hover:text-white transition">Visiting Hours &amp; Guidelines</a></li>
             <li><a href="mailto:koupati@yahoo.com" class="hover:text-white transition">koupati@yahoo.com</a></li>
             <li><span class="text-slate-500">Direct phone numbers unlisted for visitor privacy</span></li>
@@ -948,153 +926,133 @@
         </div>
         <div class="flex items-center gap-4">
           <span>Official Portal: <strong>koupati.netlify.app</strong></span>
-      <!-- Copyright & Last Updated -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>Copyright &copy; 2026 Koupati Tourism Board. All rights reserved.</p>
-        <p>Last Updated: 30 October 2026 &bull; Koupati (কৌপাতি), Udalguri / Darrang, Assam 784113</p>
+          <span>Last Updated: 30 October 2026</span>
+        </div>
       </div>
 
     </div>
   </footer>
 
   <!-- ======================================================== -->
-  <!-- JAVASCRIPT: Gallery Data, Lightbox, FAQs & Map Setup     -->
+  <!-- JAVASCRIPT: Data, Leaflet Map, Lightbox & Auto-Crop      -->
   <!-- ======================================================== -->
   <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-    });
-
-    // Mobile Navigation Drawer Toggle
-    const mobileBtn = document.getElementById("mobileMenuToggle");
-    const mobileDrawer = document.getElementById("mobileDrawer");
-    const mobileLinks = document.querySelectorAll(".mobile-link");
-
-    mobileBtn.addEventListener("click", () => {
-      mobileDrawer.classList.toggle("hidden");
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileDrawer.classList.add("hidden");
-      });
-    });
-
-    // 15 AUTHENTIC GALLERY PHOTOS LOADED VIA CDN
+    // 15 AUTHENTIC USER PHOTOGRAPHS (GOOGLE CLOUD CDN)
     const galleryData = [
       {
         id: 0,
         title: "Thatched Treehouse Machan Watchtower",
         category: "machan",
-        desc: "Signature bamboo-and-thatch machan offering 360-degree vistas across lush tea bushes in Koupati (কৌপাতি).",
+        desc: "Signature bamboo-and-thatch elevated machan offering 360-degree vistas across lush tea bushes in Koupati (কৌপাতি).",
         url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP"
       },
       {
         id: 1,
-        title: "Heritage Canopy Avenue (Dalgaon-Kopati Corridor)",
+        title: "Heritage Canopy Avenue",
         category: "canopy",
-        desc: "Ancient shaded tree archway welcoming travellers into Koupati's tranquil estates.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM"
+        desc: "Ancient shaded tree archway welcoming travellers along the Dalgaon-Kopati corridor.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY"
       },
       {
         id: 2,
-        title: "Emerald Plantation Rows at Dawn",
+        title: "Lush Tea Rows at Dawn",
         category: "tea",
         desc: "Endless geometric tea shrubs glistening under early morning Assam dew.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaSBPoSjMMHpNdXl1ZsdxfVCEldSK2D0BOHFahpE0pNozStGazJWhj3NPrU75iE_5gbVs3-FmybMVWATod2wtTHy1zkUJWNFXHXfWvS86P48__bV_87U9CvrbTgaolqqtS51nxAsp-m5Qzt"
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM"
       },
       {
         id: 3,
-        title: "Sunset Over Tea Shrub Horizon",
+        title: "Sunset Riverbank Horizon",
         category: "tea",
-        desc: "Warm golden rays filtering through the shade trees onto the manicured tea bush slopes.",
-        url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80"
+        desc: "Warm golden rays filtering through the riverbank horizon near Kopati.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYe-5Cy2NDdOwqqKybjxfa2BFGhOZe4z03fJamGvvsZpaEjywtebZhZvdPRbFiA5ZzfhdSy1PyBoaC8Ggx8_bJVaJ0fwdXkF0qNG8dvsjhzl2SEnUlPKTOXGRgepKjWUifxPoBgaoy9yIJE"
       },
       {
         id: 4,
-        title: "Machan Platform Perspective",
+        title: "Machan Sunset Vista",
         category: "machan",
-        desc: "Rustic handcrafted wooden steps ascending toward the breezy thatched viewpoint canopy.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP"
-      },
-      {
-        id: 5,
-        title: "Canopy Shaded Countryside Highway",
-        category: "canopy",
-        desc: "Paved cycling and driving avenue enveloped by lush greenery near Kopati hub.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM"
-      },
-      {
-        id: 6,
-        title: "Early Morning Plucking Trail",
-        category: "tea",
-        desc: "Local workers expertly selecting 'two leaves and a bud' during the harvest flush.",
-        url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: 7,
-        title: "Thatched Shelter Amidst the Green Fields",
-        category: "machan",
-        desc: "Peaceful rest stop built with eco-friendly bamboo materials indigenous to Assam.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP"
-      },
-      {
-        id: 8,
-        title: "Orang Sanctuary Southern Boundary",
-        category: "canopy",
-        desc: "Rich grassland and forest boundary located just 25km south of Koupati.",
-        url: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: 9,
-        title: "Verdant Tea Garden Pathway",
-        category: "tea",
-        desc: "Tranquil walking path lined by natural drainage channels and neat tea shrub borders.",
+        desc: "Rustic handcrafted viewpoint looking over the evening golden glow.",
         url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaSBPoSjMMHpNdXl1ZsdxfVCEldSK2D0BOHFahpE0pNozStGazJWhj3NPrU75iE_5gbVs3-FmybMVWATod2wtTHy1zkUJWNFXHXfWvS86P48__bV_87U9CvrbTgaolqqtS51nxAsp-m5Qzt"
       },
       {
+        id: 5,
+        title: "Heritage Plantation Road",
+        category: "canopy",
+        desc: "Paved cycling and walking road enveloped by shade trees near Kopati.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OY8baVk400iwad6_SMZUJ5k5jgYj7vlO274WInt-8FBUXiMisZo2hheF7ZDwZ6xAF80tCvoXURhx08eABXMN9X-Az0oTmXIIMCOAUKiSD9qrKhSbygQwJQkg9sG0cDLOY0BcwTK2QSvmZY"
+      },
+      {
+        id: 6,
+        title: "Tea Garden Trail Path",
+        category: "tea",
+        desc: "Neat pedestrian pathway alongside thriving green tea shrubs.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8Ob10TDU0TwRNJH5rgHOYutBRIgVLkRbMJiv7zEXOmVDf0orzAdqKthDh9L6BsqAo12q8Y45ZYumvQQL0j02bzEy-R-RpHZ904P9ZRdx6QbwsrMPAmYp4xnnG3D2DGt0iYW9Gw-5rUPNODJb"
+      },
+      {
+        id: 7,
+        title: "Canopy Tree Avenue",
+        category: "canopy",
+        desc: "Towering canopy trees that create natural temperature cooling over tea bushes.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8ObWSKqKj_DL5ITl0ev4fdcs7Y8HsWYf2WPv_L7yVZbthMtUCjGrzQXDqpiQjNkXdwdiscM5-cM5AOpKKqwgRjujiCwH3V2HIipYNOKzU-b7VUsIB56HLNIuLYoh0Uopp_XfOd3H1_aixykJ"
+      },
+      {
+        id: 8,
+        title: "Shaded Estate Lane",
+        category: "canopy",
+        desc: "Tranquil country lane bordered by tea bushes and high rain tree branches.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZn-wRA7OkoF_v4mEabrHUUo-TfDPDdczXMQDpUuPI1eGEZBT04-qKHlSG0jw5zx3BEsSMFsLVkQ-TH0Wp7vCeCS9Jv9saDgDNwJxHdj2f58rOyoxGZTC8xjjA3U_1NWd9Fl9xelOTbBIM0"
+      },
+      {
+        id: 9,
+        title: "Rural Kopati Horizon",
+        category: "tea",
+        desc: "Unspoiled open countryside view demonstrating Koupati's clean air and calm vibe.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYqx49jPIy8UUmgkdHD4RLCTXJfWWlmeTYomj6S-JQlHS0rA1unTzZAXIQ47nu0qu0utKpkMXR3nvrEi3OalggYoyCYRx2o2p_hc7TA5_1Tt8QF_ccJ2GTXwX35cebuHFe5CMa5gL04O95H"
+      },
+      {
         id: 10,
-        title: "Panoramic Machan Overlook",
+        title: "Bamboo Thicket & Machan Approach",
         category: "machan",
-        desc: "Capturing the breath of fresh air and stillness at 102 meters elevation.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP"
+        desc: "Natural bamboo groves indigenous to Assam flanking the entrance to the machan.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8Obp2qNSqtaTVk4qNx4d4KAPoO3TVghtVwPDxf1lQkLjfMsibEvkhoH8CL0yfDTnHUp15ZebgnfAXVf0-A9CMZQZyyjyQMxc061RHUmlkAX8JWysB5ePoGy9OXp0kFvfac53OlKRfS0Oq421"
       },
       {
         id: 11,
-        title: "Rain Tree Shade Canopy",
-        category: "canopy",
-        desc: "Centennial shade trees providing a protected ecosystem for the high-grade Assam tea.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM"
+        title: "Evening Tea Trails",
+        category: "tea",
+        desc: "Gentle evening breeze rustling through rows of Camellia sinensis.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZ-AW1CKBdRhpyowTsWCAa7oc88s5aY3E8RKU6ZvpwxvUNW_UcTCtLZ_Sp0NS2B1vD0WUeGcQv-rJEHR5G6VTnlK0La29S6AZrvxxWD7VhX98aAuUO_CreVGaPqqbpBZWPri4fNzMX1mGAF"
       },
       {
         id: 12,
-        title: "Dhansiri Riverbed Serenity",
+        title: "Golden Hour Estate Vista",
+        category: "tea",
+        desc: "Luminous amber hues cast across the expansive green plantation contours.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYqwum1pf8nkLeAEFFnaJV0vsMp-ASSqW2Y4FWhyBi9V9vf7R1-aUIBlwOugonCYlf_52-IOdwrwwrSmZWnIGwI6QZQ-43CtUIW1Q6Ow9rU5P6SOPrS0ahR4dSgYYLHLll2uPyYHTcJSDUJ"
+      },
+      {
+        id: 13,
+        title: "Green Carpet Vista",
+        category: "tea",
+        desc: "Continuous sea of tea bushes demonstrating why Koupati is 'The Green Destination'.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYHHl20CunO0gTgFg0LngEG6AKbjCjzgRfq_On9_exGQK-7sDe8UZxLsxjdyjYr3LqdNpGcuj5SLOP7CpK7DqbomnLn_PcqYRErA2Om7utUj9y-_kvCE6SFjWrdbHketR0_PesY4CYJIoAQ"
+      },
+      {
+        id: 14,
+        title: "Emerald Canopy Stretch",
         category: "canopy",
-        desc: "Pebble river shores offering calm waters and expansive twilight sky reflection.",
-        url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
-    let currentLightboxIndex = 0;
-    let activeFilter = 'all';
+        desc: "Stretching along the quiet tea trail roads lined by deep green leaf crowns.",
+        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZ4jXTS1gr-QlQiGm7QxRbnXGxpyzZWxqF6VPSrSnv1U5sikm88fNE9ujjPf-CVlNKEfTCCGE2Oi5t-H-FblWPvzTEYI8lW6PNSO5saTMBShXltz9Vs7Jh7sIfZab7gO2e4iKx6nvJtnE2e"
+      }
+    ];
+
+    let currentPhotoIndex = 0;
     let isLightboxCropped = true;
 
-    // Toggle Lightbox Screenshot Auto-Crop
-    function toggleLightboxCrop() {
-      isLightboxCropped = !isLightboxCropped;
-      const viewport = document.getElementById('lightboxViewport');
-      const btn = document.getElementById('cropToggleBtn');
-      if (isLightboxCropped) {
-        viewport.classList.add('is-cropped');
-        btn.innerHTML = '<span>✂️ Crop: ON</span>';
-        btn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stb-red text-white hover:bg-stb-darkred flex items-center gap-1.5 transition border border-white/20 shadow-sm";
-      } else {
-        viewport.classList.remove('is-cropped');
-        btn.innerHTML = '<span>Original / Full</span>';
-        btn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-slate-200 hover:bg-white/30 flex items-center gap-1.5 transition border border-white/20 shadow-sm";
-      }
-    }
-
-    // Render Gallery Cards
+    // Render Gallery
     function renderGallery(items) {
       const container = document.getElementById("galleryContainer");
+      if (!container) return;
       container.innerHTML = "";
 
       items.forEach(photo => {
@@ -1103,16 +1061,14 @@
         card.onclick = () => openLightbox(photo.id);
 
         card.innerHTML = `
-          <div class="h-60 overflow-hidden relative bg-slate-100">
-            <img src="${photo.url}" alt="${photo.title}" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80'">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <div class="h-60 overflow-hidden relative bg-slate-100 crop-container">
+            <img src="${photo.url}" alt="${photo.title}">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 z-10">
               <span class="inline-flex items-center gap-1.5 text-white text-xs font-bold uppercase tracking-wider bg-stb-red px-3 py-1 rounded-full shadow">
                 <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Expand View
               </span>
             </div>
-            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider z-10">
               ${photo.category}
             </span>
           </div>
@@ -1122,7 +1078,7 @@
               <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">${photo.desc}</p>
             </div>
             <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-              <span class="font-mono">Koupati (কৌপাতি) Archive</span>
+              <span class="font-mono">Koupati (কৌপাতি)</span>
               <span class="text-stb-red font-bold">#${photo.id + 1}</span>
             </div>
           </div>
@@ -1130,12 +1086,13 @@
         container.appendChild(card);
       });
 
-      lucide.createIcons();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     }
 
     // Filter Gallery
     function filterGallery(category) {
-      activeFilter = category;
       const buttons = document.querySelectorAll(".gallery-filter-btn");
       buttons.forEach(btn => {
         if (btn.getAttribute("data-filter") === category) {
@@ -1153,7 +1110,7 @@
       }
     }
 
-    // Lightbox Modal Controls
+    // Lightbox Controls
     const lightboxModal = document.getElementById("lightboxModal");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxTitle = document.getElementById("lightboxTitle");
@@ -1161,6 +1118,8 @@
     const lightboxCounter = document.getElementById("lightboxCounter");
     const lightboxCategory = document.getElementById("lightboxCategory");
     const lightboxThumbnails = document.getElementById("lightboxThumbnails");
+    const lightboxFrame = document.getElementById("lightboxFrame");
+    const cropToggleBtn = document.getElementById("cropToggleBtn");
 
     function openLightbox(index) {
       currentPhotoIndex = index;
@@ -1168,12 +1127,25 @@
       renderLightboxThumbnails();
       lightboxModal.classList.remove("hidden");
       document.body.style.overflow = "hidden";
-      lucide.createIcons();
+      if (window.lucide) lucide.createIcons();
     }
 
     function closeLightbox() {
       lightboxModal.classList.add("hidden");
       document.body.style.overflow = "auto";
+    }
+
+    function toggleLightboxCrop() {
+      isLightboxCropped = !isLightboxCropped;
+      if (isLightboxCropped) {
+        lightboxFrame.classList.add("is-cropped");
+        cropToggleBtn.innerHTML = '<span>✂️ Crop: ON</span>';
+        cropToggleBtn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stb-red text-white hover:bg-stb-darkred flex items-center gap-1.5 transition border border-white/20 shadow-sm";
+      } else {
+        lightboxFrame.classList.remove("is-cropped");
+        cropToggleBtn.innerHTML = '<span>🔍 Full View: OFF</span>';
+        cropToggleBtn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-slate-200 hover:bg-white/30 flex items-center gap-1.5 transition border border-white/20 shadow-sm";
+      }
     }
 
     function changeLightboxImage(direction) {
@@ -1209,15 +1181,16 @@
       });
     }
 
-    // Keyboard support for Lightbox
+    // Keyboard support
     document.addEventListener("keydown", (e) => {
-      if (lightboxModal.classList.contains("hidden")) return;
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowLeft") changeLightboxImage(-1);
-      if (e.key === "ArrowRight") changeLightboxImage(1);
+      if (lightboxModal && !lightboxModal.classList.contains("hidden")) {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") changeLightboxImage(-1);
+        if (e.key === "ArrowRight") changeLightboxImage(1);
+      }
     });
 
-    // FAQ Accordion Toggle
+    // FAQ Accordion
     const faqButtons = document.querySelectorAll(".faq-question");
     faqButtons.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -1225,7 +1198,6 @@
         const icon = btn.querySelector(".faq-icon");
         const isOpen = answer.style.maxHeight && answer.style.maxHeight !== "0px";
 
-        // Close all answers
         document.querySelectorAll(".faq-answer").forEach(el => el.style.maxHeight = "0px");
         document.querySelectorAll(".faq-icon").forEach(el => el.style.transform = "rotate(0deg)");
 
@@ -1236,67 +1208,81 @@
       });
     });
 
-    // LEAFLET INTERACTIVE MAP CONFIGURATION
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById("mobileMenuToggle");
+    const mobileDrawer = document.getElementById("mobileDrawer");
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener("click", () => {
+        mobileDrawer.classList.toggle("hidden");
+      });
+      document.querySelectorAll(".mobile-link").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileDrawer.classList.add("hidden");
+        });
+      });
+    }
+
+    // Leaflet Interactive Map
     const waypoints = [
       {
         id: 0,
         name: "Koupati (কৌপাতি) Tea Estate Center",
-        desc: "Historic central garden, elevation 102m, green trails hub.",
+        desc: "Centennial green tea garden hub, elevation 102m.",
         coords: [26.5846, 92.2483],
         type: "primary"
       },
       {
         id: 1,
         name: "Thatched Treehouse Machan Watchtower",
-        desc: "Elevated viewpoint platform amidst emerald tea shrubs.",
+        desc: "Elevated bamboo viewpoint looking over emerald tea bushes.",
         coords: [26.5880, 92.2510],
-        type: "spot"
+        type: "machan"
       },
       {
         id: 2,
         name: "Heritage Canopy Avenue",
-        desc: "Arch of century-old shade trees on Dalgaon-Kopati Road.",
+        desc: "Arched century-old rain tree shade canopy over the garden lane.",
         coords: [26.5795, 92.2450],
         type: "canopy"
       },
       {
         id: 3,
         name: "Kopati Bazaar & Transit Stand (PIN 784113)",
-        desc: "Local village market, regional taxi connections, and provisions.",
+        desc: "Local village marketplace, taxi stand, and regional provisions.",
         coords: [26.5820, 92.2420],
-        type: "village"
+        type: "bazaar"
       },
       {
         id: 4,
-        name: "Dalgaon Commercial Transit Hub (9 km)",
-        desc: "Major junction along NH-15 connecting Guwahati and Tezpur.",
+        name: "Dalgaon Commercial Hub (9 km)",
+        desc: "Main transit intersection on NH-15 connecting Guwahati & Tezpur.",
         coords: [26.5350, 92.2380],
         type: "hub"
       },
       {
         id: 5,
         name: "Orang National Park Gateway (25 km)",
-        desc: "Home to Great Indian One-horned Rhinos and royal Bengal tigers.",
+        desc: "Sanctuary for Great Indian One-horned Rhinos and royal Bengal tigers.",
         coords: [26.5100, 92.3500],
         type: "wildlife"
       }
     ];
 
     let map;
-    let markers = [];
+    let mapMarkers = [];
 
-    function initMap() {
-      // Center at Koupati (কৌপাতি)
+    function initLeafletMap() {
+      const mapContainer = document.getElementById("koupatiMap");
+      if (!mapContainer || typeof L === "undefined") return;
+
       map = L.map('koupatiMap').setView([26.5846, 92.2483], 12);
 
-      // OpenStreetMap Tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
 
-      // Render custom pins & popup
-      waypoints.forEach((wp, index) => {
+      waypoints.forEach((wp, idx) => {
         const marker = L.circleMarker(wp.coords, {
           radius: wp.id === 0 ? 10 : 8,
           fillColor: wp.id === 0 ? "#D71A21" : "#111827",
@@ -1307,7 +1293,7 @@
         }).addTo(map);
 
         marker.bindPopup(`
-          <div class="text-xs">
+          <div class="text-xs p-1">
             <strong class="text-slate-900 block font-bold text-sm mb-1">${wp.name}</strong>
             <p class="text-slate-600 mb-2 leading-relaxed">${wp.desc}</p>
             <span class="inline-block px-2 py-0.5 rounded bg-stb-lightred text-stb-red font-bold text-[10px]">
@@ -1316,14 +1302,15 @@
           </div>
         `);
 
-        markers.push(marker);
+        mapMarkers.push(marker);
       });
 
-      renderWaypointButtons();
+      renderWaypointSidebar();
     }
 
-    function renderWaypointButtons() {
+    function renderWaypointSidebar() {
       const container = document.getElementById("waypointButtons");
+      if (!container) return;
       container.innerHTML = "";
 
       waypoints.forEach((wp, idx) => {
@@ -1331,7 +1318,7 @@
         btn.className = "w-full text-left p-2.5 rounded-xl border border-slate-200 bg-white hover:border-stb-red hover:bg-stb-lightred/30 transition text-xs flex items-center justify-between group";
         btn.onclick = () => {
           map.flyTo(wp.coords, 14, { duration: 1.2 });
-          markers[idx].openPopup();
+          mapMarkers[idx].openPopup();
         };
 
         btn.innerHTML = `
@@ -1344,13 +1331,14 @@
         container.appendChild(btn);
       });
 
-      lucide.createIcons();
+      if (window.lucide) lucide.createIcons();
     }
 
-    // Initial Load Calls
-    window.addEventListener("load", () => {
+    // Init on Load
+    window.addEventListener("DOMContentLoaded", () => {
       renderGallery(galleryData);
-      initMap();
+      initLeafletMap();
+      if (window.lucide) lucide.createIcons();
     });
   </script>
 </body>
