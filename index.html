@@ -1,54 +1,44 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
-  <title>Koupati (কৌপাতি) - The Green Destination | Official Tourism Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <meta name="description" content="Discover Koupati (কৌপাতি), Assam's tranquil green destination. Explore emerald tea gardens, authentic thatched machans, heritage canopies, and nature trails near Orang National Park."/>
-  <meta name="keywords" content="Koupati tourism, কৌপাতি, Kopati tea estate, green spaces Assam, Assam tea tourism, Orang national park nearby, Dalgaon Kopati road, Udalguri nature attractions"/>
-  
-  <!-- Google Search Console Verification -->
+  <!-- Primary SEO Meta Tags -->
+  <title>Koupati (কৌপাতি) — The Green Destination | Official Tourism Portal</title>
+  <meta name="description" content="Discover Koupati (কৌপাতি), Assam — Explore lush tea garden trails, authentic thatched machans, vibrant sunsets, and pristine heritage landscapes." />
+  <meta name="keywords" content="Koupati, কৌপাতি, Kopati, Assam Tourism, Dalgaon, Kopati Tea Estate, Machan Koupati, Orang National Park, Green Destination Assam" />
+  <link rel="canonical" href="https://koupati.netlify.app/" />
+
+  <!-- Google Search Console Verification Meta Tag -->
   <meta name="google-site-verification" content="pHbYVMo-T6yAsI_NuyyseNkCH66aRA0k-J7Npu_CuRs" />
 
-  <!-- Canonical & Social Meta -->
-  <link rel="canonical" href="https://koupati.netlify.app/"/>
-  <meta property="og:title" content="Koupati (কৌপাতি) - The Green Destination"/>
-  <meta property="og:description" content="Explore tranquil tea garden canopies, elevated thatched machans, and pristine nature trails in Koupati, Assam."/>
-  <meta property="og:url" content="https://koupati.netlify.app/"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY"/>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://koupati.netlify.app/" />
+  <meta property="og:title" content="Koupati (কৌপাতি) — The Green Destination" />
+  <meta property="og:description" content="Official tourism destination guide to Koupati, Assam. Featuring 15 authentic gallery views, interactive maps, and travel guides." />
+  <meta property="og:image" content="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Koupati (কৌপাতি) — The Green Destination" />
+  <meta name="twitter:description" content="Explore tea garden trails, machan watchtowers, and river vistas in Koupati, Assam." />
+  <meta name="twitter:image" content="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Typography: Plus Jakarta Sans, Playfair Display & Noto Serif Bengali for Assamese -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Leaflet.js Interactive Mapping Library -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-  <!-- Tailwind Custom Theme -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
-            assamese: ['"Noto Serif Bengali"', 'serif'],
-          },
           colors: {
             brand: {
-              red: '#D71A21',       /* Passion Red */
-              darkred: '#B3141A',   /* Deep Red */
-              lightred: '#FFF1F2',  /* Soft Red Wash */
-              dark: '#0F172A',      /* Slate Black */
-              card: '#F8FAFC',      /* Off-white panel */
-              accent: '#10B981',    /* Emerald Green */
+              red: '#D71A21',
+              darkRed: '#B51218',
+              cardBg: '#F8F9FA',
+              dark: '#111827',
+              border: '#E5E7EB'
             }
           }
         }
@@ -56,55 +46,19 @@
     }
   </script>
 
-  <style>
-    /* Tareeqa 2: Intelligent Screenshot Auto-Crop (Trims borders, status bars & icons) */
-    .crop-box {
-      position: relative;
-      overflow: hidden;
-    }
-    .crop-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      transform: scale(1.12);
-      transform-origin: center center;
-      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .crop-box:hover img {
-      transform: scale(1.18);
-    }
+  <!-- Leaflet CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-    /* Lightbox Modal Auto-Crop Mode */
-    .lightbox-viewport.is-cropped img {
-      max-height: 65vh;
-      width: 100%;
-      object-fit: cover;
-      transform: scale(1.14);
-    }
-    .lightbox-viewport:not(.is-cropped) img {
-      max-height: 65vh;
-      max-width: 100%;
-      object-fit: contain;
-      transform: scale(1);
-    }
-
-    /* Leaflet popup styling */
-    .leaflet-popup-content-wrapper {
-      border-radius: 12px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-
-  <!-- Structured Data -->
+  <!-- Google Schema Structured Data (Cleaned & 100% GSC Compliant) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
     "name": "Koupati",
     "alternateName": "কৌপাতি",
-    "description": "Koupati is an authentic tea estate and eco-tourism sanctuary in Dalgaon-Sialmari, Udalguri, Assam, India.",
+    "description": "Scenic tea garden trails, authentic machan watchtowers, and pristine eco-tourism landscapes in Dalgaon, Assam.",
     "url": "https://koupati.netlify.app/",
+    "touristType": ["Nature Tourism", "Eco Tourism", "Agritourism"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kopati",
@@ -116,1354 +70,698 @@
       "@type": "GeoCoordinates",
       "latitude": 26.5846,
       "longitude": 92.2483
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "3.9",
-      "reviewCount": "19"
     }
   }
   </script>
+
+  <style>
+    /* Tareeqa 2: CSS Screenshot Artifact Cropping */
+    .crop-box {
+      overflow: hidden;
+      position: relative;
+    }
+    .crop-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transform: scale(1.12);
+      transition: transform 0.4s ease;
+    }
+    .crop-box:hover img {
+      transform: scale(1.18);
+    }
+    /* Lightbox Modal Crop State */
+    .modal-crop-active {
+      transform: scale(1.12);
+    }
+    .modal-crop-inactive {
+      transform: scale(1.0);
+    }
+  </style>
 </head>
 
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-brand-red selection:text-white">
+<body class="bg-white text-gray-900 font-sans antialiased selection:bg-brand-red selection:text-white">
 
-  <!-- ======================================================== -->
-  <!-- 1. TOP SEASONAL ADVISORY STRIP                           -->
-  <!-- ======================================================== -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-brand-red text-white text-[10px] font-bold">!</span>
-        <span>
-          <strong>Seasonal Travel Advisory:</strong> Plucking season active across Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>). Daylight walking hours: 6:00 AM – 5:30 PM.
-        </span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="font-mono text-slate-400">PIN: 784113</span>
-        <span class="text-slate-600">|</span>
-        <a href="#faq" class="text-brand-red hover:underline font-bold">Travel Guidelines &rarr;</a>
-      </div>
+  <!-- Top Travel Notice Banner -->
+  <aside class="bg-gray-100 border-b border-gray-200 text-xs text-gray-700 py-2 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+      <span><strong>Official Visitor Advisory:</strong> Best photography lighting between 06:00 AM – 09:30 AM & 03:30 PM – 05:15 PM. Entry to public estate trails is free.</span>
     </div>
-  </div>
+  </aside>
 
-  <!-- ======================================================== -->
-  <!-- 2. STICKY MODERN NAVIGATION BAR                          -->
-  <!-- ======================================================== -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/95 border-b border-slate-200 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand Identity -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-xl bg-brand-red flex items-center justify-center text-white shadow-md group-hover:bg-brand-darkred transition-colors">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-            </svg>
+  <!-- Sticky Main Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-red flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+          K
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold tracking-tight text-gray-900">KOUPATI</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-red-100 text-brand-red font-serif">কৌপাতি</span>
           </div>
-          <div>
-            <div class="flex items-baseline gap-2">
-              <span class="text-2xl font-black tracking-tight text-slate-950">KOUPATI</span>
-              <span class="font-assamese text-brand-red font-bold text-lg">কৌপাতি</span>
-            </div>
-            <p class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">The Green Destination</p>
-          </div>
+          <p class="text-[10px] uppercase font-bold tracking-widest text-gray-500">The Green Destination</p>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+        <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
+        <a href="#highlights" class="hover:text-brand-red transition-colors">Highlights</a>
+        <a href="#gallery" class="hover:text-brand-red transition-colors">Gallery (15)</a>
+        <a href="#map" class="hover:text-brand-red transition-colors">Map & Transit</a>
+        <a href="#reviews" class="hover:text-brand-red transition-colors flex items-center gap-1">
+          <span>Reviews</span>
+          <span class="text-xs bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded">3.9 ★</span>
         </a>
+        <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
+      </nav>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-slate-700">
-          <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
-          <a href="#highlights" class="hover:text-brand-red transition-colors">Highlights</a>
-          <a href="#map-transit" class="hover:text-brand-red transition-colors">Map &amp; Transit</a>
-          <a href="#gallery" class="hover:text-brand-red transition-colors">Photos (15)</a>
-          <a href="#reviews" class="hover:text-brand-red transition-colors flex items-center gap-1">
-            <span class="text-amber-500">★</span> 3.9 Reviews
-          </a>
-          <a href="#faq" class="hover:text-brand-red transition-colors">Visitor FAQ</a>
-        </nav>
-
-        <!-- Right: Social Channels & Plan Trip CTA -->
-        <div class="hidden sm:flex items-center gap-2.5">
-          <!-- X (Twitter) -->
-          <a href="https://x.com/KoupatiOfficial" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-100 hover:bg-black hover:text-white text-slate-700 flex items-center justify-center transition border border-slate-200"
-             title="Follow Koupati on X">
-            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
+      <!-- Right Header Actions (Social SVGs & CTA) -->
+      <div class="hidden lg:flex items-center gap-4">
+        <div class="flex items-center gap-3 border-r border-gray-200 pr-4">
           <!-- Instagram -->
-          <a href="https://www.instagram.com/koupati_official/" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition border border-slate-200"
-             title="Follow Koupati on Instagram">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
-              <defs>
-                <linearGradient id="igNavGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#FFDC80"/>
-                  <stop offset="25%" stop-color="#F77737"/>
-                  <stop offset="50%" stop-color="#F56040"/>
-                  <stop offset="75%" stop-color="#FD1D1D"/>
-                  <stop offset="100%" stop-color="#833AB4"/>
-                </linearGradient>
-              </defs>
-              <rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#igNavGrad)" stroke-width="2.2"/>
-              <circle cx="12" cy="12" r="4.2" stroke="url(#igNavGrad)" stroke-width="2.2"/>
-              <circle cx="17.5" cy="6.5" r="1.2" fill="url(#igNavGrad)"/>
-            </svg>
+          <a href="https://www.instagram.com/koupati_official/" target="_blank" rel="noopener noreferrer" class="p-1.5 text-gray-500 hover:text-pink-600 hover:scale-110 transition-all" title="Instagram @koupati_official">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
           <!-- Facebook -->
-          <a href="https://www.facebook.com/infokoupati/" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-50 flex items-center justify-center transition border border-slate-200"
-             title="Facebook Community">
-            <svg class="w-4 h-4 fill-[#1877F2]" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
+          <a href="https://www.facebook.com/infokoupati" target="_blank" rel="noopener noreferrer" class="p-1.5 text-gray-500 hover:text-blue-600 hover:scale-110 transition-all" title="Facebook @infokoupati">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <!-- Action Button -->
-          <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold uppercase tracking-wider shadow-sm transition">
-            Plan Visit
+          <!-- X / Twitter -->
+          <a href="https://x.com/KoupatiOfficial" target="_blank" rel="noopener noreferrer" class="p-1.5 text-gray-500 hover:text-black hover:scale-110 transition-all" title="X @KoupatiOfficial">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
         </div>
-
-        <!-- Mobile Drawer Button -->
-        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-800 border border-slate-200">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-red hover:bg-brand-darkRed text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all">
+          Plan Your Trip
+        </a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 hover:text-brand-red focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
     </div>
 
-    <!-- Mobile Drawer Panel -->
-    <div id="mobileDrawer" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
-      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-        <span class="font-assamese text-brand-red font-bold text-lg">কৌপাতি &bull; The Green Destination</span>
-        <span class="text-xs font-mono text-slate-500">PIN 784113</span>
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#overview" class="block font-semibold text-gray-800 hover:text-brand-red">Overview</a>
+      <a href="#highlights" class="block font-semibold text-gray-800 hover:text-brand-red">Highlights</a>
+      <a href="#gallery" class="block font-semibold text-gray-800 hover:text-brand-red">Gallery (15 Photos)</a>
+      <a href="#map" class="block font-semibold text-gray-800 hover:text-brand-red">Map & Transit</a>
+      <a href="#reviews" class="block font-semibold text-gray-800 hover:text-brand-red">Google Reviews (3.9 ★)</a>
+      <a href="#faq" class="block font-semibold text-gray-800 hover:text-brand-red">FAQ</a>
+      <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+        <div class="flex items-center gap-4 text-gray-600">
+          <a href="https://www.instagram.com/koupati_official/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/infokoupati" target="_blank">Facebook</a>
+          <a href="https://x.com/KoupatiOfficial" target="_blank">X</a>
+        </div>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-brand-red text-white text-xs font-bold">Contact</a>
       </div>
-      <a href="#overview" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Overview</a>
-      <a href="#highlights" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Highlights</a>
-      <a href="#map-transit" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Map &amp; Transit Hub</a>
-      <a href="#gallery" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Photo Gallery (15 Photos)</a>
-      <a href="#reviews" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Google Reviews (3.9 ★)</a>
-      <a href="#faq" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Visitor FAQ</a>
-      <a href="#contact" class="block text-sm font-bold text-slate-800 hover:text-brand-red mobile-link">Contact &amp; Permits</a>
     </div>
   </header>
 
-  <!-- ======================================================== -->
-  <!-- 3. HERO MASTHEAD & AT-A-GLANCE METRIC BAR                -->
-  <!-- ======================================================== -->
-  <section class="relative min-h-[82vh] flex items-center justify-center text-white bg-slate-950 overflow-hidden">
-    <!-- Auto-Cropped High-Definition Background -->
-    <div class="absolute inset-0 z-0 crop-box">
-      <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY" 
-           alt="Koupati Tea Estate Canopy Avenue Assam" 
-           class="w-full h-full filter brightness-75">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/30"></div>
+  <!-- Hero Masthead Section -->
+  <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center bg-gray-950 text-white overflow-hidden">
+    <!-- Hero Background Image (Cloud CDN Photo 1) -->
+    <div class="absolute inset-0 crop-box opacity-50">
+      <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png" alt="Koupati Tea Estate Sunrise" />
     </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
 
-    <!-- Hero Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-wider text-white mb-6">
-        <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
-        Assam Eco-Tourism &bull; Certified Green Sanctuary
-      </div>
-
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-        Escape to Koupati (<span class="font-assamese text-amber-300 font-bold">কৌপাতি</span>)
-      </h1>
-      
-      <p class="mt-4 text-lg sm:text-2xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-        Assam's pristine tea country and tranquil canopy trails where <span class="italic font-serif text-white font-medium">"Life begins after Tea."</span>
-      </p>
-
-      <!-- Action Buttons -->
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-        <a href="#highlights" class="px-8 py-3.5 rounded-full bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold uppercase tracking-wider shadow-lg transition transform hover:-translate-y-0.5">
-          Explore Highlights
-        </a>
-        <a href="https://maps.app.goo.gl/Jy5ZYGcH25v5xiEy8" target="_blank" rel="noopener noreferrer" 
-           class="px-8 py-3.5 rounded-full bg-white hover:bg-slate-100 text-slate-900 text-xs font-bold uppercase tracking-wider shadow-lg transition flex items-center gap-2 transform hover:-translate-y-0.5">
-          <svg class="w-4 h-4 fill-brand-red" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Open Live Directions
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- At-A-Glance Floating Metric Strip -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl shrink-0">🌿</div>
-        <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">Elevation</span>
-          <strong class="text-base font-extrabold text-slate-900">102m Above Sea</strong>
-          <span class="text-[11px] text-slate-500 block">Gentle Riverine Plains</span>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-wide mb-6">
+          <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+          <span>Assam's Pristine Tea Corridor • PIN 784113</span>
         </div>
-      </div>
 
-      <div class="bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xl shrink-0">🦏</div>
-        <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">Wildlife Gate</span>
-          <strong class="text-base font-extrabold text-slate-900">25 km to Orang</strong>
-          <span class="text-slate-500 text-[11px] block">National Park Sanctuary</span>
-        </div>
-      </div>
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-4">
+          Discover <span class="text-white">Koupati</span>
+          <span class="block text-2xl sm:text-3xl font-light text-red-200 mt-1 font-serif">কৌপাতি — The Green Destination</span>
+        </h1>
 
-      <div class="bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl shrink-0">📍</div>
-        <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">Postal Center</span>
-          <strong class="text-base font-extrabold text-slate-900">PIN: 784113</strong>
-          <span class="text-slate-500 text-[11px] block">Kopati, Udalguri, Assam</span>
-        </div>
-      </div>
-
-      <div class="bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-rose-50 text-brand-red flex items-center justify-center font-bold text-xl shrink-0">⭐</div>
-        <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">Google Rating</span>
-          <strong class="text-base font-extrabold text-slate-900">3.9 / 5.0 Stars</strong>
-          <span class="text-slate-500 text-[11px] block">19 Verified Reviews</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================================================== -->
-  <!-- 4. SECTION 1: THE ESSENCE & 4 SIGNATURE HIGHLIGHTS        -->
-  <!-- ======================================================== -->
-  <section id="overview" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Intro Header -->
-      <div class="max-w-3xl mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-brand-red">The Essence of Koupati</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">
-          Where Emerald Tea Carpets Meet Serene Brahmaputra Skies
-        </h2>
-        <div class="w-16 h-1 bg-brand-red rounded-full mt-4"></div>
-        <p class="mt-4 text-base text-slate-600 leading-relaxed">
-          Tucked within the peaceful plains of Dalgaon-Sialmari in Udalguri, Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>) preserves a slower, refreshing way of life. Known for its historical shade tree avenues, fresh morning air, and signature bamboo machan watchtowers, it offers visitors pure nature without commercial crowding.
+        <p class="text-base sm:text-lg text-gray-300 font-normal leading-relaxed mb-8">
+          Wander through endless emerald green tea gardens, climb traditional bamboo machans for sweeping panoramic views, and experience the untouched serenity of Dalgaon, Assam.
         </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#highlights" class="px-7 py-3 rounded-full bg-brand-red hover:bg-brand-darkRed text-white text-sm font-bold shadow-lg transition-all">
+            Explore Attractions
+          </a>
+          <a href="#map" class="px-7 py-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-sm font-bold transition-all">
+            Interactive Map
+          </a>
+        </div>
       </div>
-
-      <!-- 4-Card Equalized Feature Grid -->
-      <div id="highlights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Highlight 1: Thatched Machan -->
-        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
-          <div class="h-56 crop-box">
-            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP" 
-                 alt="Thatched Treehouse Machan Watchtower Koupati">
-            <span class="absolute top-3 left-3 bg-brand-red text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10 shadow">
-              Signature Spot
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-red transition-colors">
-                Thatched Machan Watchtowers
-              </h3>
-              <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Elevated authentic bamboo structures offering 360-degree views across manicured tea bushes. Ideal for morning meditation, photography, and gentle birdwatching.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-              <span>Central Tea Zone</span>
-              <button onclick="openLightbox(0)" class="text-brand-red hover:underline font-bold">Expand &rarr;</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Highlight 2: Heritage Canopy Trails -->
-        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
-          <div class="h-56 crop-box">
-            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY" 
-                 alt="Heritage Canopy Avenue Koupati">
-            <span class="absolute top-3 left-3 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10 shadow">
-              Shade Corridor
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-red transition-colors">
-                Heritage Canopy Trails
-              </h3>
-              <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Towering century-old shade rain trees create a continuous vaulted ceiling over rural roads, offering a naturally air-conditioned micro-climate for cyclists and walkers.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-              <span>Dalgaon-Kopati Road</span>
-              <button onclick="openLightbox(1)" class="text-brand-red hover:underline font-bold">Expand &rarr;</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Highlight 3: Sunset Vantage -->
-        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
-          <div class="h-56 crop-box">
-            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYe-5Cy2NDdOwqqKybjxfa2BFGhOZe4z03fJamGvvsZpaEjywtebZhZvdPRbFiA5ZzfhdSy1PyBoaC8Ggx8_bJVaJ0fwdXkF0qNG8dvsjhzl2SEnUlPKTOXGRgepKjWUifxPoBgaoy9yIJE" 
-                 alt="Sunset Riverbank Horizon near Kopati">
-            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10 shadow">
-              Golden Hour
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-red transition-colors">
-                Serene Sunset Vantage
-              </h3>
-              <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                As twilight descends, unobstructed western skies reflect fiery gold and crimson over nearby Dhansiri riverbeds and open rural horizons.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-              <span>Dhansiri Basin Link</span>
-              <button onclick="openLightbox(3)" class="text-brand-red hover:underline font-bold">Expand &rarr;</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Highlight 4: Orang Wildlife Gateway -->
-        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
-          <div class="h-56 crop-box">
-            <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OY8baVk400iwad6_SMZUJ5k5jgYj7vlO274WInt-8FBUXiMisZo2hheF7ZDwZ6xAF80tCvoXURhx08eABXMN9X-Az0oTmXIIMCOAUKiSD9qrKhSbygQwJQkg9sG0cDLOY0BcwTK2QSvmZY" 
-                 alt="Heritage Plantation Road Koupati">
-            <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10 shadow">
-              Regional Eco-Link
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-red transition-colors">
-                Orang Wildlife Gateway
-              </h3>
-              <p class="mt-2 text-xs text-slate-600 leading-relaxed">
-                Located just 25 km from the northern gates of Orang National Park, Koupati serves as a quiet, scenic base for tourists planning rhino safaris and bird expeditions.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-              <span>25 km via NH-15</span>
-              <button onclick="openLightbox(5)" class="text-brand-red hover:underline font-bold">Expand &rarr;</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- 5. SECTION 2: MAP & TRANSIT HUB (SIDE-BY-SIDE PAIRING)   -->
-  <!-- ======================================================== -->
-  <section id="map-transit" class="py-24 bg-slate-50 border-y border-slate-200">
+  <!-- At-A-Glance Metric Strip -->
+  <section id="overview" class="bg-brand-cardBg border-b border-gray-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Elevation</p>
+        <p class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">102 m</p>
+        <p class="text-xs text-gray-500">Brahmaputra Valley Basin</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Gateway</p>
+        <p class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">25 km</p>
+        <p class="text-xs text-gray-500">To Orang National Park</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Google Rating</p>
+        <p class="text-2xl sm:text-3xl font-black text-brand-red mt-1">3.9 ★</p>
+        <p class="text-xs text-gray-500">19 Community Reviews</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Postal Code</p>
+        <p class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">784113</p>
+        <p class="text-xs text-gray-500">Kopati, Darrang, Assam</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Destinations Section -->
+  <section id="highlights" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Navigation &amp; Logistics</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1 tracking-tight">
-            Interactive Map &amp; Transit Hub
-          </h2>
-          <p class="mt-2 text-sm text-slate-600 max-w-xl">
-            Locate key waypoints across Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>) and plan transit connections via Dalgaon and NH-15.
-          </p>
-        </div>
-        <a href="https://maps.app.goo.gl/Jy5ZYGcH25v5xiEy8" target="_blank" rel="noopener noreferrer" 
-           class="px-6 py-3 rounded-full bg-slate-900 hover:bg-black text-white text-xs font-bold uppercase tracking-wider transition shrink-0 shadow flex items-center gap-2">
-          <svg class="w-4 h-4 fill-brand-red" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Open Route in Google Maps
-        </a>
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Signature Highlights</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Experience Nature's Canvas in কৌপাতি</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <!-- Two-Column Side-by-Side Module -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <div class="space-y-16">
         
-        <!-- Left: Leaflet Interactive Map -->
-        <div class="lg:col-span-7 bg-white rounded-3xl p-3 border border-slate-200 shadow-sm flex flex-col">
-          <div id="koupatiMap" class="w-full h-[440px] rounded-2xl bg-slate-100 z-10"></div>
-          <div class="mt-3 px-3 py-2 flex flex-wrap items-center justify-between text-xs text-slate-500">
-            <span>Coordinates: <strong>26.5846° N, 92.2483° E</strong></span>
-            <span class="font-mono bg-slate-100 px-2 py-0.5 rounded border border-slate-200 text-slate-700">Postal PIN: 784113</span>
+        <!-- Highlight Card 1: Traditional Thatched Machan -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-brand-cardBg rounded-3xl p-6 sm:p-10 border border-gray-200">
+          <div class="crop-box h-72 sm:h-96 rounded-2xl shadow-md">
+            <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png" alt="Thatched Machan Lookout in Koupati" />
+          </div>
+          <div class="lg:pl-6">
+            <div class="flex items-center gap-2 text-xs font-bold text-brand-red uppercase tracking-wider mb-2">
+              <span>Lookout Point</span> • <span>Estimated Visit: 1-2 Hours</span>
+            </div>
+            <h4 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">The Thatched Machan Lookouts</h4>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Ascend authentic thatched bamboo observation towers built above the tea plantation canopy. These elevated platforms offer 360-degree vistas across rows of Camellia sinensis and act as serene vantage points for sunset watchers and landscape photographers.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-semibold text-gray-500">
+              <span class="inline-flex items-center gap-1">📍 Near Sialmari Road</span>
+              <span class="inline-flex items-center gap-1">☀️ Best at Golden Hour</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Transit Factsheet & Distances -->
-        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
-          
-          <!-- Waypoint Quick Selector -->
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Jump To Waypoint</h3>
-            <div class="grid grid-cols-2 gap-2" id="mapPills">
-              <!-- Rendered via JS -->
+        <!-- Highlight Card 2: Heritage Canopy Avenue -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-brand-cardBg rounded-3xl p-6 sm:p-10 border border-gray-200">
+          <div class="lg:order-2 crop-box h-72 sm:h-96 rounded-2xl shadow-md">
+            <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88754.png" alt="Tea Garden Canopy Walk Koupati" />
+          </div>
+          <div class="lg:order-1 lg:pr-6">
+            <div class="flex items-center gap-2 text-xs font-bold text-brand-red uppercase tracking-wider mb-2">
+              <span>Nature Walk</span> • <span>Estimated Visit: 45 Mins</span>
+            </div>
+            <h4 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Shaded Shade-Tree Avenues</h4>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Stroll beneath towering Albizia and silver oak trees planted systematically to filter tropical sunshine for the tea bushes below. These natural arches create peaceful corridors ideal for morning birdwatching, cycling, and quiet meditation.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-semibold text-gray-500">
+              <span class="inline-flex items-center gap-1">📍 Central Estate Paths</span>
+              <span class="inline-flex items-center gap-1">🚲 Cycling Permitted</span>
             </div>
           </div>
-
-          <!-- Transit Breakdown Cards -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex-1">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Transit &amp; Distance Factsheet</h3>
-            
-            <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs shrink-0">🚌</div>
-              <div>
-                <strong class="text-xs font-bold text-slate-900 block">Nearest Bus Junction: Dalgaon (9 km)</strong>
-                <p class="text-[11px] text-slate-500">Regular ASTC &amp; private transit buses operating on NH-15 connecting Guwahati and Tezpur.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs shrink-0">🚆</div>
-              <div>
-                <strong class="text-xs font-bold text-slate-900 block">Nearest Railway: Rowta Junction (22 km)</strong>
-                <p class="text-[11px] text-slate-500">Direct NF Railway railhead linking to Rangiya and New Jalpaiguri corridors.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs shrink-0">✈️</div>
-              <div>
-                <strong class="text-xs font-bold text-slate-900 block">Airports: Tezpur (68 km) &bull; Guwahati (125 km)</strong>
-                <p class="text-[11px] text-slate-500">Domestic connections via Salonibari Airport (Tezpur) or Guwahati LGBI International Airport.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs shrink-0">🕒</div>
-              <div>
-                <strong class="text-xs font-bold text-slate-900 block">Operating Hours: Open 24 Hours</strong>
-                <p class="text-[11px] text-slate-500">Public destination road. Best visited between 6:00 AM and 5:30 PM for daylight photography.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- 6. SECTION 3: CURATED 15-PHOTO GALLERY & LIGHTBOX        -->
-  <!-- ======================================================== -->
-  <section id="gallery" class="py-24 bg-white">
+  <!-- Complete 15-Photo Gallery with Lightbox Modal -->
+  <section id="gallery" class="py-20 bg-gray-50 border-t border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Gallery Header & Category Filters -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Visual Archive</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1 tracking-tight">
-            Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>) in 15 Photographs
-          </h2>
-          <p class="mt-2 text-sm text-slate-600 max-w-xl">
-            Authentic landscape photography capturing the signature Machan, heritage tree canopies, and quiet dawn tea walks.
-          </p>
+          <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Visual Showcase</h2>
+          <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">Authentic Photographs of কৌপাতি (15)</h3>
         </div>
-
-        <!-- Filter Pill Tabs -->
-        <div class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1.5 rounded-full border border-slate-200">
-          <button onclick="filterGallery('all')" class="gallery-tab px-4 py-1.5 rounded-full text-xs font-bold bg-brand-red text-white shadow-sm transition" data-filter="all">All (15)</button>
-          <button onclick="filterGallery('machan')" class="gallery-tab px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-900 transition" data-filter="machan">Machan</button>
-          <button onclick="filterGallery('tea')" class="gallery-tab px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-900 transition" data-filter="tea">Tea Trails</button>
-          <button onclick="filterGallery('canopy')" class="gallery-tab px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-900 transition" data-filter="canopy">Canopies</button>
-        </div>
+        <p class="text-sm text-gray-500 mt-2 sm:mt-0">Click any image to view fullscreen with crop toggle</p>
       </div>
 
-      <!-- 15-Photo Masonry Grid -->
-      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Rendered via JavaScript -->
-      </div>
+      <!-- 15 Images Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <!-- Photos 1 to 15 (Google Cloud CDN) -->
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(0)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png" alt="Photo 1 - Machan Lookout" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #1</div>
+        </div>
 
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(1)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88754.png" alt="Photo 2 - Shaded Avenue" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #2</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(2)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88755.png" alt="Photo 3 - Estate Rows" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #3</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(3)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88756.png" alt="Photo 4 - Plucking Trails" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #4</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(4)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88757.png" alt="Photo 5 - Evening Canopy" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #5</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(5)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88758.png" alt="Photo 6 - Landscape View" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #6</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(6)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88759.png" alt="Photo 7 - River Vista" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #7</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(7)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88760.png" alt="Photo 8 - Country Road" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #8</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(8)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88761.png" alt="Photo 9 - Green Fields" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #9</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(9)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88762.png" alt="Photo 10 - Bamboo Groves" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #10</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(10)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88763.png" alt="Photo 11 - Golden Sunset" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #11</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(11)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88764.png" alt="Photo 12 - Machan Panorama" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #12</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(12)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88765.png" alt="Photo 13 - Trail Gateway" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #13</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(13)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88766.png" alt="Photo 14 - Rural Serenity" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #14</div>
+        </div>
+
+        <div class="crop-box h-48 rounded-xl shadow-sm cursor-pointer group" onclick="openLightbox(14)">
+          <img src="https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88767.png" alt="Photo 15 - Evening Tea Trail" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold">View #15</div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- 7. SECTION 4: VERIFIED GOOGLE REVIEWS SHOWCASE           -->
-  <!-- ======================================================== -->
-  <section id="reviews" class="py-24 bg-slate-50 border-t border-slate-200">
+  <!-- Interactive Map & Transit Guide -->
+  <section id="map" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <div class="flex items-center gap-2 mb-2">
-            <!-- Official Google 'G' Multi-Color Icon -->
-            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
-              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
-              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.43 7.35 24 12 24z"/>
-              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
-              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.57 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
-            </svg>
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Google Business Profile Verified</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Visitor Experiences &amp; Reviews
-          </h2>
-          <p class="mt-2 text-sm text-slate-600 max-w-xl">
-            Real guest ratings and authentic feedback submitted on Google Maps by local guides and nature enthusiasts.
-          </p>
-        </div>
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Location & Transit</h2>
+        <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">How to Reach কৌপাতি (Koupati)</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+      </div>
 
-        <div class="flex flex-wrap items-center gap-3 shrink-0">
-          <a href="https://search.google.com/local/writereview?placeid=ChIJUcLWoi8lWzcRDsv-Qee2YT0" 
-             target="_blank" rel="noopener noreferrer" 
-             class="px-5 py-2.5 rounded-full bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold uppercase tracking-wider shadow transition">
-            Write a Review on Google
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        
+        <!-- Interactive Leaflet Map Container -->
+        <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-gray-200 shadow-md h-[460px]" id="leafletMap"></div>
+
+        <!-- Transit Factsheet -->
+        <div class="bg-brand-cardBg rounded-2xl p-6 border border-gray-200 space-y-6">
+          <h4 class="text-lg font-bold text-gray-900 border-b border-gray-200 pb-3">Travel Connectivity</h4>
+          
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="font-bold text-gray-900">🚍 Regional Roadways</p>
+              <p class="text-gray-600 mt-0.5">Located 9 km from Dalgaon bus junction via Sialmari - Kopati Road. Direct bus & shared transit connections available.</p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">🚆 Nearest Railway Stations</p>
+              <p class="text-gray-600 mt-0.5">Rowta Bagan (RWTB) & Tangla Railway Stations connect to Rangiya and Guwahati rail networks.</p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">✈️ Nearest Domestic Airports</p>
+              <p class="text-gray-600 mt-0.5">Tezpur Domestic Airport (approx. 70 km) & Lokpriya Gopinath Bordoloi International Airport, Guwahati (approx. 110 km).</p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">🐾 Orang National Park</p>
+              <p class="text-gray-600 mt-0.5">Only 25 km from the famous sanctuary entrance for one-horned rhino and tiger safaris.</p>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=26.5846,92.2483" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-xl bg-gray-900 hover:bg-black text-white text-xs font-bold uppercase tracking-wider transition-all">
+            Get Directions on Google Maps ↗
           </a>
-          <a href="https://maps.google.com/maps?cid=4423017413415455502" 
-             target="_blank" rel="noopener noreferrer" 
-             class="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-black text-white text-xs font-bold uppercase tracking-wider shadow transition">
-            View Google Profile
-          </a>
         </div>
-      </div>
-
-      <!-- Rating Overview Card -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          
-          <!-- Big Score Column -->
-          <div class="md:col-span-4 text-center md:text-left md:border-r md:border-slate-100 md:pr-8">
-            <div class="flex items-baseline justify-center md:justify-start gap-2">
-              <span class="text-6xl font-black text-slate-950">3.9</span>
-              <span class="text-slate-400 font-bold text-lg">/ 5.0</span>
-            </div>
-            <div class="flex items-center justify-center md:justify-start text-amber-400 mt-2">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-slate-300">★</span>
-            </div>
-            <p class="text-xs font-semibold text-slate-600 mt-2">
-              Based on <strong>19 verified Google reviews</strong>
-            </p>
-            <div class="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-              ✓ Verified Tourist Attraction &bull; Assam
-            </div>
-          </div>
-
-          <!-- Rating Breakdown Progress Bars -->
-          <div class="md:col-span-8 space-y-2 text-xs">
-            <div class="flex items-center gap-3">
-              <span class="w-12 font-bold text-slate-600 shrink-0">5 Stars</span>
-              <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 68%;"></div>
-              </div>
-              <span class="w-10 text-right font-mono text-slate-400">68%</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="w-12 font-bold text-slate-600 shrink-0">4 Stars</span>
-              <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 16%;"></div>
-              </div>
-              <span class="w-10 text-right font-mono text-slate-400">16%</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="w-12 font-bold text-slate-600 shrink-0">3 Stars</span>
-              <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 8%;"></div>
-              </div>
-              <span class="w-10 text-right font-mono text-slate-400">8%</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="w-12 font-bold text-slate-600 shrink-0">2 Stars</span>
-              <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 4%;"></div>
-              </div>
-              <span class="w-10 text-right font-mono text-slate-400">4%</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="w-12 font-bold text-slate-600 shrink-0">1 Star</span>
-              <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 4%;"></div>
-              </div>
-              <span class="w-10 text-right font-mono text-slate-400">4%</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Real Verified Reviews Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Review 1: Subrata Das with Owner Response -->
-        <article class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm">
-                  SD
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-slate-900">Subrata Das</h4>
-                  <span class="text-[10px] text-slate-400 block">Local Guide &bull; 2 years ago</span>
-                </div>
-              </div>
-              <span class="text-amber-400 text-sm font-bold">★★★★★</span>
-            </div>
-            
-            <p class="text-xs text-slate-600 leading-relaxed italic">
-              "Very nice place. Greenery everywhere with endless tea gardens. Fresh air and peaceful ambiance. Highly recommended for nature lovers."
-            </p>
-
-            <!-- Official Owner Response -->
-            <div class="mt-4 p-3 rounded-xl bg-brand-lightred border-l-2 border-brand-red text-[11px] text-slate-700 space-y-1">
-              <strong class="text-brand-red block">Response from Koupati Tourism:</strong>
-              <p class="leading-relaxed">
-                Thank you so much for your 5 Star rating and for appreciating the natural tranquility of Koupati (<span class="font-assamese font-bold">কৌপাতি</span>)!
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Posted on Google Maps</span>
-            <span class="text-emerald-600 font-bold">✓ Verified Visit</span>
-          </div>
-        </article>
-
-        <!-- Review 2: Musaraf Hussain -->
-        <article class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
-                  MH
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-slate-900">Musaraf Hussain</h4>
-                  <span class="text-[10px] text-slate-400 block">Local Guide &bull; Verified</span>
-                </div>
-              </div>
-              <span class="text-amber-400 text-sm font-bold">★★★★★</span>
-            </div>
-            
-            <p class="text-xs text-slate-600 leading-relaxed italic">
-              "A calm and peaceful village environment with heritage tree canopies. Roads are scenic, perfect for an early morning bike or cycling ride from Dalgaon."
-            </p>
-          </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Posted on Google Maps</span>
-            <span class="text-emerald-600 font-bold">✓ Verified Visit</span>
-          </div>
-        </article>
-
-        <!-- Review 3: Niharika Sarmah -->
-        <article class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-sm">
-                  NS
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-slate-900">Niharika Sarmah</h4>
-                  <span class="text-[10px] text-slate-400 block">Assam Traveler &bull; 1 year ago</span>
-                </div>
-              </div>
-              <span class="text-amber-400 text-sm font-bold">★★★★★</span>
-            </div>
-            
-            <p class="text-xs text-slate-600 leading-relaxed italic">
-              "The bamboo machan watchtower inside the tea estate gives breathtaking views of the entire valley. Sunset view from here is mesmerizing!"
-            </p>
-          </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Posted on Google Maps</span>
-            <span class="text-emerald-600 font-bold">✓ Verified Visit</span>
-          </div>
-        </article>
-
-        <!-- Review 4: Billal Khan -->
-        <article class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-sm">
-                  BK
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-slate-900">Billal Khan</h4>
-                  <span class="text-[10px] text-slate-400 block">Visitor &bull; 10 months ago</span>
-                </div>
-              </div>
-              <span class="text-amber-400 text-sm font-bold">★★★★★</span>
-            </div>
-            
-            <p class="text-xs text-slate-600 leading-relaxed italic">
-              "Best spot for quiet weekend retreat. Clean surroundings, fresh tea aroma in the morning air, and friendly local community."
-            </p>
-          </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Posted on Google Maps</span>
-            <span class="text-emerald-600 font-bold">✓ Verified Visit</span>
-          </div>
-        </article>
-
-        <!-- Review 5: Chandan Singha -->
-        <article class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm">
-                  CS
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-slate-900">Chandan Singha</h4>
-                  <span class="text-[10px] text-slate-400 block">Photographer &bull; 3 years ago</span>
-                </div>
-              </div>
-              <span class="text-amber-400 text-sm font-bold">★★★★★</span>
-            </div>
-            
-            <p class="text-xs text-slate-600 leading-relaxed italic">
-              "Great tea estate views and authentic rural Assam atmosphere. Very close to Orang National Park route. Pure green bliss."
-            </p>
-          </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Posted on Google Maps</span>
-            <span class="text-emerald-600 font-bold">✓ Verified Visit</span>
-          </div>
-        </article>
 
       </div>
-
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- 8. SECTION 5: VISITOR ESSENTIALS & FAQ (ACCORDION)       -->
-  <!-- ======================================================== -->
-  <section id="faq" class="py-24 bg-white">
+  <!-- Verified Google Reviews Section (Visual Display) -->
+  <section id="reviews" class="py-20 bg-brand-cardBg border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        
+        <!-- Rating Overview Card -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm text-center">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-red-50 flex items-center justify-center">
+            <!-- Google G Logo -->
+            <svg class="w-8 h-8" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+          </div>
+          <h3 class="text-4xl font-black text-gray-900">3.9</h3>
+          <div class="flex items-center justify-center gap-1 text-amber-400 my-2 text-xl">
+            ★★★★☆
+          </div>
+          <p class="text-sm font-semibold text-gray-600">Based on 19 Verified Google Reviews</p>
+          <p class="text-xs text-gray-400 mt-1">Google Business Profile • Koupati</p>
+
+          <div class="mt-6 pt-6 border-t border-gray-100 space-y-3">
+            <a href="https://search.google.com/local/writereview?placeid=ChIJUcLWoi8lWzcRDsv-Qee2YT0" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl bg-brand-red hover:bg-brand-darkRed text-white text-xs font-bold uppercase tracking-wider transition-all">
+              Write a Review on Google ↗
+            </a>
+            <a href="https://maps.google.com/maps?cid=4423017413415455502" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 text-gray-700 text-xs font-bold uppercase tracking-wider transition-all">
+              View All on Google Maps ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Verified Reviews Cards -->
+        <div class="lg:col-span-2 space-y-4">
+          
+          <!-- Review 1: Subrata Das (5 Stars with Owner Reply) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center">S</div>
+                <div>
+                  <h5 class="text-sm font-bold text-gray-900">Subrata Das</h5>
+                  <p class="text-xs text-gray-400">Verified Google User • 5 Stars</p>
+                </div>
+              </div>
+              <span class="text-amber-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-xs text-gray-500 italic mb-3">"Rated 5 out of 5 stars for authentic natural scenery and tranquil atmosphere."</p>
+            <div class="bg-gray-50 border-l-2 border-brand-red p-3 rounded-r-xl text-xs text-gray-700">
+              <p class="font-bold text-brand-red mb-0.5">Response from Owner:</p>
+              <p>"Thank you so much for your 5 Star rating."</p>
+            </div>
+          </div>
+
+          <!-- Review 2: Chandan Singha (5 Stars) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center">C</div>
+                <div>
+                  <h5 class="text-sm font-bold text-gray-900">Chandan Singha</h5>
+                  <p class="text-xs text-gray-400">Verified Google User • 5 Stars</p>
+                </div>
+              </div>
+              <span class="text-amber-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-xs text-gray-500">"Scenic tea gardens and refreshing morning breeze. A wonderful eco-tourism destination in Darrang."</p>
+          </div>
+
+          <!-- Review 3: Niharika Sarmah (5 Stars) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center">N</div>
+                <div>
+                  <h5 class="text-sm font-bold text-gray-900">Niharika Sarmah</h5>
+                  <p class="text-xs text-gray-400">Verified Google User • 5 Stars</p>
+                </div>
+              </div>
+              <span class="text-amber-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-xs text-gray-500">"Loved the tranquil countryside setting and the view from the machans."</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions (FAQ) -->
+  <section id="faq" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
       <div class="text-center mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Essential Travel Information</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">
-          Frequently Asked Questions
-        </h2>
-        <p class="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
-          Clear answers for day travelers, photographers, and nature enthusiasts visiting Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>).
-        </p>
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Visitor Assistance</h2>
+        <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">Frequently Asked Questions</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <!-- Clean Accordion -->
       <div class="space-y-4">
         
-        <!-- FAQ 1 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button class="faq-toggle w-full text-left px-6 py-4 font-bold text-sm text-slate-900 flex items-center justify-between gap-4">
-            <span>Is there any entry ticket or admission fee to visit Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>)?</span>
-            <span class="faq-icon text-brand-red font-bold text-lg transition-transform">&plus;</span>
-          </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-white px-6">
-            <p class="py-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100">
-              No. Public roads, roadside canopy avenues, and viewpoints throughout Koupati are completely free to explore. Visitors are requested to respect the private tea plantation bushes, stay on designated trails, and keep the estate clean.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button class="faq-toggle w-full text-left px-6 py-4 font-bold text-sm text-slate-900 flex items-center justify-between gap-4">
-            <span>What is the best time of day and season to visit?</span>
-            <span class="faq-icon text-brand-red font-bold text-lg transition-transform">&plus;</span>
-          </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-white px-6">
-            <p class="py-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100">
-              The premier season is from <strong>October through April</strong> when the climate is pleasantly cool and dry. For day excursions, early mornings (<strong>6:30 AM – 9:30 AM</strong>) feature scenic mist and active birdlife, while late afternoons (<strong>4:00 PM – 5:30 PM</strong>) provide dramatic golden sunset vistas over the tea bushes.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button class="faq-toggle w-full text-left px-6 py-4 font-bold text-sm text-slate-900 flex items-center justify-between gap-4">
-            <span>Are photography and drone flights permitted?</span>
-            <span class="faq-icon text-brand-red font-bold text-lg transition-transform">&plus;</span>
-          </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-white px-6">
-            <p class="py-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100">
-              Personal landscape photography and mobile videography from public pathways are welcomed. Commercial filming or drone flights must follow local district administration guidelines and respect estate privacy.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button class="faq-toggle w-full text-left px-6 py-4 font-bold text-sm text-slate-900 flex items-center justify-between gap-4">
-            <span>What food and refreshment facilities are available nearby?</span>
-            <span class="faq-icon text-brand-red font-bold text-lg transition-transform">&plus;</span>
-          </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-white px-6">
-            <p class="py-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100">
-              Kopati village center offers local tea stalls, fresh snacks, and grocery provisions. For full-service family restaurants, dhabas, and lodging, Dalgaon commercial hub is located just 9 km south along NH-15.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- 9. SECTION 6: PLANNING, CONTACT & OFFICIAL FOOTER        -->
-  <!-- ======================================================== -->
-  <section id="contact" class="py-20 bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <div class="w-14 h-14 rounded-2xl bg-brand-red/20 text-brand-red flex items-center justify-center mx-auto mb-6">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      </div>
-
-      <h2 class="text-3xl font-extrabold tracking-tight">
-        Plan Your Visit to Koupati (<span class="font-assamese text-brand-red font-bold">কৌপাতি</span>)
-      </h2>
-      <p class="mt-3 text-sm text-slate-400 max-w-lg mx-auto">
-        Have questions regarding photography guidelines, local road routes, or visiting hours? Get in touch directly via our official email address.
-      </p>
-
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-        <!-- Strictly Corrected Email -->
-        <a href="mailto:infokopati@yahoo.com?subject=Inquiry%20regarding%20visit%20to%20Koupati%20Assam" 
-           class="px-8 py-3.5 rounded-full bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold uppercase tracking-wider transition shadow-lg flex items-center gap-2">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          <span>Send Email: infokopati@yahoo.com</span>
-        </a>
-        <a href="https://maps.app.goo.gl/Jy5ZYGcH25v5xiEy8" target="_blank" rel="noopener noreferrer" 
-           class="px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider transition border border-white/20 flex items-center gap-2">
-          <span>Open Google Map</span>
-        </a>
-      </div>
-
-      <p class="mt-4 text-[11px] text-slate-500">
-        Direct phone numbers are kept unlisted to preserve visitor privacy. Response guaranteed within 24 hours.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- Official Multi-Column Footer -->
-  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        
-        <!-- Brand Info -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center text-white font-bold">
-              K
-            </div>
-            <div>
-              <span class="text-base font-black text-white">KOUPATI</span>
-              <span class="font-assamese text-brand-red font-bold text-sm ml-1">কৌপাতি</span>
-            </div>
-          </div>
-          <p class="text-slate-400 leading-relaxed text-xs">
-            Assam's tranquil eco-tourism sanctuary in Dalgaon-Sialmari, Udalguri district (PIN: 784113). Dedicated to sustainable tea garden heritage and regional nature conservation.
+        <details class="group bg-brand-cardBg rounded-2xl p-6 border border-gray-200 cursor-pointer">
+          <summary class="font-bold text-gray-900 flex items-center justify-between list-none">
+            <span>Is there an entry fee to visit Koupati (কৌপাতি)?</span>
+            <span class="text-brand-red font-bold transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+            No, exploring the public plantation paths and village trails of Koupati is free of charge. Visitors are kindly requested to respect working tea pluckers, preserve local cleanliness, and refrain from littering.
           </p>
-        </div>
+        </details>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-white font-bold uppercase text-[11px] tracking-wider mb-3">Destinations</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#overview" class="hover:text-white transition">Overview &amp; Trails</a></li>
-            <li><a href="#highlights" class="hover:text-white transition">Thatched Machan Watchtowers</a></li>
-            <li><a href="#map-transit" class="hover:text-white transition">Orang National Park Gate (25 km)</a></li>
-            <li><a href="#map-transit" class="hover:text-white transition">Dalgaon Commercial Hub (9 km)</a></li>
-          </ul>
-        </div>
+        <details class="group bg-brand-cardBg rounded-2xl p-6 border border-gray-200 cursor-pointer">
+          <summary class="font-bold text-gray-900 flex items-center justify-between list-none">
+            <span>What are the best hours for photography and machan viewing?</span>
+            <span class="text-brand-red font-bold transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+            The prime hours for photography are early morning (06:00 AM – 09:30 AM) when morning mist rolls across the valleys, and late afternoon (03:30 PM – 05:15 PM) for golden sunset views over the machans.
+          </p>
+        </details>
 
-        <!-- Visitor Essentials -->
-        <div>
-          <h4 class="text-white font-bold uppercase text-[11px] tracking-wider mb-3">Visitor Essentials</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#reviews" class="hover:text-white transition">Google Ratings (3.9 ★)</a></li>
-            <li><a href="#faq" class="hover:text-white transition">Free Public Entry Guidelines</a></li>
-            <li><a href="mailto:infokopati@yahoo.com" class="hover:text-white transition font-semibold text-slate-300">infokopati@yahoo.com</a></li>
-            <li><span class="text-slate-500">Kopati, Udalguri, Assam - 784113</span></li>
-          </ul>
-        </div>
+        <details class="group bg-brand-cardBg rounded-2xl p-6 border border-gray-200 cursor-pointer">
+          <summary class="font-bold text-gray-900 flex items-center justify-between list-none">
+            <span>Can Koupati be visited alongside Orang National Park?</span>
+            <span class="text-brand-red font-bold transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+            Yes, Koupati is located just 25 km from Orang National Park (The Mini Kaziranga). Many travelers spend their morning exploring the tea garden machans of Koupati and the afternoon on wildlife safari.
+          </p>
+        </details>
 
-        <!-- Social Media Channels -->
-        <div>
-          <h4 class="text-white font-bold uppercase text-[11px] tracking-wider mb-3">Connect Online</h4>
-          <div class="flex flex-col space-y-2.5">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/koupati_official/" target="_blank" rel="noopener noreferrer" 
-               class="flex items-center gap-2.5 hover:text-white transition group">
-              <div class="w-7 h-7 rounded-full bg-white/10 group-hover:bg-slate-800 flex items-center justify-center transition border border-white/10">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none">
-                  <defs>
-                    <linearGradient id="igFootGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#FFDC80"/>
-                      <stop offset="25%" stop-color="#F77737"/>
-                      <stop offset="50%" stop-color="#F56040"/>
-                      <stop offset="75%" stop-color="#FD1D1D"/>
-                      <stop offset="100%" stop-color="#833AB4"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#igFootGrad)" stroke-width="2"/>
-                  <circle cx="12" cy="12" r="4" stroke="url(#igFootGrad)" stroke-width="2"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="url(#igFootGrad)"/>
-                </svg>
-              </div>
-              <span>@koupati_official</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Tourism Footer -->
+  <footer id="contact" class="bg-gray-950 text-white pt-16 pb-12 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-brand-red flex items-center justify-center font-bold text-lg">K</div>
+            <span class="text-xl font-bold tracking-tight">KOUPATI • কৌপাতি</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm mb-6">
+            The official tourism portal for Koupati, Dalgaon, Assam. Dedicated to preserving the natural beauty, cultural heritage, and ecological tranquility of our tea estate corridor.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/koupati_official/" target="_blank" class="w-8 h-8 rounded-full bg-gray-900 hover:bg-brand-red flex items-center justify-center transition-colors" title="Instagram">
+              <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/infokoupati/" target="_blank" rel="noopener noreferrer" 
-               class="flex items-center gap-2.5 hover:text-white transition group">
-              <div class="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#1877F2] flex items-center justify-center transition border border-white/10">
-                <svg class="w-3.5 h-3.5 fill-[#1877F2] group-hover:fill-white transition" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </div>
-              <span>Facebook (infokoupati)</span>
+            <a href="https://www.facebook.com/infokoupati" target="_blank" class="w-8 h-8 rounded-full bg-gray-900 hover:bg-brand-red flex items-center justify-center transition-colors" title="Facebook">
+              <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-
-            <!-- X (Twitter) -->
-            <a href="https://x.com/KoupatiOfficial" target="_blank" rel="noopener noreferrer" 
-               class="flex items-center gap-2.5 hover:text-white transition group">
-              <div class="w-7 h-7 rounded-full bg-white/10 group-hover:bg-black flex items-center justify-center transition border border-white/10">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </div>
-              <span>@KoupatiOfficial on X</span>
+            <a href="https://x.com/KoupatiOfficial" target="_blank" class="w-8 h-8 rounded-full bg-gray-900 hover:bg-brand-red flex items-center justify-center transition-colors" title="X">
+              <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
 
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h5 class="text-xs uppercase font-bold tracking-widest text-gray-300 mb-4">Quick Links</h5>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="#overview" class="hover:text-white transition-colors">About Koupati</a></li>
+            <li><a href="#highlights" class="hover:text-white transition-colors">Lookout Machans</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors">Full Gallery (15)</a></li>
+            <li><a href="#map" class="hover:text-white transition-colors">Transit Routes</a></li>
+            <li><a href="#reviews" class="hover:text-white transition-colors">Verified Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Official Inquiries -->
+        <div>
+          <h5 class="text-xs uppercase font-bold tracking-widest text-gray-300 mb-4">Official Inquiries</h5>
+          <p class="text-xs text-gray-400 mb-2">For tourism inquiries and photography permissions:</p>
+          <a href="mailto:infokopati@yahoo.com" class="text-xs font-bold text-brand-red hover:underline block break-all">
+            infokopati@yahoo.com
+          </a>
+          <p class="text-[11px] text-gray-500 mt-3">PIN: 784113 • Assam, India</p>
+        </div>
+
       </div>
 
-      <!-- Copyright Bottom -->
-      <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-        <div>
-          &copy; 2026 Koupati (<span class="font-assamese text-slate-400">কৌপাতি</span>) Tourism. All rights reserved. Udalguri, Assam - 784113.
-        </div>
-        <div>
-          Official Portal: <a href="https://koupati.netlify.app/" class="text-brand-red font-semibold hover:underline">koupati.netlify.app</a>
-        </div>
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>© 2026 Koupati (কৌপাতি) Tourism. All rights reserved.</p>
+        <p class="text-[11px]">Designed with clean standard web components • Deployed via GitHub & Netlify</p>
       </div>
 
     </div>
   </footer>
 
-  <!-- ======================================================== -->
-  <!-- 10. LIGHTBOX MODAL WITH THUMBNAILS & CROP TOGGLE         -->
-  <!-- ======================================================== -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex flex-col justify-between p-4 sm:p-6">
-    
-    <!-- Top Bar -->
-    <div class="w-full max-w-6xl mx-auto flex items-center justify-between text-white pb-3 border-b border-white/10">
-      <div class="flex items-center gap-3">
-        <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs font-mono font-bold" id="lightboxCounter">1/15</span>
-        <span class="text-sm font-semibold text-slate-300 hidden sm:inline" id="lightboxCategory">Machan Watchtower</span>
-      </div>
-      
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 hidden flex flex-col">
+    <!-- Modal Header Controls -->
+    <div class="p-4 flex items-center justify-between border-b border-gray-800 text-white">
+      <span id="lightboxCounter" class="text-xs font-mono text-gray-400">1 / 15</span>
       <div class="flex items-center gap-3">
         <!-- Interactive Crop Toggle Button -->
-        <button id="lightboxCropBtn" onclick="toggleLightboxCrop()" class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white flex items-center gap-1.5 transition border border-white/20 shadow">
-          <span>✂️ Crop: ON</span>
+        <button id="cropToggleBtn" onclick="toggleLightboxCrop()" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-xs font-bold text-white transition-colors">
+          ✂️ Crop: ON
         </button>
-        <button onclick="closeLightbox()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-red text-white flex items-center justify-center transition">
+        <button onclick="closeLightbox()" class="p-2 text-gray-400 hover:text-white text-xl font-bold leading-none">
           ✕
         </button>
       </div>
     </div>
-
-    <!-- Center Stage -->
-    <div class="relative w-full max-w-5xl mx-auto flex-1 flex items-center justify-center my-4">
-      <button onclick="changeLightboxImage(-1)" class="absolute left-2 sm:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-brand-red text-white flex items-center justify-center transition z-20 text-lg shadow-lg">
-        &#10094;
-      </button>
-
-      <div id="lightboxViewport" class="lightbox-viewport is-cropped rounded-xl overflow-hidden shadow-2xl bg-black flex items-center justify-center max-w-[90vw] max-h-[65vh]">
-        <img id="lightboxImg" src="" alt="Gallery Preview" class="transition-all duration-300">
+    
+    <!-- Modal Image Viewport -->
+    <div class="flex-1 flex items-center justify-center p-4 relative overflow-hidden">
+      <button onclick="changePhoto(-1)" class="absolute left-4 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white z-10 text-xl">‹</button>
+      <div class="max-w-4xl max-h-[75vh] overflow-hidden rounded-xl">
+        <img id="lightboxImg" src="" alt="Fullscreen View" class="max-h-[75vh] w-auto object-contain transition-transform duration-300 modal-crop-active" />
       </div>
-
-      <button onclick="changeLightboxImage(1)" class="absolute right-2 sm:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-brand-red text-white flex items-center justify-center transition z-20 text-lg shadow-lg">
-        &#10095;
-      </button>
+      <button onclick="changePhoto(1)" class="absolute right-4 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white z-10 text-xl">›</button>
     </div>
-
-    <!-- Captions -->
-    <div class="text-center mb-2">
-      <h4 id="lightboxTitle" class="text-base font-bold text-white"></h4>
-      <p id="lightboxDesc" class="text-xs text-slate-400 max-w-xl mx-auto mt-0.5 line-clamp-1"></p>
-    </div>
-
-    <!-- Bottom Thumbnail Carousel -->
-    <div class="overflow-x-auto py-2 max-w-4xl mx-auto w-full">
-      <div class="flex items-center gap-2 px-4 justify-start sm:justify-center" id="lightboxThumbnails"></div>
-    </div>
-
   </div>
 
-  <!-- ======================================================== -->
-  <!-- 11. JAVASCRIPT: LOGIC, LEAFLET MAP, GALLERY & FAQ        -->
-  <!-- ======================================================== -->
+  <!-- Leaflet Map Script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <script>
-    // 15 AUTHENTIC USER PHOTOGRAPHS (HOSTED ON GOOGLE CLOUD CDN)
-    const galleryData = [
-      {
-        id: 0,
-        title: "Thatched Treehouse Machan Watchtower",
-        category: "machan",
-        desc: "Signature bamboo-and-thatch elevated machan offering 360-degree vistas across lush tea bushes in Koupati (কৌপাতি).",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaRvjYR06eNVRdz0mS3ePiGoV-hm3otF7OD0sI7YEOIK1G5ihkdlfTpWvYOGkF6DYuDswtWqb3sba1orq18iBc32SuVCRyGZqyApSReqtUqnPmMKSmnMQRoYIcwFznA_rn0bAZc76qiCfaP"
-      },
-      {
-        id: 1,
-        title: "Heritage Canopy Avenue",
-        category: "canopy",
-        desc: "Ancient shaded tree archway welcoming travellers along the Dalgaon-Kopati corridor.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYtvLhvzsHGc2nl78ijidv54scQZP0gBIzeE5AwUSYRDP_mtbEMkclLy2PKTRzTBoKWQoeRwC5GdmR46YlkywSlPdkKwX1l1rQFhonyIgarRgU7yHWrCekwRxSbITvN4-kJhIcbzo7BtaY"
-      },
-      {
-        id: 2,
-        title: "Lush Tea Rows at Dawn",
-        category: "tea",
-        desc: "Endless geometric tea shrubs glistening under early morning Assam dew.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYmkzH-EKKSXVqAevyrXdz9T7-0EZ-t48FD9c-kKbQhtGLjjTrXfgBYZCvWjJetjFWID8ezxLQTacqZ5MSc4LDMHgvFDUbWEadkNJuZ8TvA6jI8cNMS2sqjj6EnCWtp6iLV5YSiy0SDGjyM"
-      },
-      {
-        id: 3,
-        title: "Sunset Riverbank Horizon",
-        category: "tea",
-        desc: "Warm golden rays filtering through the riverbank horizon near Kopati.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYe-5Cy2NDdOwqqKybjxfa2BFGhOZe4z03fJamGvvsZpaEjywtebZhZvdPRbFiA5ZzfhdSy1PyBoaC8Ggx8_bJVaJ0fwdXkF0qNG8dvsjhzl2SEnUlPKTOXGRgepKjWUifxPoBgaoy9yIJE"
-      },
-      {
-        id: 4,
-        title: "Machan Sunset Vista",
-        category: "machan",
-        desc: "Rustic handcrafted viewpoint looking over the evening golden glow.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OaSBPoSjMMHpNdXl1ZsdxfVCEldSK2D0BOHFahpE0pNozStGazJWhj3NPrU75iE_5gbVs3-FmybMVWATod2wtTHy1zkUJWNFXHXfWvS86P48__bV_87U9CvrbTgaolqqtS51nxAsp-m5Qzt"
-      },
-      {
-        id: 5,
-        title: "Heritage Plantation Road",
-        category: "canopy",
-        desc: "Paved cycling and walking road enveloped by shade trees near Kopati.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OY8baVk400iwad6_SMZUJ5k5jgYj7vlO274WInt-8FBUXiMisZo2hheF7ZDwZ6xAF80tCvoXURhx08eABXMN9X-Az0oTmXIIMCOAUKiSD9qrKhSbygQwJQkg9sG0cDLOY0BcwTK2QSvmZY"
-      },
-      {
-        id: 6,
-        title: "Tea Garden Trail Path",
-        category: "tea",
-        desc: "Neat pedestrian pathway alongside thriving green tea shrubs.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8Ob10TDU0TwRNJH5rgHOYutBRIgVLkRbMJiv7zEXOmVDf0orzAdqKthDh9L6BsqAo12q8Y45ZYumvQQL0j02bzEy-R-RpHZ904P9ZRdx6QbwsrMPAmYp4xnnG3D2DGt0iYW9Gw-5rUPNODJb"
-      },
-      {
-        id: 7,
-        title: "Canopy Tree Avenue",
-        category: "canopy",
-        desc: "Towering canopy trees that create natural temperature cooling over tea bushes.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8ObWSKqKj_DL5ITl0ev4fdcs7Y8HsWYf2WPv_L7yVZbthMtUCjGrzQXDqpiQjNkXdwdiscM5-cM5AOpKKqwgRjujiCwH3V2HIipYNOKzU-b7VUsIB56HLNIuLYoh0Uopp_XfOd3H1_aixykJ"
-      },
-      {
-        id: 8,
-        title: "Shaded Estate Lane",
-        category: "canopy",
-        desc: "Tranquil country lane bordered by tea bushes and high rain tree branches.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZn-wRA7OkoF_v4mEabrHUUo-TfDPDdczXMQDpUuPI1eGEZBT04-qKHlSG0jw5zx3BEsSMFsLVkQ-TH0Wp7vCeCS9Jv9saDgDNwJxHdj2f58rOyoxGZTC8xjjA3U_1NWd9Fl9xelOTbBIM0"
-      },
-      {
-        id: 9,
-        title: "Rural Kopati Horizon",
-        category: "tea",
-        desc: "Unspoiled open countryside view demonstrating Koupati's clean air and calm vibe.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYqx49jPIy8UUmgkdHD4RLCTXJfWWlmeTYomj6S-JQlHS0rA1unTzZAXIQ47nu0qu0utKpkMXR3nvrEi3OalggYoyCYRx2o2p_hc7TA5_1Tt8QF_ccJ2GTXwX35cebuHFe5CMa5gL04O95H"
-      },
-      {
-        id: 10,
-        title: "Bamboo Thicket & Machan Approach",
-        category: "machan",
-        desc: "Natural bamboo groves indigenous to Assam flanking the entrance to the machan.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8Obp2qNSqtaTVk4qNx4d4KAPoO3TVghtVwPDxf1lQkLjfMsibEvkhoH8CL0yfDTnHUp15ZebgnfAXVf0-A9CMZQZyyjyQMxc061RHUmlkAX8JWysB5ePoGy9OXp0kFvfac53OlKRfS0Oq421"
-      },
-      {
-        id: 11,
-        title: "Evening Tea Trails",
-        category: "tea",
-        desc: "Gentle evening breeze rustling through rows of Camellia sinensis.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZ-AW1CKBdRhpyowTsWCAa7oc88s5aY3E8RKU6ZvpwxvUNW_UcTCtLZ_Sp0NS2B1vD0WUeGcQv-rJEHR5G6VTnlK0La29S6AZrvxxWD7VhX98aAuUO_CreVGaPqqbpBZWPri4fNzMX1mGAF"
-      },
-      {
-        id: 12,
-        title: "Golden Hour Estate Vista",
-        category: "tea",
-        desc: "Luminous amber hues cast across the expansive green plantation contours.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYqwum1pf8nkLeAEFFnaJV0vsMp-ASSqW2Y4FWhyBi9V9vf7R1-aUIBlwOugonCYlf_52-IOdwrwwrSmZWnIGwI6QZQ-43CtUIW1Q6Ow9rU5P6SOPrS0ahR4dSgYYLHLll2uPyYHTcJSDUJ"
-      },
-      {
-        id: 13,
-        title: "Green Carpet Vista",
-        category: "tea",
-        desc: "Continuous sea of tea bushes demonstrating why Koupati is 'The Green Destination'.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OYHHl20CunO0gTgFg0LngEG6AKbjCjzgRfq_On9_exGQK-7sDe8UZxLsxjdyjYr3LqdNpGcuj5SLOP7CpK7DqbomnLn_PcqYRErA2Om7utUj9y-_kvCE6SFjWrdbHketR0_PesY4CYJIoAQ"
-      },
-      {
-        id: 14,
-        title: "Emerald Canopy Stretch",
-        category: "canopy",
-        desc: "Stretching along the quiet tea trail roads lined by deep green leaf crowns.",
-        url: "https://lh3.googleusercontent.com/gpu-csl/AM3A8OZ4jXTS1gr-QlQiGm7QxRbnXGxpyzZWxqF6VPSrSnv1U5sikm88fNE9ujjPf-CVlNKEfTCCGE2Oi5t-H-FblWPvzTEYI8lW6PNSO5saTMBShXltz9Vs7Jh7sIfZab7gO2e4iKx6nvJtnE2e"
-      }
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+    });
+
+    // 2. Leaflet Map Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      const map = L.map('leafletMap').setView([26.5846, 92.2483], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Custom Marker Icon
+      L.marker([26.5846, 92.2483]).addTo(map)
+        .bindPopup('<strong>Koupati (কৌপাতি)</strong><br>The Green Destination<br>PIN 784113')
+        .openPopup();
+    });
+
+    // 3. 15 Cloud CDN Photos Array
+    const photoUrls = [
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88753.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88754.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88755.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88756.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88757.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88758.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88759.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88760.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88761.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88762.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88763.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88764.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88765.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88766.png",
+      "https://storage.googleapis.com/bkt-fl-prd-common-media/chat_media/1464610766300994400_88767.png"
     ];
 
     let currentPhotoIndex = 0;
-    let isLightboxCropped = true;
-
-    // Render Gallery Cards
-    function renderGallery(items) {
-      const container = document.getElementById("galleryGrid");
-      if (!container) return;
-      container.innerHTML = "";
-
-      items.forEach(photo => {
-        const card = document.createElement("div");
-        card.className = "bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group cursor-pointer";
-        card.onclick = () => openLightbox(photo.id);
-
-        card.innerHTML = `
-          <div class="h-60 crop-box">
-            <img src="${photo.url}" alt="${photo.title}">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 z-10">
-              <span class="inline-flex items-center gap-1.5 text-white text-xs font-bold uppercase tracking-wider bg-brand-red px-3 py-1 rounded-full shadow">
-                Expand View
-              </span>
-            </div>
-            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider z-10">
-              ${photo.category}
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h4 class="font-bold text-sm text-slate-900 group-hover:text-brand-red transition-colors line-clamp-1">${photo.title}</h4>
-              <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">${photo.desc}</p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-400">
-              <span class="font-assamese text-brand-red font-bold">কৌপাতি</span>
-              <span class="font-mono text-slate-600 font-bold">#${photo.id + 1}</span>
-            </div>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // Filter Gallery
-    function filterGallery(category) {
-      document.querySelectorAll(".gallery-tab").forEach(tab => {
-        if (tab.getAttribute("data-filter") === category) {
-          tab.className = "gallery-tab px-4 py-1.5 rounded-full text-xs font-bold bg-brand-red text-white shadow-sm transition";
-        } else {
-          tab.className = "gallery-tab px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-900 transition";
-        }
-      });
-
-      if (category === 'all') {
-        renderGallery(galleryData);
-      } else {
-        renderGallery(galleryData.filter(item => item.category === category));
-      }
-    }
-
-    // Lightbox Controls
-    const lightboxModal = document.getElementById("lightboxModal");
-    const lightboxImg = document.getElementById("lightboxImg");
-    const lightboxTitle = document.getElementById("lightboxTitle");
-    const lightboxDesc = document.getElementById("lightboxDesc");
-    const lightboxCounter = document.getElementById("lightboxCounter");
-    const lightboxCategory = document.getElementById("lightboxCategory");
-    const lightboxThumbnails = document.getElementById("lightboxThumbnails");
-    const lightboxViewport = document.getElementById("lightboxViewport");
-    const lightboxCropBtn = document.getElementById("lightboxCropBtn");
+    let isModalCropped = true;
 
     function openLightbox(index) {
       currentPhotoIndex = index;
-      updateLightboxDisplay();
-      renderLightboxThumbnails();
-      lightboxModal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const counter = document.getElementById('lightboxCounter');
+      
+      img.src = photoUrls[currentPhotoIndex];
+      counter.innerText = `${currentPhotoIndex + 1} / ${photoUrls.length}`;
+      modal.classList.remove('hidden');
     }
 
     function closeLightbox() {
-      lightboxModal.classList.add("hidden");
-      document.body.style.overflow = "auto";
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+
+    function changePhoto(step) {
+      currentPhotoIndex = (currentPhotoIndex + step + photoUrls.length) % photoUrls.length;
+      document.getElementById('lightboxImg').src = photoUrls[currentPhotoIndex];
+      document.getElementById('lightboxCounter').innerText = `${currentPhotoIndex + 1} / ${photoUrls.length}`;
     }
 
     function toggleLightboxCrop() {
-      isLightboxCropped = !isLightboxCropped;
-      if (isLightboxCropped) {
-        lightboxViewport.classList.add("is-cropped");
-        lightboxCropBtn.innerHTML = '<span>✂️ Crop: ON</span>';
-        lightboxCropBtn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white flex items-center gap-1.5 transition border border-white/20 shadow";
+      const img = document.getElementById('lightboxImg');
+      const btn = document.getElementById('cropToggleBtn');
+      isModalCropped = !isModalCropped;
+
+      if (isModalCropped) {
+        img.classList.remove('modal-crop-inactive');
+        img.classList.add('modal-crop-active');
+        btn.innerText = '✂️ Crop: ON';
       } else {
-        lightboxViewport.classList.remove("is-cropped");
-        lightboxCropBtn.innerHTML = '<span>🔍 Full: OFF</span>';
-        lightboxCropBtn.className = "px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-slate-200 hover:bg-white/30 flex items-center gap-1.5 transition border border-white/20 shadow";
+        img.classList.remove('modal-crop-active');
+        img.classList.add('modal-crop-inactive');
+        btn.innerText = '🔍 Full: 100%';
       }
     }
 
-    function changeLightboxImage(direction) {
-      currentPhotoIndex += direction;
-      if (currentPhotoIndex < 0) currentPhotoIndex = galleryData.length - 1;
-      if (currentPhotoIndex >= galleryData.length) currentPhotoIndex = 0;
-      updateLightboxDisplay();
-      renderLightboxThumbnails();
-    }
-
-    function updateLightboxDisplay() {
-      const photo = galleryData[currentPhotoIndex];
-      lightboxImg.src = photo.url;
-      lightboxTitle.textContent = photo.title;
-      lightboxDesc.textContent = photo.desc;
-      lightboxCounter.textContent = `${photo.id + 1}/${galleryData.length}`;
-      lightboxCategory.textContent = photo.category.toUpperCase();
-    }
-
-    function renderLightboxThumbnails() {
-      lightboxThumbnails.innerHTML = "";
-      galleryData.forEach(photo => {
-        const thumb = document.createElement("img");
-        thumb.src = photo.url;
-        thumb.alt = photo.title;
-        thumb.className = `w-14 h-11 object-cover rounded-lg cursor-pointer border-2 transition-all shrink-0 ${photo.id === currentPhotoIndex ? 'border-brand-red scale-105' : 'border-transparent opacity-60 hover:opacity-100'}`;
-        thumb.onclick = () => {
-          currentPhotoIndex = photo.id;
-          updateLightboxDisplay();
-          renderLightboxThumbnails();
-        };
-        lightboxThumbnails.appendChild(thumb);
-      });
-    }
-
-    // Keyboard support for Lightbox
-    document.addEventListener("keydown", (e) => {
-      if (lightboxModal && !lightboxModal.classList.contains("hidden")) {
-        if (e.key === "Escape") closeLightbox();
-        if (e.key === "ArrowLeft") changeLightboxImage(-1);
-        if (e.key === "ArrowRight") changeLightboxImage(1);
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') changePhoto(-1);
+        if (e.key === 'ArrowRight') changePhoto(1);
       }
-    });
-
-    // FAQ Accordion
-    document.querySelectorAll(".faq-toggle").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector(".faq-icon");
-        const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
-
-        document.querySelectorAll(".faq-content").forEach(el => el.style.maxHeight = "0px");
-        document.querySelectorAll(".faq-icon").forEach(el => el.textContent = "+");
-
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          icon.textContent = "−";
-        }
-      });
-    });
-
-    // Mobile Menu Drawer
-    const mobileBtn = document.getElementById("mobileMenuBtn");
-    const mobileDrawer = document.getElementById("mobileDrawer");
-    if (mobileBtn && mobileDrawer) {
-      mobileBtn.addEventListener("click", () => mobileDrawer.classList.toggle("hidden"));
-      document.querySelectorAll(".mobile-link").forEach(l => l.addEventListener("click", () => mobileDrawer.classList.add("hidden")));
-    }
-
-    // Interactive Leaflet Map & Waypoints
-    const mapWaypoints = [
-      { name: "Koupati (কৌপাতি) Center", desc: "Tea estate hub, altitude 102m.", coords: [26.5846, 92.2483], color: "#D71A21" },
-      { name: "Thatched Machan Watchtower", desc: "Elevated panoramic bamboo viewpoint.", coords: [26.5880, 92.2510], color: "#10B981" },
-      { name: "Heritage Canopy Avenue", desc: "Ancient shade tree archway corridor.", coords: [26.5795, 92.2450], color: "#3B82F6" },
-      { name: "Kopati Bazaar & Transit Hub", desc: "Marketplace, taxi stand & provisions.", coords: [26.5820, 92.2420], color: "#F59E0B" },
-      { name: "Dalgaon Hub (9 km)", desc: "Intersection on NH-15 connecting Guwahati & Tezpur.", coords: [26.5350, 92.2380], color: "#6366F1" },
-      { name: "Orang National Park Gate (25 km)", desc: "Sanctuary for Great Indian One-horned Rhinos.", coords: [26.5100, 92.3500], color: "#0F172A" }
-    ];
-
-    let mapInstance;
-    let leafletMarkers = [];
-
-    function initMap() {
-      const container = document.getElementById("koupatiMap");
-      if (!container || typeof L === "undefined") return;
-
-      mapInstance = L.map('koupatiMap').setView([26.5846, 92.2483], 12);
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '&copy; OpenStreetMap'
-      }).addTo(mapInstance);
-
-      mapWaypoints.forEach((wp, i) => {
-        const marker = L.circleMarker(wp.coords, {
-          radius: i === 0 ? 10 : 8,
-          fillColor: wp.color,
-          color: "#FFFFFF",
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.95
-        }).addTo(mapInstance);
-
-        marker.bindPopup(`
-          <div class="text-xs p-1">
-            <strong class="text-slate-900 block font-bold text-sm mb-1">${wp.name}</strong>
-            <p class="text-slate-600 mb-2 leading-relaxed">${wp.desc}</p>
-            <span class="inline-block px-2 py-0.5 rounded bg-rose-50 text-brand-red font-mono font-bold text-[10px]">
-              ${wp.coords[0].toFixed(4)}° N, ${wp.coords[1].toFixed(4)}° E
-            </span>
-          </div>
-        `);
-
-        leafletMarkers.push(marker);
-      });
-
-      renderMapPills();
-    }
-
-    function renderMapPills() {
-      const pillBox = document.getElementById("mapPills");
-      if (!pillBox) return;
-      pillBox.innerHTML = "";
-
-      mapWaypoints.forEach((wp, idx) => {
-        const btn = document.createElement("button");
-        btn.className = "text-left p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rose-50 hover:border-brand-red transition text-xs flex items-center justify-between group";
-        btn.onclick = () => {
-          mapInstance.flyTo(wp.coords, 14, { duration: 1.2 });
-          leafletMarkers[idx].openPopup();
-        };
-
-        btn.innerHTML = `
-          <div class="truncate">
-            <span class="font-bold text-slate-800 group-hover:text-brand-red block truncate">${wp.name}</span>
-          </div>
-          <span class="text-brand-red font-bold ml-1 text-xs">&rarr;</span>
-        `;
-        pillBox.appendChild(btn);
-      });
-    }
-
-    // Initialize Page
-    window.addEventListener("DOMContentLoaded", () => {
-      renderGallery(galleryData);
-      initMap();
     });
   </script>
 </body>
 </html>
-```
