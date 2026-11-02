@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://koupati.vercel.app/" />
   <meta property="og:title" content="Koupati (কৌপাতি) — The Green Destination" />
-  <meta property="og:description" content="Official tourism destination guide to Koupati, Assam. Featuring authentic gallery views, interactive maps, reviews, and travel guides." />
+  <meta property="og:description" content="Official tourism destination guide to Koupati, Assam. Featuring authentic gallery views, interactive maps, reviews, FAQs, and travel guides." />
   <meta property="og:image" content="1.jpeg" />
 
   <!-- Twitter / X Card -->
@@ -104,7 +104,7 @@
     </div>
   </aside>
 
-  <!-- Sticky Main Navigation -->
+  <!-- Sticky Main Navigation with Mobile Drawer Button -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
@@ -118,16 +118,14 @@
       </a>
 
       <!-- Desktop Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
         <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
         <a href="#highlights" class="hover:text-brand-red transition-colors">Highlights</a>
         <a href="#heritage" class="hover:text-brand-red transition-colors">Tea Heritage</a>
         <a href="#gallery" class="hover:text-brand-red transition-colors">Gallery</a>
         <a href="#map" class="hover:text-brand-red transition-colors">Map & Transit</a>
-        <a href="#reviews" class="hover:text-brand-red transition-colors flex items-center gap-1">
-          <span>Reviews</span>
-          <span class="text-xs bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded">3.9 ★</span>
-        </a>
+        <a href="#reviews" class="hover:text-brand-red transition-colors">Reviews</a>
+        <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
       </nav>
 
       <!-- Right Header Actions (Social Profiles & CTA) -->
@@ -151,6 +149,24 @@
         </a>
       </div>
 
+      <!-- Mobile Menu Button (Three Dots / Hamburger) -->
+      <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-700 hover:text-brand-red focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#overview" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Overview</a>
+      <a href="#highlights" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Highlights</a>
+      <a href="#heritage" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Tea Heritage</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Gallery</a>
+      <a href="#map" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Map & Transit</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Google Reviews (3.9 ★)</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">FAQ</a>
     </div>
   </header>
 
@@ -174,7 +190,7 @@
         </h1>
 
         <p class="text-base sm:text-lg text-gray-300 font-normal leading-relaxed mb-8">
-          Wander through endless emerald tea gardens, serene village landscapes, and rich wildlife corridors near Orang National Park in Dalgaon, Assam.
+          Wander through endless emerald tea gardens, serene village landscapes, and rich wildlife corridors near Orang National Park in Dalgaon, Assam[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).
         </p>
 
         <div class="flex flex-wrap items-center gap-4">
@@ -195,12 +211,12 @@
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Subdivision</p>
         <p class="text-2xl font-black text-gray-900 mt-1">Dalgaon (Pt)</p>
-        <p class="text-xs text-gray-500">Darrang District, Assam</p>
+        <p class="text-xs text-gray-500">Darrang District, Assam[span_2](start_span)[span_2](end_span)</p>
       </div>
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Wildlife Access</p>
         <p class="text-2xl font-black text-gray-900 mt-1">Orang Park</p>
-        <p class="text-xs text-gray-500">Proximity Corridor</p>
+        <p class="text-xs text-gray-500">Proximity Corridor[span_3](start_span)[span_3](end_span)</p>
       </div>
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Google Rating</p>
@@ -210,7 +226,7 @@
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Postal Code</p>
         <p class="text-2xl font-black text-gray-900 mt-1">784113</p>
-        <p class="text-xs text-gray-500">Koupati, Assam</p>
+        <p class="text-xs text-gray-500">Koupati, Assam[span_4](start_span)[span_4](end_span)</p>
       </div>
     </div>
   </section>
@@ -224,10 +240,10 @@
         <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">About Koupati</h3>
         <div class="w-16 h-1 bg-brand-red mx-auto mb-8 rounded-full"></div>
         <p class="text-base sm:text-lg text-gray-600 leading-relaxed text-left mb-4">
-          Koupati is a picturesque village located in the Dalgaon subdivision of the Darrang district in Assam. Operating under the Koupati Gaon Panchayat, this scenic rural destination spans across a rich geographical expanse characterized by fertile soil, tranquil village life, and vibrant cultural harmony.
+          Koupati is a picturesque village located in the Dalgaon subdivision of the Darrang district in Assam[span_5](start_span)[span_5](end_span). Operating under the Koupati Gaon Panchayat, this scenic rural destination spans across a rich geographical expanse characterized by fertile soil, tranquil village life, and vibrant cultural harmony[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).
         </p>
         <p class="text-base sm:text-lg text-gray-600 leading-relaxed text-left">
-          Located just 13 km from Kharupetia, Koupati serves as an ideal escape for nature lovers and travelers seeking to experience authentic Assamese village culture away from urban bustle. Its unique geography, bordered by emerald tea plantations and close proximity to the renowned Orang National Park, establishes it as a prominent eco-tourism hub.
+          Located just 13 km from Kharupetia[span_8](start_span)[span_8](end_span), Koupati serves as an ideal escape for nature lovers and travelers seeking to experience authentic Assamese village culture away from urban bustle. Its unique geography, bordered by emerald tea plantations and close proximity to the renowned Orang National Park[span_9](start_span)[span_9](end_span), establishes it as a prominent eco-tourism hub.
         </p>
       </div>
 
@@ -241,27 +257,27 @@
         <h2 class="text-xs uppercase font-bold tracking-widest text-green-300 mb-2">Agricultural Legacy</h2>
         <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Kopati Tea Estate Heritage</h3>
         <div class="w-16 h-1 bg-green-400 mx-auto mt-4 rounded-full"></div>
-        <p class="text-sm text-green-200 mt-4">Rooted deeply in Assam's timeless tea-making tradition under Rydak Syndicate Limited.</p>
+        <p class="text-sm text-green-200 mt-4">Rooted deeply in Assam's timeless tea-making tradition under Rydak Syndicate Limited[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span).</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-green-800/80 p-8 rounded-2xl border border-green-700">
           <h4 class="text-xl font-bold mb-3 text-green-100">The Plantations & Terroir</h4>
           <p class="text-sm text-green-200 leading-relaxed">
-            Spanning approximately 700 acres along the banks of the Dhunseri River, Kopati Tea Estate features sandy-loam soils rich in carbon content—ideal for organic agricultural practices. The estate cultivates the native <em>Camellia sinensis var. assamica</em> variety, producing exceptional leaf quality.
+            Spanning approximately 700 acres along the banks of the Dhunseri River, Kopati Tea Estate features sandy-loam soils rich in carbon content—ideal for organic agricultural practices[span_12](start_span)[span_12](end_span). The estate cultivates the native <em>Camellia sinensis var. assamica</em> variety, producing exceptional leaf quality[span_13](start_span)[span_13](end_span).
           </p>
         </div>
         <div class="bg-green-800/80 p-8 rounded-2xl border border-green-700">
           <h4 class="text-xl font-bold mb-3 text-green-100">Flavour & Diversification</h4>
           <p class="text-sm text-green-200 leading-relaxed">
-            Renowned for robust, malty Assam teas with bright reddish-brown liquor, skilled workers hand-pluck fine artisan batches. Beyond tea, the estate contributes to local biodiversity through sustainable rubber and betel nut cultivation.
+            Renowned for robust, malty Assam teas with bright reddish-brown liquor, skilled workers hand-pluck fine artisan batches[span_14](start_span)[span_14](end_span). Beyond tea, the estate contributes to local biodiversity through sustainable rubber and betel nut cultivation[span_15](start_span)[span_15](end_span).
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Comprehensive Gallery Section -->
+  <!-- Comprehensive Gallery Section (Photos perfectly mapped with correct content) -->
   <section id="gallery" class="py-20 bg-gray-50 border-t border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -271,50 +287,50 @@
         <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <!-- Gallery Grid -->
+      <!-- Gallery Grid with Correctly Mapped Photos -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Newly Added Photo 1 -->
+        <!-- Photo 1: Orang National Park Signboard (90126.webp) -->
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52">
             <img src="90126.webp" alt="Orang National Park Gateway" />
           </div>
           <div class="p-5">
             <h4 class="font-bold text-lg text-gray-900 mb-1">Gateway to Wildlife</h4>
-            <p class="text-sm text-gray-600">The official entrance to Orang National Park, inviting explorers into pristine wilderness.</p>
+            <p class="text-sm text-gray-600">The official entrance to Orang National Park[span_16](start_span)[span_16](end_span), inviting explorers into pristine wilderness and biodiversity.</p>
           </div>
         </div>
 
-        <!-- Newly Added Photo 2 -->
+        <!-- Photo 2: Wild Tiger in Greenery (90127.webp) -->
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52">
             <img src="90127.webp" alt="The Pride of Orang" />
           </div>
           <div class="p-5">
             <h4 class="font-bold text-lg text-gray-900 mb-1">The Pride of Orang</h4>
-            <p class="text-sm text-gray-600">Witnessing magnificent wildlife thriving naturally within protected green corridors.</p>
+            <p class="text-sm text-gray-600">Witnessing magnificent wildlife thriving naturally within protected green corridors near Koupati.</p>
           </div>
         </div>
 
-        <!-- Newly Added Photo 3 -->
+        <!-- Photo 3: Eco Safari Vehicle (90128.webp) -->
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52">
             <img src="90128.webp" alt="Ready for the Wild Trail" />
           </div>
           <div class="p-5">
             <h4 class="font-bold text-lg text-gray-900 mb-1">Ready for the Wild Trail</h4>
-            <p class="text-sm text-gray-600">Equipped for adventurous eco-tours across emerald tea gardens and forest paths.</p>
+            <p class="text-sm text-gray-600">Equipped for adventurous eco-tours across emerald tea gardens and scenic forest pathways.</p>
           </div>
         </div>
 
-        <!-- Newly Added Photo 4 -->
+        <!-- Photo 4: Community Gathering (90125.webp) -->
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52">
             <img src="90125.webp" alt="Heart of Koupati Community" />
           </div>
           <div class="p-5">
             <h4 class="font-bold text-lg text-gray-900 mb-1">Heart of Koupati Community</h4>
-            <p class="text-sm text-gray-600">A glimpse of local unity and cultural heritage at the Koupati Gaon Panchayat.</p>
+            <p class="text-sm text-gray-600">A glimpse of local unity and cultural heritage at the Koupati Gaon Panchayat[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span).</p>
           </div>
         </div>
 
@@ -349,7 +365,7 @@
         </div>
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52"><img src="8.webp" alt="View 8" /></div>
-          <div class="p-5"><h4 class="font-bold text-lg text-gray-900 mb-1">Local Flora</h4><p class="text-sm text-gray-600">Diverse plant life thriving in the tropical ecosystem.</p></div>
+          <div class="p-5"><h4 class="font-bold text-lg text-gray-900 mb-1">Local Flora</h4><p class="text-sm text-gray-600">Diverse plant life thriving in ecosystem.</p></div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52"><img src="9.png" alt="View 9" /></div>
@@ -361,7 +377,7 @@
         </div>
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52"><img src="11.png" alt="View 11" /></div>
-          <div class="p-5"><h4 class="font-bold text-lg text-gray-900 mb-1">Canopy Canopy</h4><p class="text-sm text-gray-600">Shade trees protecting delicate tea leaves.</p></div>
+          <div class="p-5"><h4 class="font-bold text-lg text-gray-900 mb-1">Canopy Protection</h4><p class="text-sm text-gray-600">Shade trees protecting delicate tea leaves.</p></div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
           <div class="crop-box h-52"><img src="12.png" alt="View 12" /></div>
@@ -381,7 +397,7 @@
         <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
       </div>
       <div class="bg-brand-cardBg p-6 rounded-3xl border border-gray-200 shadow-sm text-center">
-        <p class="text-gray-600 mb-4">Easily accessible via state highways from Kharupetia (13 km away). Close to Orang National Park.</p>
+        <p class="text-gray-600 mb-4">Easily accessible via state highways from Kharupetia (13 km away)[span_19](start_span)[span_19](end_span). Close to Orang National Park[span_20](start_span)[span_20](end_span).</p>
         <div id="leafletMap" class="h-96 rounded-2xl shadow-inner w-full"></div>
       </div>
     </div>
@@ -414,6 +430,32 @@
     </div>
   </section>
 
+  <!-- Frequently Asked Questions (FAQ) Section -->
+  <section id="faq" class="py-20 bg-white border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Got Questions?</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Frequently Asked Questions</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-brand-cardBg p-6 rounded-2xl border border-gray-200">
+          <h4 class="font-bold text-lg text-gray-900 mb-2">Where is Koupati located?</h4>
+          <p class="text-sm text-gray-600">Koupati is located in the Dalgaon subdivision of Darrang district, Assam, under the Koupati Gaon Panchayat, with PIN code 784113[span_21](start_span)[span_21](end_span).</p>
+        </div>
+        <div class="bg-brand-cardBg p-6 rounded-2xl border border-gray-200">
+          <h4 class="font-bold text-lg text-gray-900 mb-2">What is the distance from Kharupetia?</h4>
+          <p class="text-sm text-gray-600">The road distance from Kharupetia to Koupati is approximately 13 km, taking around 30 to 60 minutes depending on transit[span_22](start_span)[span_22](end_span).</p>
+        </div>
+        <div class="bg-brand-cardBg p-6 rounded-2xl border border-gray-200">
+          <h4 class="font-bold text-lg text-gray-900 mb-2">Is Koupati close to Orang National Park?</h4>
+          <p class="text-sm text-gray-600">Yes, Koupati shares close geographic proximity and ecological significance with the renowned Orang National Park[span_23](start_span)[span_23](end_span).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="bg-gray-950 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -423,14 +465,19 @@
         <a href="https://x.com/KoupatiOfficial" target="_blank" class="text-gray-400 hover:text-white">X (Twitter)</a>
       </div>
       <p class="text-lg font-serif font-bold text-green-400 mb-2">কৌপাতি — Koupati Tourism Portal</p>
-      <p class="text-sm text-gray-400 mb-6">Embracing the green heritage of Dalgaon, Assam.</p>
+      <p class="text-sm text-gray-400 mb-6">Embracing the green heritage of Dalgaon, Assam[span_24](start_span)[span_24](end_span).</p>
       <p class="text-xs text-gray-500">© 2026 Koupati Official. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Leaflet JS -->
+  <!-- Leaflet JS & Mobile Menu Script -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
     const map = L.map('leafletMap').setView([26.5846, 92.2483], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
