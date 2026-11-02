@@ -117,7 +117,7 @@
         </div>
       </a>
 
-      <!-- Desktop Links -->
+      <!-- Desktop Links (Clean navigation without clutter) -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
         <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
         <a href="#highlights" class="hover:text-brand-red transition-colors">Highlights</a>
@@ -149,7 +149,7 @@
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button (Three Dots / Hamburger) -->
       <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-700 hover:text-brand-red focus:outline-none" aria-label="Toggle Menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -158,7 +158,7 @@
 
     </div>
 
-    <!-- Mobile Drawer Menu -->
+    <!-- Mobile Drawer Menu (Contains About Me inside the three-dot menu) -->
     <div id="mobileDrawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-5 space-y-4 shadow-xl">
       <a href="#overview" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Overview</a>
       <a href="#highlights" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Highlights</a>
@@ -167,6 +167,7 @@
       <a href="#map" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Map & Transit</a>
       <a href="#reviews" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Reviews (3.9 ★)</a>
       <a href="#faq" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">FAQ</a>
+      <a href="#creator" onclick="toggleMobileMenu()" class="block font-semibold text-green-800 hover:text-brand-red border-t pt-3">About Me</a>
     </div>
   </header>
 
@@ -277,7 +278,7 @@
     </div>
   </section>
 
-  <!-- Comprehensive Gallery Section (Perfectly Mapped as per Screenshot) -->
+  <!-- Comprehensive Gallery Section -->
   <section id="gallery" class="py-20 bg-gray-50 border-t border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -443,6 +444,41 @@
         <div class="bg-brand-cardBg p-6 rounded-2xl border border-gray-200">
           <h4 class="font-bold text-lg text-gray-900 mb-2">Is Koupati close to Orang National Park?</h4>
           <p class="text-sm text-gray-600">Yes, Koupati shares close geographic proximity and ecological significance with the renowned Orang National Park.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me / Developer Section (Clean & Minimal Professional) -->
+  <section id="creator" class="py-20 bg-brand-cardBg border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">The Visionary Behind The Portal</h2>
+        <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">About Me</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center gap-8">
+        <!-- Developer Photo -->
+        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-md flex-shrink-0 border-2 border-green-800">
+          <img src="tapash_photo.png" alt="Tapash Mazumdar" class="w-full h-full object-cover object-center" />
+        </div>
+
+        <!-- Developer Details -->
+        <div class="text-center md:text-left flex-1">
+          <h4 class="text-2xl font-bold text-gray-900 mb-1">Tapash Mazumdar</h4>
+          <p class="text-sm font-semibold text-green-800 mb-4">Accountant & Digital Creator • Guwahati, Assam</p>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+            I am Tapash Mazumdar, an Accountant based in Guwahati, Assam[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span). Alongside my professional background in financial reporting, taxation, and compliance management[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span), I am passionate about digital creation and community development. This official Koupati tourism portal is crafted to highlight the pristine green landscapes and cultural heritage of our region.
+          </p>
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+            <a href="https://www.linkedin.com/in/tapash-mazumdar-4464b91ab" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-full bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all flex items-center gap-2">
+              <span>Connect on LinkedIn</span>
+            </a>
+            <a href="#map" class="px-5 py-2 rounded-full border border-gray-300 hover:border-gray-900 text-gray-700 text-xs font-bold uppercase tracking-wider transition-all">
+              Explore Koupati
+            </a>
+          </div>
         </div>
       </div>
     </div>
