@@ -167,7 +167,7 @@
       <a href="#map" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Map & Transit</a>
       <a href="#reviews" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Reviews (3.9 ★)</a>
       <a href="#faq" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">FAQ</a>
-      <a href="#creator" onclick="toggleMobileMenu()" class="block font-semibold text-green-800 hover:text-brand-red border-t pt-3">About Me</a>
+      <button onclick="toggleMobileMenu(); openAboutModal();" class="w-full text-left font-semibold text-green-800 hover:text-brand-red border-t pt-3 focus:outline-none">About Me</button>
     </div>
   </header>
 
@@ -449,40 +449,34 @@
     </div>
   </section>
 
-  <!-- About Me / Developer Section (Clean & Minimal Professional) -->
-  <section id="creator" class="py-20 bg-brand-cardBg border-t border-gray-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">The Visionary Behind The Portal</h2>
-        <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">About Me</h3>
-        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
-      </div>
+  <!-- About Me Modal Popup (Hidden by default, opens when clicked from three-dot menu) -->
+  <div id="aboutModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl relative border border-gray-200 animate-in fade-in zoom-in duration-200">
+      <!-- Close Button -->
+      <button onclick="closeAboutModal()" class="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full transition-all" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
 
-      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center gap-8">
-        <!-- Developer Photo -->
-        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-md flex-shrink-0 border-2 border-green-800">
+      <div class="text-center">
+        <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-md mx-auto mb-4 border-2 border-green-800">
           <img src="tapash_photo.png" alt="Tapash Mazumdar" class="w-full h-full object-cover object-center" />
         </div>
-
-        <!-- Developer Details -->
-        <div class="text-center md:text-left flex-1">
-          <h4 class="text-2xl font-bold text-gray-900 mb-1">Tapash Mazumdar</h4>
-          <p class="text-sm font-semibold text-green-800 mb-4">Accountant & Digital Creator • Guwahati, Assam</p>
-          <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-            I am Tapash Mazumdar, an Accountant based in Guwahati, Assam. Alongside my professional background in financial reporting, taxation, and compliance management, I am passionate about digital creation and community development. This official Koupati tourism portal is crafted to highlight the pristine green landscapes and cultural heritage of our region.
-          </p>
-          <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-            <a href="https://www.linkedin.com/in/tapash-mazumdar-4464b91ab" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-full bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all flex items-center gap-2">
-              <span>Connect on LinkedIn</span>
-            </a>
-            <a href="#map" class="px-5 py-2 rounded-full border border-gray-300 hover:border-gray-900 text-gray-700 text-xs font-bold uppercase tracking-wider transition-all">
-              Explore Koupati
-            </a>
-          </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-1">Tapash Mazumdar</h3>
+        <p class="text-sm font-semibold text-green-800 mb-4">Accountant & Digital Creator • Guwahati, Assam</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6 text-left sm:text-center">
+          I am Tapash Mazumdar, an Accountant based in Guwahati, Assam. Alongside my professional background in financial reporting, taxation, and compliance management, I am passionate about digital creation and community development. This official Koupati tourism portal is crafted to highlight the pristine green landscapes and cultural heritage of our region.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a href="https://www.linkedin.com/in/tapash-mazumdar-4464b91ab" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all flex items-center gap-2">
+            <span>Connect on LinkedIn</span>
+          </a>
+          <button onclick="closeAboutModal()" class="px-5 py-2.5 rounded-full border border-gray-300 hover:border-gray-900 text-gray-700 text-xs font-bold uppercase tracking-wider transition-all">
+            Close
+          </button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Footer Section -->
   <footer class="bg-gray-950 text-white py-12">
@@ -507,12 +501,22 @@
     </div>
   </footer>
 
-  <!-- Leaflet JS & Mobile Menu Script -->
+  <!-- Leaflet JS & Interactive Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobileDrawer');
       drawer.classList.toggle('hidden');
+    }
+
+    function openAboutModal() {
+      const modal = document.getElementById('aboutModal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeAboutModal() {
+      const modal = document.getElementById('aboutModal');
+      modal.classList.add('hidden');
     }
 
     const map = L.map('leafletMap').setView([26.5846, 92.2483], 13);
