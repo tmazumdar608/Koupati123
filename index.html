@@ -117,15 +117,17 @@
         </div>
       </a>
 
-      <!-- Desktop Links -->
+      <!-- Desktop Links (Now includes About Me) -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
         <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
         <a href="#highlights" class="hover:text-brand-red transition-colors">Highlights</a>
         <a href="#heritage" class="hover:text-brand-red transition-colors">Tea Heritage</a>
+        <a href="#travel-guide" class="hover:text-brand-red transition-colors">Travel Guide</a>
         <a href="#gallery" class="hover:text-brand-red transition-colors">Gallery</a>
-        <a href="#map" class="hover:text-brand-red transition-colors">Map & Transit</a>
+        <a href="#map" class="hover:text-brand-red transition-colors">Map</a>
         <a href="#reviews" class="hover:text-brand-red transition-colors">Reviews</a>
         <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
+        <button onclick="openAboutModal()" class="hover:text-brand-red transition-colors focus:outline-none">About Me</button>
       </nav>
 
       <!-- Right Header Actions (Social Profiles & CTA) -->
@@ -158,11 +160,12 @@
 
     </div>
 
-    <!-- Mobile Drawer Menu (Contains About Me inside the three-dot menu) -->
+    <!-- Mobile Drawer Menu -->
     <div id="mobileDrawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-5 space-y-4 shadow-xl">
       <a href="#overview" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Overview</a>
       <a href="#highlights" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Highlights</a>
       <a href="#heritage" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Tea Heritage</a>
+      <a href="#travel-guide" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Travel Guide</a>
       <a href="#gallery" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Gallery</a>
       <a href="#map" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Map & Transit</a>
       <a href="#reviews" onclick="toggleMobileMenu()" class="block font-semibold text-gray-800 hover:text-brand-red">Reviews (3.9 ★)</a>
@@ -173,33 +176,33 @@
 
   <!-- Hero Masthead Section -->
   <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center bg-gray-950 text-white overflow-hidden">
-    <div class="absolute inset-0 crop-box opacity-50">
+    <div class="absolute inset-0 crop-box opacity-40">
       <img src="1.jpeg" alt="Koupati Landscape" />
     </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-gray-950/30"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-wide mb-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-xs font-semibold tracking-wide mb-6 shadow-md">
           <span class="w-2 h-2 rounded-full bg-brand-red"></span>
           <span>Assam's Pristine Eco-Tourism Destination • PIN 784113</span>
         </div>
 
-        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-4">
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-4 drop-shadow-md">
           Discover <span class="text-white">Koupati</span>
-          <span class="block text-2xl sm:text-3xl font-light text-red-200 mt-1 font-serif">কৌপাতি — The Green Destination</span>
+          <span class="block text-2xl sm:text-3xl font-light text-red-200 mt-2 font-serif">কৌপাতি — The Green Destination</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-gray-300 font-normal leading-relaxed mb-8">
-          Wander through endless emerald tea gardens, serene village landscapes, and rich wildlife corridors near Orang National Park in Dalgaon, Assam.
+        <p class="text-base sm:text-lg text-gray-200 font-normal leading-relaxed mb-8 drop-shadow">
+          Wander through endless emerald tea gardens, serene village landscapes, and rich wildlife corridors near Orang National Park in Dalgaon, Assam[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).
         </p>
 
         <div class="flex flex-wrap items-center gap-4">
-          <a href="#highlights" class="px-7 py-3 rounded-full bg-brand-red hover:bg-brand-darkRed text-white text-sm font-bold shadow-lg transition-all">
+          <a href="#highlights" class="px-7 py-3.5 rounded-full bg-brand-red hover:bg-brand-darkRed text-white text-sm font-bold shadow-xl transition-all">
             Explore Attractions
           </a>
-          <a href="#map" class="px-7 py-3 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md border border-white/30 text-white text-sm font-bold transition-all">
-            Interactive Map
+          <a href="#travel-guide" class="px-7 py-3.5 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40 text-white text-sm font-bold transition-all shadow-lg">
+            Plan Your Journey
           </a>
         </div>
       </div>
@@ -212,12 +215,12 @@
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Subdivision</p>
         <p class="text-2xl font-black text-gray-900 mt-1">Dalgaon (Pt)</p>
-        <p class="text-xs text-gray-500">Darrang District, Assam</p>
+        <p class="text-xs text-gray-500">Darrang District, Assam[span_2](start_span)[span_2](end_span)</p>
       </div>
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Wildlife Access</p>
         <p class="text-2xl font-black text-gray-900 mt-1">Orang Park</p>
-        <p class="text-xs text-gray-500">Proximity Corridor</p>
+        <p class="text-xs text-gray-500">Proximity Corridor[span_3](start_span)[span_3](end_span)</p>
       </div>
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Google Rating</p>
@@ -227,7 +230,7 @@
       <div>
         <p class="text-xs uppercase font-bold tracking-wider text-gray-500">Postal Code</p>
         <p class="text-2xl font-black text-gray-900 mt-1">784113</p>
-        <p class="text-xs text-gray-500">Koupati, Assam</p>
+        <p class="text-xs text-gray-500">Koupati, Assam[span_4](start_span)[span_4](end_span)</p>
       </div>
     </div>
   </section>
@@ -241,10 +244,10 @@
         <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">About Koupati</h3>
         <div class="w-16 h-1 bg-brand-red mx-auto mb-8 rounded-full"></div>
         <p class="text-base sm:text-lg text-gray-600 leading-relaxed text-left mb-4">
-          Koupati is a picturesque village located in the Dalgaon subdivision of the Darrang district in Assam. Operating under the Koupati Gaon Panchayat, this scenic rural destination spans across a rich geographical expanse characterized by fertile soil, tranquil village life, and vibrant cultural harmony.
+          Koupati is a picturesque village located in the Dalgaon subdivision of the Darrang district in Assam[span_5](start_span)[span_5](end_span). Operating under the Koupati Gaon Panchayat, this scenic rural destination spans across a rich geographical expanse characterized by fertile soil, tranquil village life, and vibrant cultural harmony[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).
         </p>
         <p class="text-base sm:text-lg text-gray-600 leading-relaxed text-left">
-          Located just 13 km from Kharupetia, Koupati serves as an ideal escape for nature lovers and travelers seeking to experience authentic Assamese village culture away from urban bustle. Its unique geography, bordered by emerald tea plantations and close proximity to the renowned Orang National Park, establishes it as a prominent eco-tourism hub.
+          Located just 13 km from Kharupetia[span_8](start_span)[span_8](end_span), Koupati serves as an ideal escape for nature lovers and travelers seeking to experience authentic Assamese village culture away from urban bustle. Its unique geography, bordered by emerald tea plantations and close proximity to the renowned Orang National Park[span_9](start_span)[span_9](end_span), establishes it as a prominent eco-tourism hub.
         </p>
       </div>
 
@@ -258,20 +261,56 @@
         <h2 class="text-xs uppercase font-bold tracking-widest text-green-300 mb-2">Agricultural Legacy</h2>
         <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Kopati Tea Estate Heritage</h3>
         <div class="w-16 h-1 bg-green-400 mx-auto mt-4 rounded-full"></div>
-        <p class="text-sm text-green-200 mt-4">Rooted deeply in Assam's timeless tea-making tradition under Rydak Syndicate Limited.</p>
+        <p class="text-sm text-green-200 mt-4">Rooted deeply in Assam's timeless tea-making tradition under Rydak Syndicate Limited[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span).</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-green-800/80 p-8 rounded-2xl border border-green-700">
           <h4 class="text-xl font-bold mb-3 text-green-100">The Plantations & Terroir</h4>
           <p class="text-sm text-green-200 leading-relaxed">
-            Spanning approximately 700 acres along the banks of the Dhunseri River, Kopati Tea Estate features sandy-loam soils rich in carbon content—ideal for organic agricultural practices. The estate cultivates the native <em>Camellia sinensis var. assamica</em> variety, producing exceptional leaf quality.
+            Spanning approximately 700 acres along the banks of the Dhunseri River, Kopati Tea Estate features sandy-loam soils rich in carbon content—ideal for organic agricultural practices[span_12](start_span)[span_12](end_span). The estate cultivates the native <em>Camellia sinensis var. assamica</em> variety, producing exceptional leaf quality[span_13](start_span)[span_13](end_span).
           </p>
         </div>
         <div class="bg-green-800/80 p-8 rounded-2xl border border-green-700">
           <h4 class="text-xl font-bold mb-3 text-green-100">Flavour & Diversification</h4>
           <p class="text-sm text-green-200 leading-relaxed">
-            Renowned for robust, malty Assam teas with bright reddish-brown liquor, skilled workers hand-pluck fine artisan batches. Beyond tea, the estate contributes to local biodiversity through sustainable rubber and betel nut cultivation.
+            Renowned for robust, malty Assam teas with bright reddish-brown liquor, skilled workers hand-pluck fine artisan batches[span_14](start_span)[span_14](end_span). Beyond tea, the estate contributes to local biodiversity through sustainable rubber and betel nut cultivation[span_15](start_span)[span_15](end_span).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical Travel Guide Section -->
+  <section id="travel-guide" class="py-20 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-red mb-2">Visitor Planning</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Practical Travel Guide</h3>
+        <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+        <p class="text-sm text-gray-600 mt-4">Everything you need to know before embarking on your trip to Koupati.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-cardBg p-8 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-xl mb-4">🚗</div>
+          <h4 class="font-bold text-xl text-gray-900 mb-2">How to Reach</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Accessible via state highways from Guwahati (approx. 90-100 km). Nearest major commercial hub and transit point is Kharupetia (13 km away)[span_16](start_span)[span_16](end_span). Local cabs and buses are readily available.
+          </p>
+        </div>
+        <div class="bg-brand-cardBg p-8 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-xl mb-4">🌤️</div>
+          <h4 class="font-bold text-xl text-gray-900 mb-2">Best Time to Visit</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            October to April offers pleasant weather, ideal for tea garden walks, wildlife safaris near Orang National Park[span_17](start_span)[span_17](end_span), and outdoor photography during sunrise and twilight.
+          </p>
+        </div>
+        <div class="bg-brand-cardBg p-8 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-xl mb-4">📸</div>
+          <h4 class="font-bold text-xl text-gray-900 mb-2">Things to Experience</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Explore authentic rural machans, stroll through Kopati Tea Estate trails, observe rich biodiversity corridors, and experience warm Assamese village hospitality.
           </p>
         </div>
       </div>
@@ -279,7 +318,7 @@
   </section>
 
   <!-- Comprehensive Gallery Section -->
-  <section id="gallery" class="py-20 bg-gray-50 border-t border-b border-gray-200">
+  <section id="gallery" class="py-20 bg-gray-50 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
@@ -449,10 +488,14 @@
     </div>
   </section>
 
-  <!-- About Me Modal Popup (Hidden by default, opens when clicked from three-dot menu) -->
+  <!-- Floating Quick Contact / WhatsApp Button -->
+  <a href="https://wa.me/919400000000?text=Hello%20Tapash,%20I%20visited%20the%20Koupati%20Tourism%20portal%20and%20want%20to%20know%20more!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110" title="Chat on WhatsApp">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- About Me Modal Popup -->
   <div id="aboutModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl relative border border-gray-200 animate-in fade-in zoom-in duration-200">
-      <!-- Close Button -->
       <button onclick="closeAboutModal()" class="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full transition-all" aria-label="Close Modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
@@ -464,7 +507,7 @@
         <h3 class="text-2xl font-bold text-gray-900 mb-1">Tapash Mazumdar</h3>
         <p class="text-sm font-semibold text-green-800 mb-4">Accountant & Digital Creator • Guwahati, Assam</p>
         <p class="text-gray-600 text-sm leading-relaxed mb-6 text-left sm:text-center">
-          I am Tapash Mazumdar, Certified Accountant based in Guwahati, Assam. Alongside my professional background in financial reporting, taxation, and compliance management, I am passionate about digital creation and community development. This official Koupati tourism portal is crafted to highlight the pristine green landscapes and cultural heritage of our region.
+          I am Tapash Mazumdar, an Accountant based in Guwahati, Assam. Alongside my professional background in financial reporting, taxation, and compliance management, I am passionate about digital creation and community development. This official Koupati tourism portal is crafted to highlight the pristine green landscapes and cultural heritage of our region.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <a href="https://www.linkedin.com/in/tapash-mazumdar-4464b91ab" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all flex items-center gap-2">
