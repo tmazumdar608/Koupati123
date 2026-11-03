@@ -2,16 +2,20 @@
 
 Independent local information and destination guide for Koupati, Darrang, Assam.
 
-## Deploy on Vercel
+## Pages
+- `/` — Homepage
+- `/about-koupati.html` — About Koupati
+- `/tea-garden.html` — Tea garden heritage
+- `/local-life.html` — Sunday market and local life
+- `/culture-food.html` — Culture and food
+- `/travel-guide.html` — Travel guide
 
-This is a static HTML website. Keep `index.html`, the image files, and the `images/` folder in the project root. Import the repository into Vercel or upload the project and use the default static deployment settings. No build command is required.
+## SEO files
+- `sitemap.xml` lists the homepage and five guide pages.
+- `robots.txt` allows crawling and points crawlers to the sitemap.
+- Each page has a unique title, meta description, canonical URL and WebPage structured data.
 
-## Before publishing
+## Deploy
+Upload the contents of this folder to the root of the connected GitHub repository and commit the changes. Vercel should deploy automatically. After deployment, resubmit `https://koupati.vercel.app/sitemap.xml` in Google Search Console and inspect each new page URL.
 
-- Confirm the map pin coordinates and exact destination address.
-- Confirm all factual information about the tea estate and visitor access with the relevant management.
-- Check image permissions and exact photo locations.
-- Add a verified contact method if you want visitors to contact you directly.
-- Add a real review source only if you have a verified public review profile and permission to reproduce testimonials.
-
-The site intentionally describes itself as an independent local guide, not an official government tourism portal.
+This is an independent local guide, not an official government tourism or tea-estate website. Verify local details, visitor access, market hours and directions before publishing further claims.
