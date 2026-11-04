@@ -7,6 +7,14 @@ sources={
 "5.png":1084,"6.webp":1084,"7.webp":1280,"9.png":1084,"90513.webp":1536,
 "images/koupati_logo.png":320,"koupati_logo.png":320,"tapash_photo.png":800
 }
+# A separate smaller hero source for narrow viewports; keep original assets intact.
+hero_source=root/"7.webp"
+with Image.open(hero_source) as original:
+ mobile=ImageOps.exif_transpose(original)
+ if mobile.mode not in ("RGB","RGBA"): mobile=mobile.convert("RGB")
+ mobile.thumbnail((480,720),Image.Resampling.LANCZOS)
+ mobile.save(root/"7-mobile.webp",format="WEBP",quality=74,method=6)
+ print("mobile hero:",(root/"7-mobile.webp").stat().st_size)
 dimensions={}
 for name,maxdim in sources.items():
  p=root/name
