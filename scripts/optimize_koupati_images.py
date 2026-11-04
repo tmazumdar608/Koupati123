@@ -23,7 +23,7 @@ for p in root.glob("*.html"):
  original=p.read_text(encoding="utf-8")
  def transform(match):
   tag=match.group(0)
-  src_match=re.search(r'\\bsrc="([^"]+)"',tag)
+  src_match=re.search(r'\bsrc="([^"]+)"',tag)
   if not src_match: return tag
   src=src_match.group(1)
   if src in dimensions:
@@ -35,8 +35,8 @@ for p in root.glob("*.html"):
     with Image.open(root/src) as im: w,h=im.size
    except Exception: return tag
   else: return tag
-  tag=re.sub(r'\\swidth="[^"]*"', '',tag)
-  tag=re.sub(r'\\sheight="[^"]*"', '',tag)
+  tag=re.sub(r'\swidth="[^"]*"', '',tag)
+  tag=re.sub(r'\sheight="[^"]*"', '',tag)
   return tag[:-1]+f' width="{w}" height="{h}">'
- updated=re.sub(r'<img\\b[^>]*>',transform,original)
+ updated=re.sub(r'<img\b[^>]*>',transform,original)
  if updated!=original: p.write_text(updated,encoding="utf-8")
