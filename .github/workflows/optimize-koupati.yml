@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/optimize-koupati.yml'
+      - 'scripts/optimize_koupati_images.py'
   workflow_dispatch:
 permissions:
   contents: write
