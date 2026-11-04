@@ -33,7 +33,7 @@ jobs:
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html' '*-optimized.webp' 'images/*-optimized.webp'
+          git add -- '*.html' '*-optimized.webp' 'images/*-optimized.webp' '7-mobile.webp'
           if ! git diff --cached --quiet; then
             git commit -m "Optimize image assets and set intrinsic image dimensions"
             git push
