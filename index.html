@@ -116,6 +116,10 @@
    .community-photo-grid figure:has(img[src="90376.webp"]) img,
    .community-photo-grid figure:has(img[src="90377.webp"]) img{height:auto;aspect-ratio:4/3;object-fit:contain}
  }
+
+/* Koupati Premium Nature & Heritage design system */
+:root{--forest:#173f2b;--forest2:#24583c;--leaf:#71906b;--gold:#c49a56;--paper:#fbfaf6;--cream:#f4f1e8;--ink:#252b25;--muted:#626d63;--line:#e5e5dc;--shadow:0 16px 44px rgba(25,48,33,.09)}
+body{background:#fbfaf6;color:#252b25;-webkit-font-smoothing:antialiased}a,button{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:3px solid #c49a56;outline-offset:3px}img{max-width:100%;height:auto}h1,h2,h3{text-wrap:balance}.site-header{background:rgba(251,250,246,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e4e9de}.nav-wrap{gap:14px}.nav-links{gap:13px!important}.nav-links a{font-size:.79rem;white-space:nowrap}.nav-links a:hover,.nav-links a:focus-visible{color:#176b45}.brand-name strong{color:#173f2b}.btn,.page-link,.feature-card,.local-card,.card{transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-2px)}.section-head{max-width:780px}.section-head h2,.content-wrap h2{letter-spacing:-.025em}.page-hero{background-position:center;position:relative}.page-hero h1{letter-spacing:-.035em}.content-wrap{max-width:930px}.content-wrap p{line-height:1.8}.page-link,.feature-card{border-radius:12px;overflow:hidden}.page-link:hover,.feature-card:hover{box-shadow:0 16px 40px rgba(23,63,43,.1);transform:translateY(-3px)}.mobile-nav{max-height:calc(100dvh - 70px);overflow-y:auto}.mobile-nav a{min-height:44px;display:flex;align-items:center}.menu-toggle{min-width:44px;min-height:44px}@media(max-width:1180px){.nav-links,.nav-cta{display:none!important}.menu-toggle{display:block!important}}@media(max-width:760px){.container{width:min(100% - 32px,600px)}.page-hero h1{font-size:clamp(2.4rem,10vw,4rem)}.section{padding:64px 0}.btn{min-height:44px}}@media(prefers-reduced-motion:reduce){.btn,.page-link,.feature-card,.local-card,.card{transition:none!important}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"An independent local information and destination guide to Koupati, Udalguri, Assam."}</script>
 </head>
@@ -125,15 +129,11 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Koupati home"><img src="images/koupati_logo.png" alt="Koupati logo"><span class="brand-name"><strong>কৌপাতি · Koupati</strong><span>The green destination</span></span></a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="about-koupati.html">About</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html#transport-options">How to reach</a><a href="#gallery">Gallery</a>
-      </nav>
+      <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="about-koupati.html">About</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html#transport-options">How to reach</a><a href="education.html">Schools</a><a href="nearby-villages-hospitals.html">Local services</a></nav>
       <a class="btn btn-primary nav-cta" href="#location">Find Koupati ↗</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="about-koupati.html">About Koupati</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market & local life</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html">Travel guide</a><a href="#gallery">Gallery</a><a href="#location">Location & map</a><button type="button" onclick="openAbout();closeMenu()">About this website</button>
-    </nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="about-koupati.html">About</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html#transport-options">How to reach</a><a href="education.html">Schools</a><a href="nearby-villages-hospitals.html">Local services</a></nav>
   </header>
 
   <main id="main-content">
