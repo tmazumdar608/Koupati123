@@ -28,3 +28,7 @@ Some current photographs are temporary representative images from the existing p
 The `koupati-website-2.0-phase-2` branch is for development and review. Do not merge it into `main` or deploy it to the live website until the site owner has reviewed and approved the changes. The production Vercel deployment remains connected to the production branch.
 
 This is an independent local guide, not an official government tourism or tea-estate website. Verify local details, visitor access, market hours and directions before publishing further claims.
+
+## Phase 2 authentic local photo assets (development branch)
+
+The homepage gallery and local-life/culture-food pages now reference 15 WebP files in `images/local/`. **Upload these image files before previewing or merging this branch**; until then the new photo slots will not display. The ready-to-upload package is `Koupati_15_Authentic_Photos_Phase2.zip` from the ChatGPT conversation. Extract it and upload only the `images/local/` folder, preserving filenames and directory structure. Photos were confirmed by the contributor to show Koupati and its Sunday market. Keep the production `main` branch unchanged until all 15 URLs load and the gallery/lightbox works.
