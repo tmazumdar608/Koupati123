@@ -135,6 +135,13 @@ body{background:#fbfaf6;color:#252b25;-webkit-font-smoothing:antialiased}a,butto
 /* Approved compact mobile Koupati-at-a-glance strip */
 @media(max-width:760px){.intro{padding:14px 0 16px}.intro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}.intro-item{min-width:0;border-bottom:0;border-right:1px solid #d8d9ce;padding:8px 10px;text-align:center}.intro-item:first-child{padding-left:0}.intro-item:last-child{border-right:0;padding-right:0}.intro-item b{font-size:clamp(.79rem,2.7vw,1rem);line-height:1.3}.intro-item span{display:block;font-size:clamp(.66rem,2.1vw,.78rem);line-height:1.4;margin-top:4px}}
 @media(max-width:390px){.intro-item{padding:7px 6px}.intro-item b{font-size:.77rem}.intro-item span{font-size:.63rem}}
+
+/* Phase 2: stable image geometry, keyboard focus and reduced motion */
+.content-image{aspect-ratio:16/10;height:auto;object-fit:cover}
+.gallery-item{aspect-ratio:4/3}
+.gallery-item img{display:block}
+:where(a,button,[role="button"],[tabindex]):focus-visible{outline:3px solid #d8c89b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati, Assam | Discover the Green Heart of Assam","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"Discover Koupati in Udalguri, Assam — explore local landscapes, tea-garden scenery, village life, culture and useful visitor information."}</script>
 <meta name="robots" content="index,follow"></head>
@@ -143,7 +150,7 @@ body{background:#fbfaf6;color:#252b25;-webkit-font-smoothing:antialiased}a,butto
   <div class="topline"><strong>Local destination guide</strong> · Koupati, Udalguri, Assam · Please respect private property and local guidance when visiting.</div>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Koupati home"><img src="images/koupati_logo.png" alt="Koupati logo" decoding="async"><span class="brand-name"><strong>কৌপাতি · Koupati</strong><span>The green destination</span></span></a>
+      <a class="brand" href="index.html" aria-label="Koupati home"><img src="images/koupati_logo.png" alt="Koupati logo" decoding="async" width="48" height="48" fetchpriority="high"><span class="brand-name"><strong>কৌপাতি · Koupati</strong><span>The green destination</span></span></a>
       <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="about-koupati.html">About</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html#transport-options">How to reach</a><a href="education.html">Schools</a><a href="nearby-villages-hospitals.html">Local services</a></nav>
       <a class="btn btn-primary nav-cta" href="#location">Find Koupati ↗</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">☰</button>
@@ -153,7 +160,7 @@ body{background:#fbfaf6;color:#252b25;-webkit-font-smoothing:antialiased}a,butto
 
   <main id="main-content">
     <section class="hero" id="home">
-      <img class="hero-bg" src="7.webp" alt="Representative tea-growing landscape; exact location not verified" fetchpriority="high" decoding="async">
+      <img class="hero-bg" src="7.webp" alt="Representative tea-growing landscape; exact location not verified" fetchpriority="high" decoding="async" width="1600" height="900">
       <div class="container hero-content">
         <div class="hero-kicker"><i></i> UDALGURI · ASSAM · INDIA</div>
         <h1>Find your place<br>in the green.<span>কৌপাতি — অসমৰ সেউজীয়া সৌন্দৰ্য</span></h1>
