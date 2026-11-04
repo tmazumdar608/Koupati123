@@ -79,7 +79,15 @@
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
     }
-  </style>
+  .community-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+ .community-photo-grid figure{margin:0;overflow:hidden;border-radius:16px;background:#f4f1e8;box-shadow:0 10px 30px rgba(23,63,43,.09)}
+ .community-photo-grid img{width:100%;height:245px;object-fit:cover;transition:transform .25s ease}
+ .community-photo-grid figure:hover img{transform:scale(1.03)}
+ .community-photo-grid figcaption{padding:12px 15px;font-weight:700;color:#173f2b}
+ .community-photo-note{text-align:center;color:#687269;font-size:.85rem;margin-top:20px}
+ @media(max-width:760px){.community-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.community-photo-grid img{height:180px}.community-photo-grid figcaption{font-size:.83rem;padding:10px}}
+ @media(max-width:400px){.community-photo-grid img{height:145px}}
+ </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"An independent local information and destination guide to Koupati, Darrang, Assam."}</script>
 </head>
 <body>
@@ -159,7 +167,19 @@
       <div class="travel-disclaimer"><strong>Please note:</strong> Distances, transport availability, public access, facilities and opening hours have not been independently verified here. Confirm details locally before making a special trip.</div>
     </div></section>
 
-    <section class="section gallery" id="gallery"><div class="container"><div class="section-head"><span class="eyebrow">Photographed in Koupati</span><h2>Our village, our stories</h2><p>Explore authentic photographs shared from Koupati, including the Sunday market, fresh local produce, fields and everyday village life.</p></div>
+    <section class="section" id="community-photos" aria-labelledby="community-photo-title">
+ <div class="container">
+ <div class="section-head"><span class="eyebrow">From our community</span><h2 id="community-photo-title">Real moments from Koupati</h2><p>Village landscapes, Sunday Market, local harvests and the people who make Koupati special. Photographs shared by the local community.</p></div>
+ <div class="community-photo-grid">
+ <figure><img src="images/local/90372.webp" alt="Vegetable sellers at Koupati Sunday Market" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Sunday Market</figcaption></figure>
+<figure><img src="images/local/90376.webp" alt="Smiling vegetable vendor at the local market" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Local people</figcaption></figure>
+<figure><img src="images/local/90377.webp" alt="Fresh vegetables sold at Koupati market" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Local produce</figcaption></figure>
+<figure><img src="images/local/90514.webp" alt="Golden rice fields in Koupati" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Village landscapes</figcaption></figure>
+<figure><img src="images/local/90513.webp" alt="Quiet rural road at dusk in Koupati" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Evening scenes</figcaption></figure>
+<figure><img src="images/local/90386.webp" alt="People gathered for a local community event" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>Community</figcaption></figure>
+ </div><p class="community-photo-note">Original photographs from Koupati and its local Sunday Market.</p>
+ </div></section>
+<section class="section gallery" id="gallery"><div class="container"><div class="section-head"><span class="eyebrow">Photographed in Koupati</span><h2>Our village, our stories</h2><p>Explore authentic photographs shared from Koupati, including the Sunday market, fresh local produce, fields and everyday village life.</p></div>
       <div class="gallery-grid">
         <button class="gallery-item" data-full="90372.webp" aria-label="View sunday market vendors and fresh vegetables"><img src="90372.webp" alt="Sunday market vendors and fresh vegetables, Koupati, Assam" loading="lazy" decoding="async"></button>
         <button class="gallery-item" data-full="90376.webp" aria-label="View smiling local produce vendor"><img src="90376.webp" alt="Smiling local produce vendor, Koupati, Assam" loading="lazy" decoding="async"></button>
