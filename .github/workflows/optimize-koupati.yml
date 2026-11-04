@@ -36,5 +36,6 @@ jobs:
           git add -- '*.html' '*-optimized.webp' 'images/*-optimized.webp' '7-mobile.webp'
           if ! git diff --cached --quiet; then
             git commit -m "Optimize image assets and set intrinsic image dimensions"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
