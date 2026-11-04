@@ -103,6 +103,19 @@
       .gallery-item[data-full="90376.webp"] img{object-position:center 12%}
       .gallery-item[data-full="90377.webp"] img{object-position:center 10%}
     }
+
+ /* Show complete portraits in community cards: never cut off vendors' faces */
+ .community-photo-grid figure:has(img[src="90372.webp"]) img,
+ .community-photo-grid figure:has(img[src="90376.webp"]) img,
+ .community-photo-grid figure:has(img[src="90377.webp"]) img{
+   height:auto;aspect-ratio:4/3;object-fit:contain;background:#f4f1e8;
+ }
+ .community-photo-grid figure:has(img[src="90376.webp"]) img{object-position:center top}
+ @media(max-width:760px){
+   .community-photo-grid figure:has(img[src="90372.webp"]) img,
+   .community-photo-grid figure:has(img[src="90376.webp"]) img,
+   .community-photo-grid figure:has(img[src="90377.webp"]) img{height:auto;aspect-ratio:4/3;object-fit:contain}
+ }
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"An independent local information and destination guide to Koupati, Darrang, Assam."}</script>
 </head>
