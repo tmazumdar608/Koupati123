@@ -37,18 +37,22 @@
     @media(max-width:980px){.nav-links{gap:13px;font-size:.77rem}.nav-cta{display:none}.about-grid{gap:35px}.gallery-grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:760px){.container{width:min(100% - 32px,600px)}.section{padding:68px 0}.site-header{height:70px}.nav-links,.nav-wrap>.nav-cta{display:none}.menu-toggle{display:block}.brand img{width:42px;height:42px}.hero{min-height:650px}.hero-content{padding:90px 0}.hero:before{background:linear-gradient(90deg,rgba(9,28,17,.78),rgba(9,28,17,.34)),linear-gradient(0deg,rgba(9,28,17,.4),transparent)}.intro-grid{grid-template-columns:1fr;gap:8px}.intro-item{border-right:0;border-bottom:1px solid #d8d9ce;padding:12px 5px}.intro-item:last-child{border:0}.about-grid,.heritage-grid,.map-layout{grid-template-columns:1fr;gap:30px}.about-photo img{height:360px}.photo-label{right:0}.cards,.travel-grid{grid-template-columns:1fr}.feature-card img{height:220px}.heritage-grid img{height:310px}.local-grid{grid-template-columns:1fr}.local-card{grid-template-columns:38% 1fr;min-height:175px}.local-card img{min-height:175px}.local-card div{padding:17px}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:165px;gap:8px}.gallery-item:first-child{grid-column:span 2;grid-row:span 2}.gallery-item:nth-child(6){grid-column:span 1}.map-copy{padding:0}#leafletMap{height:330px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:span 2}.footer-bottom{flex-direction:column}.section-head{margin-bottom:32px}}
     @media(max-width:390px){.hero h1{font-size:2.8rem}.local-card{grid-template-columns:1fr}.local-card img{height:170px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
+    .skip-link{position:absolute;left:16px;top:-60px;z-index:3000;background:#fff;color:var(--forest);padding:10px 16px;border-radius:0 0 10px 10px;font-weight:700;box-shadow:var(--shadow)}.skip-link:focus{top:0}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .community-invite{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px 30px;margin-top:28px;background:var(--cream);border:1px solid #e4e0d3;border-left:4px solid var(--gold)}.community-invite h3{font:600 1.5rem 'Playfair Display',serif;color:var(--forest);margin:0 0 7px}.community-invite p{color:var(--muted);margin:0;max-width:650px;font-size:.92rem}.community-invite .btn{flex-shrink:0}
+    @media(max-width:760px){.community-invite{align-items:flex-start;flex-direction:column;padding:22px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"An independent local information and destination guide to Koupati, Darrang, Assam."}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="topline"><strong>Local destination guide</strong> · Koupati, Darrang, Assam · Please respect private property and local guidance when visiting.</div>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Koupati home"><img src="images/koupati_logo.png" alt="Koupati logo"><span class="brand-name"><strong>কৌপাতি · Koupati</strong><span>The green destination</span></span></a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="about-koupati.html">About</a><a href="tea-garden.html">Tea heritage</a><a href="local-life.html">Sunday market</a><a href="culture-food.html">Culture & food</a><a href="travel-guide.html">Travel guide</a><a href="#gallery">Gallery</a>
-        <button type="button" onclick="openAbout()">About</button>
       </nav>
       <a class="btn btn-primary nav-cta" href="#location">Find Koupati ↗</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">☰</button>
@@ -58,7 +62,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="home">
       <img class="hero-bg" src="7.webp" alt="Green tea garden landscape in the Koupati area" fetchpriority="high">
       <div class="container hero-content">
@@ -106,7 +110,7 @@
         <article class="local-card"><img src="9.png" alt="A rural home among greenery" loading="lazy"><div><h3>Village surroundings</h3><p>Take time to appreciate the homes, trees and quieter scenes found around the locality.</p></div></article>
         <article class="local-card"><img src="11.png" alt="Local poultry in a village setting" loading="lazy"><div><h3>Everyday rural life</h3><p>Small details — gardens, animals and daily routines — tell a story of the countryside.</p></div></article>
       </div>
-      <p class="gallery-caption">Know a local story, market day, food spot or cultural event? Share verified details with the website creator so this guide can grow responsibly.</p>
+      <div class="community-invite" id="community-story"><div><span class="eyebrow">Your voice matters</span><h3>Help tell Koupati’s story</h3><p>Are you a local resident, shopkeeper, photographer or visitor? Share a Sunday Market memory, a food recommendation, a cultural event, a photograph or a correction. Please send only information and images you have permission to share.</p></div><a class="btn btn-primary" href="https://www.instagram.com/koupati_official/" target="_blank" rel="noopener noreferrer">Share a story on Instagram ↗</a></div>
     </div></section>
 
     <section class="section travel" id="travel"><div class="container"><div class="section-head"><span class="eyebrow">Before you set out</span><h2>Plan your visit</h2><p>A few practical reminders to make your journey smoother and more respectful.</p></div>
@@ -118,7 +122,7 @@
       <div class="travel-disclaimer"><strong>Please note:</strong> Distances, transport availability, public access, facilities and opening hours have not been independently verified here. Confirm details locally before making a special trip.</div>
     </div></section>
 
-    <section class="section gallery" id="gallery"><div class="container"><div class="section-head"><span class="eyebrow">A visual diary</span><h2>Koupati through the lens</h2><p>A selection of photographs from the current website collection. Select any image to view it larger.</p></div>
+    <section class="section gallery" id="gallery"><div class="container"><div class="section-head"><span class="eyebrow">A visual diary</span><h2>Koupati through the lens</h2><p>Browse the photographs currently available for this website. Select any image to view it larger.</p></div>
       <div class="gallery-grid">
         <button class="gallery-item" data-full="7.webp" aria-label="View tea garden landscape"><img src="7.webp" alt="Tea garden landscape" loading="lazy"></button>
         <button class="gallery-item" data-full="12.png" aria-label="View tree-lined garden"><img src="12.png" alt="Tree-lined garden" loading="lazy"></button>
@@ -127,13 +131,13 @@
         <button class="gallery-item" data-full="1.jpeg" aria-label="View sunset"><img src="1.jpeg" alt="Sunset over the countryside" loading="lazy"></button>
         <button class="gallery-item" data-full="10.png" aria-label="View open rural space"><img src="10.png" alt="Open rural space" loading="lazy"></button>
         <button class="gallery-item" data-full="5.png" aria-label="View garden entrance"><img src="5.png" alt="Garden entrance" loading="lazy"></button>
-        <button class="gallery-item" data-full="90127.webp" aria-label="View safari vehicle"><img src="90127.webp" alt="Safari vehicle" loading="lazy"></button>
-        <button class="gallery-item" data-full="90128.webp" aria-label="View Orang National Park sign"><img src="90128.webp" alt="Orang National Park signboard" loading="lazy"></button>
+        <button class="gallery-item" data-full="9.png" aria-label="View representative rural photograph"><img src="9.png" alt="Representative rural photograph from the current collection; exact location not verified" loading="lazy"></button>
+        <button class="gallery-item" data-full="3.jpg" aria-label="View additional representative landscape"><img src="3.jpg" alt="Additional representative landscape from the current collection; exact location not verified" loading="lazy"></button>
         <button class="gallery-item" data-full="4.jpg" aria-label="View evening landscape"><img src="4.jpg" alt="Evening landscape" loading="lazy"></button>
-      </div><p class="gallery-caption">Photographs are shown as supplied in the project. Please verify exact locations and obtain permission where required before using images in promotional material.</p>
+      </div><p class="gallery-caption">Some current photographs are temporary representative images. Their exact locations have not all been verified as Koupati. They will be replaced with authentic local photographs when available.</p>
     </div></section>
 
-    <section class="section map-section" id="location"><div class="container map-layout"><div class="map-copy"><span class="eyebrow">Find your way</span><h2>Explore Koupati on the map</h2><p>Use the map to orient yourself and open Google Maps for current directions. The pin is an approximate reference carried over from the previous website and should be checked before relying on it for navigation.</p><div class="map-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Koupati%2C+Darrang%2C+Assam" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a><a class="btn" style="border-color:var(--forest);color:var(--forest)" href="https://www.google.com/maps/dir/?api=1&destination=Koupati%2C+Darrang%2C+Assam" target="_blank" rel="noopener noreferrer">Get directions</a></div><p class="map-caveat">Map tiles © OpenStreetMap contributors. Please confirm your exact destination locally.</p></div><div id="leafletMap" role="application" aria-label="Map showing an approximate Koupati location"></div></div></section>
+    <section class="section map-section" id="location"><div class="container map-layout"><div class="map-copy"><span class="eyebrow">Find your way</span><h2>Explore Koupati on the map</h2><p>Use the map to orient yourself and open Google Maps for current directions. The pin is an approximate reference carried over from the previous website and should be checked before relying on it for navigation.</p><div class="map-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Koupati%2C+Darrang%2C+Assam" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a><a class="btn" style="border-color:var(--forest);color:var(--forest)" href="https://www.google.com/maps/dir/?api=1&destination=Koupati%2C+Darrang%2C+Assam" target="_blank" rel="noopener noreferrer">Get directions</a></div><p class="map-caveat">Map tiles © OpenStreetMap contributors. The pin is approximate; confirm your exact destination locally.</p></div><div id="leafletMap" role="application" aria-label="Map showing an approximate Koupati location"></div></div></section>
 
     <section class="section faq"><div class="container"><div class="section-head"><span class="eyebrow">Useful information</span><h2>Frequently asked questions</h2><p>Quick answers for people learning about Koupati.</p></div><div class="faq-list">
       <details><summary>Where is Koupati?</summary><p>Koupati is in Darrang district, Assam, India. Use the map and a current navigation service to confirm the route from your location.</p></details>
