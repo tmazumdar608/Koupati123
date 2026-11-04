@@ -36,7 +36,7 @@ This is an independent local guide, not an official government tourism or tea-es
 The homepage gallery and local-life/culture-food pages now reference 15 WebP files in `images/local/`. **All 15 WebP files have been uploaded to the repository root (`90372.webp`, ..., `90515.webp`) and the development-branch HTML now points to these exact paths. Verify all 15 photos and gallery/lightbox before merging. Keep the production `main` branch unchanged until approval.
 
 ## SEO and UX improvement branch (November 2026)
-- Earlier SEO updates used Darrang in some page titles and descriptions; the current main-branch HTML has since been updated to use Udalguri consistently.
+- Current page titles and meta descriptions use Udalguri consistently for Koupati, while preserving route-specific geographic references where relevant.
 - Added a contextual link to the travel guide from the education and nearby-services pages.
 - Existing sitemap and robots.txt remain unchanged; validate deployed HTTP status, canonical URLs, images and structured data before merging.
 - Photo provenance, location claims in page bodies, and live indexing remain to be reviewed before publication.
