@@ -87,7 +87,14 @@
  .community-photo-note{text-align:center;color:#687269;font-size:.85rem;margin-top:20px}
  @media(max-width:760px){.community-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.community-photo-grid img{height:180px}.community-photo-grid figcaption{font-size:.83rem;padding:10px}}
  @media(max-width:400px){.community-photo-grid img{height:145px}}
- </style>
+ 
+    /* Keep faces visible in the Sunday Market gallery without changing photos */
+    .gallery-item[data-full="90372.webp"] img{object-position:74% 42%}
+    .gallery-item[data-full="90376.webp"] img{object-position:50% 17%}
+    .gallery-item[data-full="90377.webp"] img{object-position:50% 22%}
+    .gallery-item[data-full="90372.webp"]{grid-column:span 2;grid-row:span 2}
+    @media(max-width:700px){.gallery-item[data-full="90372.webp"] img{object-position:75% center}}
+</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Koupati","alternateName":"কৌপাতি","url":"https://koupati.vercel.app/","description":"An independent local information and destination guide to Koupati, Darrang, Assam."}</script>
 </head>
 <body>
