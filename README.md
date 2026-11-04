@@ -9,6 +9,8 @@ Independent local information and destination guide for Koupati, Darrang, Assam.
 - `/local-life.html` — Sunday market and local life
 - `/culture-food.html` — Culture and food
 - `/travel-guide.html` — Travel guide
+- `/education.html` — Schools and education
+- `/nearby-villages-hospitals.html` — Nearby villages, hospitals and services
 
 ## Phase 2 development
 - Improved homepage navigation, accessibility and mobile-friendly community contribution prompts.
@@ -20,7 +22,7 @@ Independent local information and destination guide for Koupati, Darrang, Assam.
 Some current photographs are temporary representative images from the existing project collection. Their exact locations have not all been verified as Koupati, the Sunday Market or a specific cultural/food event. Replace them with original, permission-approved local photographs when available. Do not label representative images as verified local scenes.
 
 ## SEO files
-- `sitemap.xml` lists the homepage and five guide pages.
+- `sitemap.xml` lists the homepage and seven secondary pages (eight URLs total).
 - `robots.txt` allows crawling and points crawlers to the sitemap.
 - Each page has a unique title, meta description, canonical URL and structured data.
 
@@ -32,3 +34,9 @@ This is an independent local guide, not an official government tourism or tea-es
 ## Phase 2 authentic local photo assets (development branch)
 
 The homepage gallery and local-life/culture-food pages now reference 15 WebP files in `images/local/`. **All 15 WebP files have been uploaded to the repository root (`90372.webp`, ..., `90515.webp`) and the development-branch HTML now points to these exact paths. Verify all 15 photos and gallery/lightbox before merging. Keep the production `main` branch unchanged until approval.
+
+## SEO and UX improvement branch (November 2026)
+- Updated page titles and meta descriptions to use Darrang consistently for Koupati, while retaining route-specific mentions of Udalguri where relevant.
+- Added a contextual link to the travel guide from the education and nearby-services pages.
+- Existing sitemap and robots.txt remain unchanged; validate deployed HTTP status, canonical URLs, images and structured data before merging.
+- Photo provenance, location claims in page bodies, and live indexing remain to be reviewed before publication.
