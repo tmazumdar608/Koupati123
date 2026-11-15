@@ -4,6 +4,8 @@ on:
     branches: [optimize-sunday-market-image-20261115]
     paths:
       - '.github/workflows/optimize-sunday-market.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write
