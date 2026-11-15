@@ -139,3 +139,9 @@ body{background:#fbfaf6;color:#252b25;-webkit-font-smoothing:antialiased}a,butto
 #leafletMap .leaflet-control-zoom a{width:36px;height:36px;line-height:36px}
 section[id]{scroll-margin-top:75px}
 }
+
+/* Final audit: mobile section links and touch targets */
+.section-anchor{display:block;position:relative;top:-90px;visibility:hidden;height:0}
+.travel-guide-link{margin:24px 0 0}
+@media(max-width:760px){.mobile-quick-jump{top:66px;scroll-padding-inline:16px}.mobile-quick-jump a{flex-shrink:0;min-height:44px}section[id]{scroll-margin-top:125px}.section-anchor{top:-125px}.menu-toggle{touch-action:manipulation}}
+@media(prefers-reduced-motion:reduce){.mobile-quick-jump{scroll-behavior:auto}}
