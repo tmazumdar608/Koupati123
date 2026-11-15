@@ -1,0 +1,45 @@
+name: Optimize Sunday Market card image
+on:
+  push:
+    branches: [optimize-sunday-market-image-20261115]
+    paths:
+      - '.github/workflows/optimize-sunday-market.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: optimize-sunday-market-image-20261115
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pillow
+      - name: Generate responsive image and update homepage
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageOps
+          from pathlib import Path
+          src=Path("90372.webp")
+          assert src.is_file(), "Original market image missing"
+          with Image.open(src) as image:
+              image=ImageOps.exif_transpose(image).convert("RGB")
+              image.thumbnail((720,720))
+              image.save("90372-card.webp","WEBP",quality=74,method=6)
+          html=Path("index.html")
+          data=html.read_text()
+          old='<img src="90372.webp" alt="Sunday Market vendors and local shoppers in a village setting, Udalguri, Assam" loading="lazy" decoding="async" fetchpriority="low" width="1536" height="1204">'
+          assert old in data, "Homepage image tag changed: review manually"
+          data=data.replace(old,'<img src="90372-card.webp" alt="Sunday Market vendors and local shoppers in a village setting, Udalguri, Assam" loading="lazy" decoding="async" fetchpriority="low" width="720" height="565">',1)
+          html.write_text(data)
+          print("Optimized card bytes:",Path("90372-card.webp").stat().st_size)
+          PY
+      - name: Commit optimized asset to PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html 90372-card.webp
+          git diff --cached --quiet || (git commit -m "Generate compressed Sunday Market card WebP" && git push)
