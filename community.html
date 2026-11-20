@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f2b">
+  <title>Koupati Community | Local stories, photos & useful places</title>
+  <meta name="description" content="A preview of Koupati Community: share local moments, ask questions and discover useful places around Koupati, Udalguri, Assam.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://koupati.vercel.app/community.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Assamese:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Assamese:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles-home.css">
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="topline"><strong>Community preview</strong> · Koupati, Udalguri, Assam · Sample content only</div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Koupati home">
+        <img src="images/koupati_logo-optimized.webp" alt="Koupati logo" decoding="async" width="48" height="48">
+        <span class="brand-name"><strong><span lang="as">কৌপাতি</span> · Koupati</strong><span>The green destination</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a><a href="about-koupati.html">Explore</a><a href="#local-map">Local map</a><a href="#community-feed" aria-current="page">Community</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#post-composer">Share a moment</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="/">Home</a><a href="about-koupati.html">Explore Koupati</a><a href="#local-map">Local map</a><a href="#community-feed" aria-current="page">Community</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="community-hero">
+      <div class="container community-hero-grid">
+        <div class="community-hero-copy">
+          <span class="eyebrow">A local space for Koupati</span>
+          <h1>Koupati <em>Community</em></h1>
+          <p>Share a view, ask a local question, or help someone discover a useful place around Koupati.</p>
+          <div class="community-actions">
+            <button class="btn btn-primary" type="button" data-open-post>Write a post <span aria-hidden="true">↗</span></button>
+            <a class="btn community-outline" href="#local-map">Explore the local map</a>
+          </div>
+          <p class="preview-note"><span class="preview-dot" aria-hidden="true"></span> Design preview — posts and place suggestions are not published or saved.</p>
+        </div>
+        <div class="community-hero-image">
+          <img src="7-optimized.webp" alt="Representative green landscape used for this design preview; exact location not verified" width="826" height="1239" fetchpriority="high">
+          <span class="image-caption">A representative landscape · exact location not verified</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" id="community-feed" aria-labelledby="feed-title">
+      <div class="container community-layout">
+        <div class="feed-column">
+          <div class="section-heading-row">
+            <div><span class="eyebrow">Local voices & moments</span><h2 id="feed-title">Community feed</h2></div>
+            <button class="btn btn-primary compose-wide" type="button" data-open-post>＋ Share a post</button>
+          </div>
+
+          <div class="category-list" role="group" aria-label="Filter community posts">
+            <button class="category-chip is-active" type="button" data-filter="all" aria-pressed="true">All posts</button>
+            <button class="category-chip" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+            <button class="category-chip" type="button" data-filter="questions" aria-pressed="false">Questions</button>
+            <button class="category-chip" type="button" data-filter="events" aria-pressed="false">Events</button>
+            <button class="category-chip" type="button" data-filter="local" aria-pressed="false">Local places</button>
+          </div>
+
+          <div id="post-list" class="post-list" aria-live="polite">
+            <article class="community-post" data-category="nature">
+              <div class="post-topline"><div class="member-avatar" aria-hidden="true">K</div><div class="post-author"><strong>Koupati member</strong><span>Nature · Sample post</span></div><span class="post-badge">Preview</span></div>
+              <p class="post-copy">A green moment to brighten the day. Share a view from around Koupati and add an area tag if you know the place.</p>
+              <figure class="post-photo"><img src="7-optimized.webp" alt="Representative green landscape used in this sample post; exact location not verified" width="826" height="1239" loading="lazy"><figcaption>Representative photo from the website · location not verified</figcaption></figure>
+              <div class="post-place">⌖ <span>Area tag will be optional</span></div>
+              <div class="post-actions"><button type="button" class="post-action" data-like>♡ <span>Like</span> <b>0</b></button><button type="button" class="post-action" data-comments>◌ <span>Comment</span></button><button type="button" class="post-action" data-report>⚑ <span>Report</span></button></div>
+              <div class="comment-panel" hidden><p>Comments will appear here in the live app.</p></div>
+            </article>
+
+            <article class="community-post" data-category="questions">
+              <div class="post-topline"><div class="member-avatar member-avatar-gold" aria-hidden="true">?</div><div class="post-author"><strong>Koupati member</strong><span>Question · Sample post</span></div><span class="post-badge">Preview</span></div>
+              <p class="post-copy">Example: “Which nearby shop keeps school supplies?” Local questions can help neighbours share useful recommendations.</p>
+              <div class="post-place">⌖ <span>Koupati area · example only</span></div>
+              <div class="post-actions"><button type="button" class="post-action" data-like>♡ <span>Like</span> <b>0</b></button><button type="button" class="post-action" data-comments>◌ <span>Comment</span></button><button type="button" class="post-action" data-report>⚑ <span>Report</span></button></div>
+              <div class="comment-panel" hidden><p>Comments will appear here in the live app.</p></div>
+            </article>
+
+            <article class="community-post" data-category="events">
+              <div class="post-topline"><div class="member-avatar member-avatar-leaf" aria-hidden="true">K</div><div class="post-author"><strong>Koupati member</strong><span>Community update · Sample post</span></div><span class="post-badge">Preview</span></div>
+              <p class="post-copy">Example: share a community gathering, market update or local activity—include a date and place so people can plan.</p>
+              <div class="post-place">⌖ <span>Event location would be added by the poster</span></div>
+              <div class="post-actions"><button type="button" class="post-action" data-like>♡ <span>Like</span> <b>0</b></button><button type="button" class="post-action" data-comments>◌ <span>Comment</span></button><button type="button" class="post-action" data-report>⚑ <span>Report</span></button></div>
+              <div class="comment-panel" hidden><p>Comments will appear here in the live app.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="community-aside">
+          <section class="map-card" id="local-map" aria-labelledby="map-title">
+            <div class="aside-heading"><span class="eyebrow">Discover nearby</span><h2 id="map-title">Koupati local map</h2><p>Useful places will appear here after local details are checked.</p></div>
+            <div class="map-preview" role="img" aria-label="Illustrative map preview. No business pins are shown because local listings are not yet verified.">
+              <span class="map-label map-label-one">Koupati</span><span class="map-label map-label-two">Udalguri district</span><span class="map-marker" aria-hidden="true">⌖</span><span class="map-preview-caption">Map illustration · not to scale</span>
+            </div>
+            <div class="map-categories" aria-label="Place categories">
+              <span>Groceries</span><span>Health</span><span>Food</span><span>Schools</span><span>Transport</span>
+            </div>
+            <p class="verification-note">No shops or services are listed as verified in this preview. Each listing should show its source and last-checked date.</p>
+            <div class="aside-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Koupati%2C%20Udalguri%2C%20Assam" target="_blank" rel="noopener">Open Google Maps ↗</a><button class="text-button" type="button" data-open-place>Suggest a local place</button></div>
+          </section>
+
+          <section class="community-guidelines">
+            <span class="eyebrow">A welcoming space</span><h2>Community guidelines</h2>
+            <ul><li>Be kind and useful to neighbours.</li><li>Share only photos you own or have permission to post.</li><li>Keep private addresses and personal details out of posts.</li></ul>
+            <p>In the live version, members can report posts and moderators can review them.</p>
+          </section>
+
+          <section class="community-join-card">
+            <span class="eyebrow">Know a place?</span><h2>Help complete the local map</h2><p>Suggest a useful shop, service or gathering place. Details will be checked before publication.</p>
+            <button class="btn community-outline" type="button" data-open-place>Suggest a place</button>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer community-footer"><div class="container"><div><strong>Koupati</strong><p>An independent local guide to Koupati, Udalguri, Assam.</p></div><a href="/">Back to Koupati website ↑</a></div></footer>
+
+  <nav class="community-bottom-nav" aria-label="Community navigation">
+    <a href="/" aria-label="Home">⌂<span>Home</span></a><a href="#local-map" aria-label="Map">⌖<span>Map</span></a><a class="is-current" href="#community-feed" aria-current="page" aria-label="Community">◉<span>Community</span></a><a href="about-koupati.html" aria-label="Explore">◌<span>Explore</span></a>
+  </nav>
+
+  <dialog class="community-dialog" id="post-dialog" aria-labelledby="post-dialog-title">
+    <form method="dialog" class="dialog-dismiss"><button aria-label="Close post dialog">×</button></form>
+    <form id="post-form" class="dialog-content">
+      <span class="eyebrow">Share with Koupati</span><h2 id="post-dialog-title">Create a community post</h2>
+      <p class="dialog-hint">Preview only: this post will appear in this browser session and will not be sent to the website.</p>
+      <label for="post-category">Post type</label>
+      <select id="post-category" name="category"><option value="nature">Nature & photos</option><option value="questions">Question or recommendation</option><option value="events">Event or community update</option><option value="local">Local place</option></select>
+      <label for="post-text">What would you like to share?</label>
+      <textarea id="post-text" name="text" rows="4" maxlength="400" required placeholder="Share a helpful update or a moment from around Koupati…"></textarea>
+      <label class="upload-control" for="post-media"><span>＋ Add a photo or short video</span><small>Preview only; files are not uploaded or saved.</small></label>
+      <input id="post-media" name="media" type="file" accept="image/*,video/*">
+      <div id="media-preview" class="media-preview" hidden></div>
+      <label class="place-tag-control"><input type="checkbox" name="placeTag"> Add an optional general area tag</label>
+      <div class="identity-note"><span class="member-avatar" aria-hidden="true">K</span><span><strong>Koupati member</strong><small>Your real name is not shown in this preview.</small></span></div>
+      <div class="dialog-actions"><button type="button" class="btn community-outline" data-close-dialog>Cancel</button><button type="submit" class="btn btn-primary">Preview post</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="community-dialog" id="place-dialog" aria-labelledby="place-dialog-title">
+    <form method="dialog" class="dialog-dismiss"><button aria-label="Close suggestion dialog">×</button></form>
+    <form id="place-form" class="dialog-content">
+      <span class="eyebrow">Help map Koupati</span><h2 id="place-dialog-title">Suggest a useful place</h2>
+      <p class="dialog-hint">Preview only: suggestions are not sent or published yet.</p>
+      <label for="place-name">Place name</label><input id="place-name" name="placeName" required maxlength="100" placeholder="For example, a local grocery shop">
+      <label for="place-type">Category</label><select id="place-type" name="placeType"><option>Grocery & general store</option><option>Health & pharmacy</option><option>Food</option><option>Education</option><option>Transport</option><option>Other useful place</option></select>
+      <label for="place-area">Area or village (optional)</label><input id="place-area" name="placeArea" maxlength="80" placeholder="Koupati / nearby area">
+      <div class="dialog-actions"><button type="button" class="btn community-outline" data-close-dialog>Cancel</button><button type="submit" class="btn btn-primary">Preview suggestion</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="community.js" defer></script>
+</body>
+</html>
